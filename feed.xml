@@ -1,66 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://thoughtstopen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thoughtstopen.com/" rel="alternate" type="text/html" /><updated>2023-10-17T23:23:04-06:00</updated><id>https://thoughtstopen.com/feed.xml</id><title type="html">Thoughts To Pen</title><subtitle>My thoughts on Computer Programming || Psychology || Personal Finances || &amp; much more...</subtitle><entry><title type="html">Sequenced Collections (Java 21)</title><link href="https://thoughtstopen.com/java-21-sequenced-collections/" rel="alternate" type="text/html" title="Sequenced Collections (Java 21)" /><published>2023-10-17T21:45:00-06:00</published><updated>2023-10-17T21:45:00-06:00</updated><id>https://thoughtstopen.com/java-21-sequenced-collections</id><content type="html" xml:base="https://thoughtstopen.com/java-21-sequenced-collections/"><![CDATA[<h1 id="sequenced-collection">Sequenced Collection</h1>
-<p>Its a great addition to the existing Collection framework which allows access to the first and last elements of a collection out-of-the-box (using its default methods). Apart from this, it also allow us to get the reversed view of our Collection.</p>
-
-<p>Sequenced Collections are part of <a href="https://openjdk.org/jeps/431" target="_blank">JPE-431</a>.</p>
-
-<p>Sequenced Collection introduced 3 new interfaces in the Collection framework hierarchy.</p>
-<ol>
-  <li>SequencedCollection</li>
-  <li>SequencedSet</li>
-  <li>SequencedMap</li>
-</ol>
-
-<p><img src="https://cr.openjdk.org/~smarks/collections/SequencedCollectionDiagram20220216.png" alt="Image shows new Collection interfaces introduced in the java Collection framework." title="Hierarchy of New Interfaces introduced in Java 21 Collection Framework" /></p>
-
-<p>Lets discuss more about them in details.</p>
-
-<ol>
-  <li>
-    <h3 id="sequencedcollection-interface">SequencedCollection Interface</h3>
-    <p>The <strong>SequencedCollection</strong> interface introduced methods to add, get, and remove elements from the ends of the collection. It also provides a <em>reversed()</em> method which provides a reverse order view of the collection object.</p>
-
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">SequencedCollection</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="nc">Collection</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="o">{</span>
-   	<span class="nc">SequencedCollection</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="nf">reversed</span><span class="o">();</span>
-	  	
-   	<span class="k">default</span> <span class="kt">void</span> <span class="nf">addFirst</span><span class="o">(</span><span class="no">E</span> <span class="n">e</span><span class="o">)</span>
-	  	
-   	<span class="k">default</span> <span class="kt">void</span> <span class="nf">addLast</span><span class="o">(</span><span class="no">E</span> <span class="n">e</span><span class="o">)</span>
-	  	
-   	<span class="k">default</span> <span class="no">E</span> <span class="nf">getFirst</span><span class="o">()</span>
-	  	
-   	<span class="k">default</span> <span class="no">E</span> <span class="nf">getLast</span><span class="o">()</span>
-	  	
-   	<span class="k">default</span> <span class="no">E</span> <span class="nf">removeFirst</span><span class="o">()</span>
-	  	
-   	<span class="k">default</span> <span class="no">E</span> <span class="nf">removeLast</span><span class="o">()</span>
-    <span class="o">}</span>
-</code></pre></div>    </div>
-    <p>Except for reversed(), all other are default operations.
-For Example:</p>
-
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">integerList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
-   <span class="n">integerList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span> <span class="c1">//[100]</span>
-	
-   <span class="n">integerList</span><span class="o">.</span><span class="na">addFirst</span><span class="o">(</span><span class="mi">50</span><span class="o">);</span> <span class="c1">//[50,100]</span>
-   <span class="n">integerList</span><span class="o">.</span><span class="na">addLast</span><span class="o">(</span><span class="mi">150</span><span class="o">);</span> <span class="c1">//[50,100,150]</span>
-		
-   <span class="n">integerList</span><span class="o">.</span><span class="na">getFirst</span><span class="o">();</span> <span class="c1">//50</span>
-   <span class="n">integerList</span><span class="o">.</span><span class="na">getLast</span><span class="o">();</span> <span class="c1">//150</span>
-		
-   <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">integerList</span><span class="o">.</span><span class="na">reversed</span><span class="o">());</span> <span class="c1">//[150,100,50]</span>
-	  
-   <span class="c1">//integerList = [50,100,150]</span>
-   <span class="n">integerList</span><span class="o">.</span><span class="na">removeFirst</span><span class="o">();</span> <span class="c1">//[100,150]</span>
-   <span class="n">integerList</span><span class="o">.</span><span class="na">removeLast</span><span class="o">();</span> <span class="c1">//[100]</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <h3 id="sequencedset-interface">SequencedSet Interface</h3>
-    <p>SequencedSet interface extends SequencedCollection and is specific to the <em>Set</em> implementation.</p>
-  </li>
-</ol>
-
-<p>TBC…… 🫡</p>]]></content><author><name></name></author><category term="programming" /><category term="java" /><category term="sequenced collections" /><category term="java21" /><summary type="html"><![CDATA[Sequenced Collections introduced in Java 21]]></summary></entry><entry><title type="html">Virtual Threads (Java 21)</title><link href="https://thoughtstopen.com/java-21-virtual-threads/" rel="alternate" type="text/html" title="Virtual Threads (Java 21)" /><published>2023-10-12T21:55:00-06:00</published><updated>2023-10-12T21:55:00-06:00</updated><id>https://thoughtstopen.com/java-21-virtual-threads</id><content type="html" xml:base="https://thoughtstopen.com/java-21-virtual-threads/"><![CDATA[<h1 id="virtual-threads">Virtual Threads</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://thoughtstopen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thoughtstopen.com/" rel="alternate" type="text/html" /><updated>2023-10-17T23:42:11-06:00</updated><id>https://thoughtstopen.com/feed.xml</id><title type="html">Thoughts To Pen</title><subtitle>My thoughts on Computer Programming || Psychology || Personal Finances || &amp; much more...</subtitle><entry><title type="html">Virtual Threads (Java 21)</title><link href="https://thoughtstopen.com/java-21-virtual-threads/" rel="alternate" type="text/html" title="Virtual Threads (Java 21)" /><published>2023-10-12T21:55:00-06:00</published><updated>2023-10-12T21:55:00-06:00</updated><id>https://thoughtstopen.com/java-21-virtual-threads</id><content type="html" xml:base="https://thoughtstopen.com/java-21-virtual-threads/"><![CDATA[<h1 id="virtual-threads">Virtual Threads</h1>
 <p><strong>NOTE</strong>: This is a preview feature  <em>NOT</em>  enabled by-default in JDK-21.</p>
 
 <p>Virtual Threads are introduced under <strong>Project Loom</strong> and are part of <a href="https://openjdk.org/jeps/436" target="_blank">JPE-436</a>.</p>
@@ -222,22 +160,7 @@ Greetings from T2P!
   </li>
   <li>
     <h2 id="virtual-threads"><a href="/java-21-virtual-threads/">Virtual Threads</a></h2>
-    <p>Virtual Threads are JVM managed lightweight threads. Lighter than the traditional Threads.</p>
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Executors</span><span class="o">.</span><span class="na">newVirtualThreadPerTaskExecutor</span><span class="o">();</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <h2 id="sequenced-collections"><a href="/java-21-sequenced-collections/">Sequenced Collections</a></h2>
-    <p>New interface <strong>Sequenced Collection</strong> is introduced in the Collections framework which provides new functionality of <em>defined encounter order</em>, which means, we will have a well-defined order for first element, second element, upto the last element.</p>
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">integerList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
-  <span class="n">integerList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span> <span class="c1">//[100]</span>
-	
-  <span class="n">integerList</span><span class="o">.</span><span class="na">addFirst</span><span class="o">(</span><span class="mi">50</span><span class="o">);</span> <span class="c1">//[50,100]</span>
-  <span class="n">integerList</span><span class="o">.</span><span class="na">addLast</span><span class="o">(</span><span class="mi">150</span><span class="o">);</span> <span class="c1">//[50,100,150]</span>
-	
-  <span class="n">integerList</span><span class="o">.</span><span class="na">getFirst</span><span class="o">();</span> <span class="c1">//50</span>
-  <span class="n">integerList</span><span class="o">.</span><span class="na">getLast</span><span class="o">();</span> <span class="c1">//150</span>
-</code></pre></div>    </div>
+    <p>Virtual Threads are JVM managed lightweight threads.</p>
   </li>
 </ul>]]></content><author><name></name></author><category term="programming" /><category term="java" /><summary type="html"><![CDATA[All new features introduced in Java 21]]></summary></entry><entry><title type="html">U$A ਕੈਫੇਟੇਰੀਆ</title><link href="https://thoughtstopen.com/usa-cafeteria/" rel="alternate" type="text/html" title="U$A ਕੈਫੇਟੇਰੀਆ" /><published>2023-02-22T20:40:00-07:00</published><updated>2023-02-22T20:40:00-07:00</updated><id>https://thoughtstopen.com/usa-cafeteria</id><content type="html" xml:base="https://thoughtstopen.com/usa-cafeteria/"><![CDATA[<p>ਅੰਬਰ ਨੂੰ ਕਈ ਵਰ੍ਹੇ ਹੋ ਗਏ ਸਨ ਮਜ਼ਦੂਰੀ ਕਰਦੇ ਪਰ ਉਸਦੀ ਕਮਾਈ ਨਾਲ਼ ਨਾ ਤਾਂ ਜੂਨ ਗੁਜ਼ਾਰਾ ਚੱਲਦਾ ਸੀ ਤੇ ਨਾ ਹੀ ਉਸ ਦੀ ਆਤਮਾ ਨੂੰ ਤ੍ਰਿਪਤੀ ਮਿਲਦੀ ਸੀ। ਉਸ ਦੇ ਹਾਲਾਤ ਮਾੜੇ ਸਨ ਕਿਉਂਕਿ ਉਹ ਗਰੀਬ ਤੇ ਅਲਪ ਸਿੱਖਿਅਤ ਸੀ। ਉਹ ਬੜੀ ਵਿਲੱਖਣ ਸੋਚ ਵਾਲ਼ਾ ਇਨਸਾਨ ਸੀ। ਸਭਤੋਂ ਅਲੱਗ ਸੋਚਣ ਦੀ ਉਸਦੀ ਆਦਤ ਉਸਨੂੰ ਦੂਜਿਆਂ ਤੋਂ ਵੱਖ ਕਰਦੀ ਸੀ। ਉਸਦੇ ਆਲ਼ੇ ਦੁਆਲ਼ੇ ਦੇ ਲੋਕ ਤੇ ਸਾਕ ਸਬੰਧੀ ਉਸਨੂੰ ਛੋਟੀ ਸੋਚ ਵਾਲ਼ਾ ਆਖ਼ਦੇ ਸਨ। ਉਮਰ ਦੇ ਤਿੰਨ ਦਹਾਕਿਆਂ ਤੋਂ ਵੱਧ ਸਮੇਂ ਵਿੱਚ ਉਸਨੇ ਜ਼ਿੰਦਗੀ ਦੇ ਕਈ ਉਤਾਰ ਚੜ੍ਹਾਅ ਵੇਖੇ ਸਨ। ਹਰ ਥਾਂ ਤੋਂ ਅਸਫ਼ਲਤਾ, ਧੋਖੇ ਤੇ ਨਾਕਾਮੀਆਂ ਉਸ ਦੇ ਪੱਲੇ ਆਈਆਂ ਸਨ। ਉਮਰ ਤੋਂ ਕਿਤੇ ਪਹਿਲਾਂ ਹੀ ਉਹ ਬੁੱਢਾ ਦਿਸਣ ਲੱਗ ਪਿਆ ਸੀ। ਉਹ ਕਦੇ ਕਦੇ ਖੁਦਕੁਸ਼ੀ ਕਰਨ ਬਾਰੇ ਸੋਚਦਾ ਪਰ ਮੌਤ ਵੀ ਉਹਨੂੰ ਧੋਖਾ ਨਾ ਦੇ ਜਾਵੇ ਇਹ ਖ਼ਿਆਲ ਕਰ ਕੇ ਉਹ ਰੁਕ ਜਾਂਦਾ। ਉਹ ਰੋ ਵੀ ਨਹੀਂ ਸੀ ਸਕਦਾ ਕਿਉਂਕਿ ਦੁੱਖਾਂ ਦੀਆਂ ਹਨੇਰੀਆਂ ਨੇ ਉਸ ਦੀਆਂ ਅੱਖਾਂ ਦੇ ਸਮੁੰਦਰ ਵੀ ਸੁਕਾ ਦਿੱਤੇ ਸਨ। ਇੱਕ ਖਾਲੀਪਣ ਉਸ ਦੀ ਜ਼ਿੰਦਗੀ ਵਿੱਚ ਪਸਰ ਗਿਆ ਸੀ। ਜੋ ਉਸ ਉੱਤੇ ਬੀਤ ਰਹੀ ਸੀ, ਉਹ ਉਹ ਹੀ ਜਾਣਦਾ ਸੀ। ਇੱਕ ਦਿਨ ਉਸ ਦਾ ਇੱਕ ਰਿਸ਼ਤੇਦਾਰ ਅਨਮੋਲ ਉਸ ਨੂੰ ਮਿਲਣ ਆਇਆ।
 ਅਨਮੋਲ ਜਾਰਜੀਆ ਵਿੱਚ ਪਰਮਾਨੈਂਟ ਰੇਜੀਡੇਂਟ(PR) ਸੀ। ਉਸ ਦੀ ਫੈਮਿਲੀ ਵੀ ਉੱਥੇ ਹੀ ਸੈਟਲ ਸੀ। ਚਾਹ ਪਾਣੀ ਮਗਰੋਂ ਘੰਟਾ ਭਰ ਗੱਲਾਂ ਹੁੰਦੀਆਂ ਰਹੀਆਂ। ਫਿਰ ਅੰਬਰ ਕਿਸੇ ਕੰਮ ਕਮਰੇ ਤੋਂ ਬਾਹਰ ਚਲਾ ਗਿਆ। ਅਨਮੋਲ ਦੀ ਨਜ਼ਰ ਉਸ ਦੀ ਟੇਬਲ ‘ਤੇ ਇੱਕ ਨੋਟਬੁੱਕ ‘ਤੇ ਪਈ। ਉਸ ਵਿੱਚ ਲਿਖਿਆ ਹੋਇਆ ਸੀ  <em>U$A Cafeteria</em>। ਅਨਮੋਲ ਨੇ ਪੰਨਾ ਪਲਟਿਆ ਤਾਂ ਇੱਕ ਵਿੰਗੀ ਟੇਢੀ ਜਿਹੀ ਆਕ੍ਰਿਤੀ ਬਣੀ ਹੋਈ ਸੀ। ਅਗਲੇ ਪੰਨੇ ‘ਤੇ ਇੱਕ ਆਰਟੀਕਲ ਲਿਖਿਆ ਹੋਇਆ ਸੀ,ਜੋ ਕੁੱਝ ਇਸ ਤਰ੍ਹਾਂ ਸੀ :-</p>
