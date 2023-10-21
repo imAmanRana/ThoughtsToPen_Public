@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://thoughtstopen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thoughtstopen.com/" rel="alternate" type="text/html" /><updated>2023-10-18T00:02:22-06:00</updated><id>https://thoughtstopen.com/feed.xml</id><title type="html">Thoughts To Pen</title><subtitle>My thoughts on Computer Programming || Psychology || Personal Finances || &amp; much more...</subtitle><entry><title type="html">Sequenced Collections (Java 21)</title><link href="https://thoughtstopen.com/java-21-sequenced-collections/" rel="alternate" type="text/html" title="Sequenced Collections (Java 21)" /><published>2023-10-17T21:45:00-06:00</published><updated>2023-10-17T21:45:00-06:00</updated><id>https://thoughtstopen.com/java-21-sequenced-collections</id><content type="html" xml:base="https://thoughtstopen.com/java-21-sequenced-collections/"><![CDATA[<h1 id="sequenced-collection">Sequenced Collection</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://thoughtstopen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thoughtstopen.com/" rel="alternate" type="text/html" /><updated>2023-10-21T00:18:19-06:00</updated><id>https://thoughtstopen.com/feed.xml</id><title type="html">Thoughts To Pen</title><subtitle>My thoughts on Computer Programming || Psychology || Personal Finances || &amp; much more...</subtitle><entry><title type="html">Sequenced Collections (Java 21)</title><link href="https://thoughtstopen.com/java-21-sequenced-collections/" rel="alternate" type="text/html" title="Sequenced Collections (Java 21)" /><published>2023-10-17T21:45:00-06:00</published><updated>2023-10-17T21:45:00-06:00</updated><id>https://thoughtstopen.com/java-21-sequenced-collections</id><content type="html" xml:base="https://thoughtstopen.com/java-21-sequenced-collections/"><![CDATA[<h1 id="sequenced-collection">Sequenced Collection</h1>
 <p>Its a great addition to the existing Collection framework which allows access to the first and last elements of a collection out-of-the-box (using its default methods). Apart from this, it also allow us to get the reversed view of our Collection.</p>
 
 <p>Sequenced Collections are part of <a href="https://openjdk.org/jeps/431" target="_blank">JPE-431</a>.</p>
@@ -35,7 +35,7 @@
    	<span class="k">default</span> <span class="no">E</span> <span class="nf">removeLast</span><span class="o">()</span>
     <span class="o">}</span>
 </code></pre></div>    </div>
-    <p>Except for reversed(), all other are default operations.
+    <p>Except for reversed(), all are default operations.
 For Example:</p>
 
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">integerList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
@@ -56,11 +56,115 @@ For Example:</p>
   </li>
   <li>
     <h3 id="sequencedset-interface">SequencedSet Interface</h3>
-    <p>SequencedSet interface extends SequencedCollection and is specific to the <em>Set</em> implementation.</p>
-  </li>
-</ol>
+    <p>SequencedSet interface extends SequencedCollection and is specific to the <em>Set</em> implementation. It overrides the <em>reverse()</em> method and returns a SequencedSet<E>.</E></p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">SequencedSet</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="nc">SequencedCollection</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;,</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="o">{</span>
+     <span class="nc">SequencedSet</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="nf">reversed</span><span class="o">();</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+    <p>Lets look into an example.</p>
 
-<p>TBC…… 🫡</p>]]></content><author><name></name></author><category term="programming" /><category term="java" /><category term="sequenced collections" /><category term="java21" /><summary type="html"><![CDATA[Sequenced Collections introduced in Java 21]]></summary></entry><entry><title type="html">Virtual Threads (Java 21)</title><link href="https://thoughtstopen.com/java-21-virtual-threads/" rel="alternate" type="text/html" title="Virtual Threads (Java 21)" /><published>2023-10-12T21:55:00-06:00</published><updated>2023-10-12T21:55:00-06:00</updated><id>https://thoughtstopen.com/java-21-virtual-threads</id><content type="html" xml:base="https://thoughtstopen.com/java-21-virtual-threads/"><![CDATA[<h1 id="virtual-threads">Virtual Threads</h1>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">SequencedSet</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">integerSet</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedHashSet</span><span class="o">&lt;&gt;();</span>
+ <span class="n">integerSet</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span> 	<span class="c1">//[100]</span>
+	
+ <span class="n">integerSet</span><span class="o">.</span><span class="na">addFirst</span><span class="o">(</span><span class="mi">50</span><span class="o">);</span> <span class="c1">//[50,100]</span>
+ <span class="n">integerSet</span><span class="o">.</span><span class="na">addLast</span><span class="o">(</span><span class="mi">150</span><span class="o">);</span> <span class="c1">//[50,100,150]</span>
+		
+ <span class="n">integerSet</span><span class="o">.</span><span class="na">getFirst</span><span class="o">();</span> <span class="c1">//50</span>
+ <span class="n">integerSet</span><span class="o">.</span><span class="na">getLast</span><span class="o">();</span> <span class="c1">//150</span>
+			
+ <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">integerSet</span><span class="o">.</span><span class="na">reversed</span><span class="o">());</span> <span class="c1">//[150,100,50]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h3 id="sequencedmap-interface">SequencedMap Interface</h3>
+    <p>It applies to the Map classes and as shown in the diagram above, it doesn’t extend the <code class="language-plaintext highlighter-rouge">SequencedCollection</code> interface but rather it provide its own methods for access order.</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">SequencedMap</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span> <span class="no">V</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span> <span class="no">V</span><span class="o">&gt;</span> <span class="o">{</span>
+     <span class="nc">SequencedMap</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span> <span class="no">V</span><span class="o">&gt;</span> <span class="nf">reversed</span><span class="o">();</span>
+		
+     <span class="k">default</span> <span class="no">V</span> <span class="nf">putFirst</span><span class="o">(</span><span class="no">K</span> <span class="n">k</span><span class="o">,</span> <span class="no">V</span> <span class="n">v</span><span class="o">)</span> <span class="o">{}</span>
+     <span class="k">default</span> <span class="no">V</span> <span class="nf">putLast</span><span class="o">(</span><span class="no">K</span> <span class="n">k</span><span class="o">,</span> <span class="no">V</span> <span class="n">v</span><span class="o">)</span> <span class="o">{}</span>
+		
+     <span class="k">default</span> <span class="nc">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span><span class="no">V</span><span class="o">&gt;</span> <span class="nf">firstEntry</span><span class="o">(){}</span>
+     <span class="k">default</span> <span class="nc">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span><span class="no">V</span><span class="o">&gt;</span> <span class="nf">lastEntry</span><span class="o">()</span> <span class="o">{}</span>
+     <span class="k">default</span> <span class="nc">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span><span class="no">V</span><span class="o">&gt;</span> <span class="nf">pollFirstEntry</span><span class="o">()</span> <span class="o">{}</span>
+     <span class="k">default</span> <span class="nc">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span><span class="no">V</span><span class="o">&gt;</span> <span class="nf">pollLastEntry</span><span class="o">()</span> <span class="o">{}</span>
+		
+     <span class="k">default</span> <span class="nc">SequencedSet</span><span class="o">&lt;</span><span class="no">K</span><span class="o">&gt;</span> <span class="nf">sequencedKeySet</span><span class="o">()</span> <span class="o">{}</span>
+     <span class="k">default</span> <span class="nc">SequencedCollection</span><span class="o">&lt;</span><span class="no">V</span><span class="o">&gt;</span> <span class="nf">sequencedValues</span><span class="o">()</span> <span class="o">{}</span>
+     <span class="k">default</span> <span class="nc">SequencedSet</span><span class="o">&lt;</span><span class="nc">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span> <span class="no">V</span><span class="o">&gt;&gt;</span> <span class="nf">sequencedEntrySet</span><span class="o">()</span> <span class="o">{}</span>
+		
+ <span class="o">}</span>
+</code></pre></div>    </div>
+    <p>Lets again look at its example</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">SequencedMap</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">daysOfWeekMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedHashMap</span><span class="o">&lt;&gt;();</span>
+		
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="s">"MONDAY"</span><span class="o">);</span>
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"TUESDAY"</span><span class="o">);</span>
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="s">"WEDNESDAY"</span><span class="o">);</span>
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="s">"THURSDAY"</span><span class="o">);</span>
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span> <span class="s">"FRIDAY"</span><span class="o">);</span>
+ <span class="c1">//{2=MONDAY, 3=TUESDAY, 4=WEDNESDAY, 5=THURSDAY, 6=FRIDAY}</span>
+	
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">putFirst</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"SUNDAY"</span><span class="o">);</span>
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">putLast</span><span class="o">(</span><span class="mi">7</span><span class="o">,</span> <span class="s">"SATURDAY"</span><span class="o">);</span>
+ <span class="c1">//{1=SUNDAY, 2=MONDAY, 3=TUESDAY, 4=WEDNESDAY, 5=THURSDAY, 6=FRIDAY, 7=SATURDAY}</span>
+	
+	
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">firstEntry</span><span class="o">();</span>	<span class="c1">//1=SUNDAY</span>
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">lastEntry</span><span class="o">();</span>	<span class="c1">//7=SATURDAY</span>
+	
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">sequencedKeySet</span><span class="o">();</span>	<span class="c1">//[1, 2, 3, 4, 5, 6, 7]</span>
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">sequencedValues</span><span class="o">();</span>	<span class="c1">//[SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY]</span>
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">sequencedEntrySet</span><span class="o">();</span>	<span class="c1">//[1=SUNDAY, 2=MONDAY, 3=TUESDAY, 4=WEDNESDAY, 5=THURSDAY, 6=FRIDAY, 7=SATURDAY]</span>
+	
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">pollFirstEntry</span><span class="o">();</span>
+ <span class="n">daysOfWeekMap</span><span class="o">.</span><span class="na">pollLastEntry</span><span class="o">();</span>
+ <span class="c1">//{2=MONDAY, 3=TUESDAY, 4=WEDNESDAY, 5=THURSDAY, 6=FRIDAY}</span>
+	
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h3 id="addition-to-collections-class">Addition to Collections Class</h3>
+    <p>In order to accommodate these new data types, new methods has been added to <code class="language-plaintext highlighter-rouge">Collections</code> class.</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableSequencedCollection</span><span class="o">(</span><span class="n">sequencedCollection</span><span class="o">);</span>
+ <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableSequencedSet</span><span class="o">(</span><span class="n">sequencedSet</span><span class="o">);</span>
+ <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableSequencedMap</span><span class="o">(</span><span class="n">sequencedMap</span><span class="o">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h3 id="common-exceptions">Common Exceptions</h3>
+    <p>If we try to perform these operations on a immmutable data type or a collection which already have a specific order, an <code class="language-plaintext highlighter-rouge">UnsupportedOperationException</code> is thrown</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">SequencedCollection</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">immutableList</span> <span class="o">=</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">);</span>
+ <span class="n">immutableList</span><span class="o">.</span><span class="na">addFirst</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+	
+ <span class="nc">SequencedMap</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">treeMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TreeMap</span><span class="o">&lt;&gt;(</span><span class="nc">Map</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">200</span><span class="o">));</span>
+ <span class="n">treeMap</span><span class="o">.</span><span class="na">putLast</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">300</span><span class="o">);</span>
+	
+ <span class="cm">/*
+ Exception in thread "main" java.lang.UnsupportedOperationException
+ at java.base/java.util.ImmutableCollections.uoe(ImmutableCollections.java:142)
+ at java.base/java.util.ImmutableCollections$AbstractImmutableList.add(ImmutableCollections.java:258)
+ at java.base/java.util.List.addFirst(List.java:796)
+ */</span>
+</code></pre></div>    </div>
+
+    <p>Similarly, when trying to fetch first or last elements from an empty collection results in <code class="language-plaintext highlighter-rouge">NoSuchElementException</code></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">SequencedSet</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">treeMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TreeSet</span><span class="o">&lt;&gt;(</span><span class="nc">Set</span><span class="o">.</span><span class="na">of</span><span class="o">());</span>
+ <span class="n">treeMap</span><span class="o">.</span><span class="na">getLast</span><span class="o">();</span>
+ <span class="cm">/*
+ Exception in thread "main" java.util.NoSuchElementException
+ at java.base/java.util.TreeMap.key(TreeMap.java:1637)
+ at java.base/java.util.TreeMap.lastKey(TreeMap.java:309)
+ at java.base/java.util.TreeSet.last(TreeSet.java:402)
+ at java.base/java.util.SortedSet.getLast(SortedSet.java:320)
+ */</span>
+</code></pre></div>    </div>
+  </li>
+</ol>]]></content><author><name></name></author><category term="programming" /><category term="java" /><category term="sequenced collections" /><category term="java21" /><summary type="html"><![CDATA[Sequenced Collections introduced in Java 21]]></summary></entry><entry><title type="html">Virtual Threads (Java 21)</title><link href="https://thoughtstopen.com/java-21-virtual-threads/" rel="alternate" type="text/html" title="Virtual Threads (Java 21)" /><published>2023-10-12T21:55:00-06:00</published><updated>2023-10-12T21:55:00-06:00</updated><id>https://thoughtstopen.com/java-21-virtual-threads</id><content type="html" xml:base="https://thoughtstopen.com/java-21-virtual-threads/"><![CDATA[<h1 id="virtual-threads">Virtual Threads</h1>
 <p><strong>NOTE</strong>: This is a preview feature  <em>NOT</em>  enabled by-default in JDK-21.</p>
 
 <p>Virtual Threads are introduced under <strong>Project Loom</strong> and are part of <a href="https://openjdk.org/jeps/436" target="_blank">JPE-436</a>.</p>
