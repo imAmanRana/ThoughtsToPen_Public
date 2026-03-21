@@ -1,0 +1,14 @@
+# Thoughts To Pen
+> My thoughts on Computer Programming || Psychology || Personal Finances || & much more...
+
+Thoughts To Pen is a blog focusing on computer programming algorithms, personal finance strategies, software development tutorials, and psychological insights.
+
+## Author / Publisher
+Aman Rana (imAmanRana)
+
+## Main Sections
+- [Algorithms](/projects/computer-programming/algorithms/)
+- [Java Development](/projects/computer-programming/java/)
+- [Personal Finances](/projects/personal-finances/)
+- [Posts](/posts/)
+- [Projects](/projects/)
