@@ -49,7 +49,8 @@ bundle install
 To run the local development server with development configurations (e.g., local URL `http://127.0.0.1:4000` and live reloading):
 
 ```bash
-bundle exec jekyll serve --config _config.yml,_config_dev.yml --livereload
+set JEKYLL_ENV="development"
+bundle exec jekyll serve --config _config.yml,_config_dev.yml --incremental
 ```
 
 Open your browser and navigate to `http://127.0.0.1:4000`.
@@ -60,7 +61,7 @@ To build the static site for production:
 
 **Windows (PowerShell / CMD):**
 ```powershell
-$env:JEKYLL_ENV="production"
+set JEKYLL_ENV="production"
 bundle exec jekyll build
 ```
 
