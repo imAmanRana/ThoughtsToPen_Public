@@ -1,6 +1,24 @@
 [
   
   {
+    "title": "Interactive FIRE Calculator: Find Your Financial Independence Number & Date",
+    "url": "/interactive-fire-calculator/",
+    "date": "September 06, 2026",
+    "tags": "personal-finances, tools, fire-calculator, financial-independence, early-retirement, compound-interest, investing",
+    "excerpt": "Instant, simple, client-side interactive FIRE calculator. Calculate your target FIRE number, years to financial freedom, and projected retirement date.",
+    "content": "📘 Prerequisite Guide: Looking for the mathematical theory behind the 4% rule, the Trinity Study, savings rate dynamics, and Lean vs. Fat FIRE? Read the prerequisite guide: The Complete Guide to FIRE: Financial Independence, Retire Early Explained. FIRE Trajectory Calculator Real-time inflation-adjusted compounding projection Currency: $ (USD / CAD / AUD) ₹ (INR) £ (GBP) € (EUR) Current Age Current Invested Portfolio Monthly Savings / Deposit Annual Retirement Expenses Expected Return (% / Year) Safe Withdrawal Rate (SWR %) 3.5% 4.0% Target FIRE Number $1,200,000 (25x Annual Expenses) Time to Freedom 17.1 Years Target Year: 2043 Retirement Age Age 47 Current: 4.2% Funded Progress Toward Goal 4.2% Lean FIRE (75% budget) $900,000 ~14.5 yrs to reach Standard FIRE (100% budget)..."
+  },
+  
+  {
+    "title": "The Complete Guide to FIRE: Financial Independence, Retire Early Explained",
+    "url": "/what-is-fire-financial-independence-retire-early/",
+    "date": "September 05, 2026",
+    "tags": "personal-finances, investing, fire-movement, financial-independence, index-funds, compound-growth, wealth-building",
+    "excerpt": "Demystify the FIRE movement. Learn the 25x rule, the 4% Safe Withdrawal Rate from the Trinity Study, Lean vs Fat vs Coast FIRE, and the math to retire early.",
+    "content": "For generations, the standard financial playbook has been drilled into our heads: go to school, land a stable 9-to-5 job, work continuously for 40 to 45 years, and retire at age 65 when the government and your pension plan say you are permitted to stop.The FIRE (Financial Independence, Retire Early) movement fundamentally rejects that timeline.At its core, FIRE is not about lounging on a tropical beach sipping cocktails for forty years, nor is it about extreme deprivation and eating instant noodles for dinner every night. FIRE is about decoupling your time from your monthly survival. It is the mathematical realization that once your invested assets produce sufficient passive income to cover your living expenses indefinitely, work transitions from a compulsory..."
+  },
+  
+  {
     "title": "Java Garbage Collection Showdown: G1GC vs. Generational ZGC in 2026 (Benchmarks & Architecture)",
     "url": "/java-garbage-collection-showdown-g1gc-vs-zgc/",
     "date": "September 04, 2026",
