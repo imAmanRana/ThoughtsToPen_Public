@@ -145,8 +145,8 @@ function calculateTFSA() {
             // Add row to table
             tableHtml += `<tr>
                 <td style="padding: 10px; border: 1px solid #eee; text-align: left;">${year}</td>
-                <td style="padding: 10px; border: 1px solid #eee; text-align: right;">$${limits[year].toLocaleString()}</td>
-                <td style="padding: 10px; border: 1px solid #eee; text-align: right; font-weight: bold;">$${total.toLocaleString()}</td>
+                <td style="padding: 10px; border: 1px solid #eee; text-align: right;">$${limits[year].toLocaleString('en-CA')}</td>
+                <td style="padding: 10px; border: 1px solid #eee; text-align: right; font-weight: bold;">$${total.toLocaleString('en-CA')}</td>
             </tr>`;
         }
     }
@@ -160,7 +160,7 @@ function calculateTFSA() {
     }
 
     // Use textContent for everything but the span to avoid full re-parse
-    resultText.innerHTML = "<span>&#36;</span> " + total.toLocaleString();
+    resultText.innerHTML = "<span>&#36;</span> " + total.toLocaleString('en-CA');
 
     // Show the boxes
     resultBox.style.display = "block";

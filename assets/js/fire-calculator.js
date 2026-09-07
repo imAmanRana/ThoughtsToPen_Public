@@ -26,7 +26,8 @@ function toggleTable() {
 }
 
 function formatMoney(num, currency) {
-  return currency + Math.round(num).toLocaleString();
+  var locale = (currency === '₹') ? 'en-IN' : 'en-US';
+  return currency + Math.round(num).toLocaleString(locale);
 }
 
 function calculateFIRE() {
