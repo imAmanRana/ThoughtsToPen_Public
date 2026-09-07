@@ -5,5 +5,8 @@ Disallow: /404
 Disallow: /404.html
 Disallow: /search.json
 
-Sitemap: https://thoughtstopen.com/sitemap.xml
+# Explicitly allow Google AdSense Crawler
+User-agent: Mediapartners-Google
+Allow: /
 
+Sitemap: https://thoughtstopen.com/sitemap.xml

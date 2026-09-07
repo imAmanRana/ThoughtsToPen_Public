@@ -16,3 +16,7 @@ Thoughts To Pen is a technical publication and digital garden covering deep-dive
 - [Personal Finance](https://thoughtstopen.com/projects/personal-finances/): Practical financial engineering, Canadian tax-advantaged accounts (TFSA, RRSP, FHSA), and compound interest tools.
 - [Interactive Web Tools](https://thoughtstopen.com/projects/computer-programming/web-tools/): Client-side utilities including QR code generator and compound interest calculators.
 
+## Legal & Compliance Policies
+- [Privacy Policy](https://thoughtstopen.com/privacy-policy/): Comprehensive data collection disclosure, Google AdSense cookie usage, and GDPR/CCPA privacy rights.
+- [Terms of Service](https://thoughtstopen.com/terms/): Terms governing website access, educational code usage, intellectual property, and user conduct.
+- [Legal & Financial Disclaimer](https://thoughtstopen.com/disclaimer/): Mandatory disclosures regarding securities trading risks, SEBI compliance, and non-financial advice notice.
