@@ -1,3 +1,9 @@
-# Allow crawling of all content
+# Allow crawling of all public content
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /404
+Disallow: /404.html
+Disallow: /search.json
+
+Sitemap: https://thoughtstopen.com/sitemap.xml
+

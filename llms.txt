@@ -1,14 +1,18 @@
 # Thoughts To Pen
-> My thoughts on Computer Programming || Psychology || Personal Finances || & much more...
+> Turning caffeine into clean Java, systematic trades, compound growth, and questionable life choices.
 
-Thoughts To Pen is a blog focusing on computer programming algorithms, personal finance strategies, software development tutorials, and psychological insights.
+Thoughts To Pen is a technical publication and digital garden covering deep-dive computer programming (Java 8 to Java 25, Virtual Threads, HotSpot internals), algorithmic trading (Shoonya API, WebSockets, order execution), system design, data structures & algorithms, and personal finance strategies (TFSA, RRSP, FHSA).
 
-## Author / Publisher
-Aman Rana (imAmanRana)
+## Author & Publisher
+- **Author**: Aman Rana ([@imAmanRana](https://github.com/imAmanRana))
+- **Website**: https://thoughtstopen.com
+- **Sitemap**: https://thoughtstopen.com/sitemap.xml
 
-## Main Sections
-- [Algorithms](/projects/computer-programming/algorithms/)
-- [Java Development](/projects/computer-programming/java/)
-- [Personal Finances](/projects/personal-finances/)
-- [Posts](/posts/)
-- [Projects](/projects/)
+## Main Sections & Resources
+- [All Blog Posts](https://thoughtstopen.com/posts/): Complete chronological archive of all deep-dive articles, system architecture guides, and tutorials.
+- [Java Development](https://thoughtstopen.com/projects/computer-programming/java/): Comprehensive coverage of modern Java features from Java 8 to Java 25, including Virtual Threads, JIT tiered compilation, and GC internals.
+- [Algorithmic Trading](https://thoughtstopen.com/projects/computer-programming/algorithmic-trading/): Guides and scratch-built implementations for algorithmic trading APIs, authentication, order placement, and WebSocket tick streaming.
+- [Data Structures & Algorithms](https://thoughtstopen.com/projects/computer-programming/algorithms/): In-depth explanations of sorting, graph traversals, dynamic programming, trees, and complexity analysis.
+- [Personal Finance](https://thoughtstopen.com/projects/personal-finances/): Practical financial engineering, Canadian tax-advantaged accounts (TFSA, RRSP, FHSA), and compound interest tools.
+- [Interactive Web Tools](https://thoughtstopen.com/projects/computer-programming/web-tools/): Client-side utilities including QR code generator and compound interest calculators.
+
