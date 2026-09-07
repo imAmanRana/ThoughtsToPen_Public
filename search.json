@@ -60,7 +60,16 @@
     "date": "August 25, 2026",
     "tags": "tools, utility, qr-code, javascript, java, programming, web-development, privacy",
     "excerpt": "Generate 100% free, private, permanent QR codes online from text, URLs, Wi-Fi passwords, UPI payments, and emails. No signup required, no subscription fees, no scan limits, and no expiring redirect links.",
-    "content": "Instant Free QR Code Maker 100% Client-Side &amp; Private • No Expiration • No Watermark • Unlimited High-Res Downloads 📝 Text / URL 📶 Wi-Fi 💳 UPI Pay (India) 📧 Email 📞 Phone / SMS Enter Text or Website URL: https://thoughtstopen.com Network Name (SSID): Wi-Fi Password: Encryption: WPA / WPA2 / WPA3 WEP None (Open) Hidden Network Payee UPI ID (VPA): Payee Name: Amount (₹ Optional): Recipient Email: Subject: Message Body: 📞 Phone Call 💬 SMS Message Phone Number (with Country Code): Pre-filled SMS Text: 🎨 Customization Options QR Color: Background: Output Size: 300px Error Correction: Low (7% Recovery) Medium (15% Recovery) Quartile (25% Recovery) High (30% Recovery - Best for Print) White Border (Quiet Zone): Standard (4 Modules -..."
+    "content": "📘 Looking for the Technical Guide? Want to learn how QR codes work under the hood, their binary matrix anatomy, Reed-Solomon error correction algebra, or how to generate them in Java with ZXing? Read our comprehensive companion guide: How QR Codes Work: Matrix Anatomy, Error Correction, and Java Guide. Instant Free QR Code Maker 100% Client-Side &amp; Private • No Expiration • No Watermark • Unlimited High-Res Downloads 📝 Text / URL 📶 Wi-Fi 💳 UPI Pay (India) 📧 Email 📞 Phone / SMS Enter Text or Website URL: https://thoughtstopen.com Network Name (SSID): Wi-Fi Password: Encryption: WPA / WPA2 / WPA3 WEP None (Open) Hidden Network Payee UPI ID (VPA): Payee Name: Amount (₹ Optional): Recipient Email: Subject: Message Body:..."
+  },
+  
+  {
+    "title": "How QR Codes Work: Matrix Anatomy, Reed-Solomon Error Correction, and Java Guide",
+    "url": "/how-qr-codes-work-internals-and-java-guide/",
+    "date": "August 24, 2026",
+    "tags": "qr-code, java, programming, data-structures, system-architecture, web-development, cryptography",
+    "excerpt": "Deep technical guide to QR code internals: matrix anatomy, 2D scanning physics, Reed-Solomon error correction algebra, and complete Java ZXing implementation.",
+    "content": "🚀 Looking for an Instant, Free QR Generator? Want to generate permanent, unexpiring QR codes right now for website links, Wi-Fi networks, UPI payments, or text with custom colors? Use our fast client-side tool: Launch the Free Online QR Code Generator. Every day, billions of smartphones scan black-and-white pixel grids printed on restaurant tables, product packaging, boarding passes, subway turnstiles, and payment counters. We point our cameras at these pixelated squares, and in a fraction of a second, a browser opens, a payment executes, or our phone connects to a secure Wi-Fi network.Yet beneath this seamless experience lies a masterclass of optical engineering, two-dimensional geometry, and advanced error-correcting mathematics.In this comprehensive guide, we will unpack how QR codes work under..."
   },
   
   {
