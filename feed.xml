@@ -1,4 +1,467 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://thoughtstopen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thoughtstopen.com/" rel="alternate" type="text/html" /><updated>2026-09-07T16:50:51-06:00</updated><id>https://thoughtstopen.com/feed.xml</id><title type="html">Thoughts To Pen</title><subtitle>Turning caffeine into clean Java, systematic trades, compound growth, and questionable life choices.</subtitle><entry><title type="html">Interactive FIRE Calculator: Find Your Financial Independence Number &amp;amp; Date</title><link href="https://thoughtstopen.com/interactive-fire-calculator/" rel="alternate" type="text/html" title="Interactive FIRE Calculator: Find Your Financial Independence Number &amp;amp; Date" /><published>2026-09-06T10:00:00-06:00</published><updated>2026-09-06T10:00:00-06:00</updated><id>https://thoughtstopen.com/interactive-fire-calculator</id><content type="html" xml:base="https://thoughtstopen.com/interactive-fire-calculator/"><![CDATA[<div style="background: var(--bg-surface, #f8fafc); border-left: 5px solid #D24D57; border-radius: 8px; padding: 16px 20px; margin: 15px 0 30px 0; border: 1px solid var(--border-color, #e2e8f0); border-left-width: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://thoughtstopen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thoughtstopen.com/" rel="alternate" type="text/html" /><updated>2026-09-07T19:08:06-06:00</updated><id>https://thoughtstopen.com/feed.xml</id><title type="html">Thoughts To Pen</title><subtitle>Turning caffeine into clean Java, systematic trades, compound growth, and questionable life choices.</subtitle><entry><title type="html">Indian Stock Brokerage &amp;amp; STT Calculator: Compare Zerodha, Shoonya, Groww &amp;amp; Angel One</title><link href="https://thoughtstopen.com/indian-brokerage-stt-calculator/" rel="alternate" type="text/html" title="Indian Stock Brokerage &amp;amp; STT Calculator: Compare Zerodha, Shoonya, Groww &amp;amp; Angel One" /><published>2026-09-07T14:00:00-06:00</published><updated>2026-09-07T14:00:00-06:00</updated><id>https://thoughtstopen.com/indian-brokerage-stt-calculator</id><content type="html" xml:base="https://thoughtstopen.com/indian-brokerage-stt-calculator/"><![CDATA[<div style="background: var(--bg-surface, #f8fafc); border-left: 5px solid #D24D57; border-radius: 8px; padding: 16px 20px; margin: 15px 0 30px 0; border: 1px solid var(--border-color, #e2e8f0); border-left-width: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+  <p style="margin: 0; font-size: 0.98rem; line-height: 1.6; color: var(--text-color, #334155);">
+    <strong>📘 Looking for the Complete Math Breakdown?</strong> Understand the statutory tax formulas, Budget STT rules on options, and Java calculation engine in our companion guide: <a href="/understanding-indian-stock-market-charges-and-stt/" style="font-weight: 600; text-decoration: underline; color: #D24D57;">Understanding Indian Stock Market Charges: STT, Stamp Duty, GST, and Brokerage Math</a>.
+  </p>
+</div>
+
+<!-- Interactive Brokerage Calculator -->
+<div id="brokerage-calculator-app" style="background: var(--bg-surface, #ffffff); border: 1px solid var(--border-color, #e2e8f0); border-radius: 12px; padding: 24px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); margin-bottom: 35px;">
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 2px solid var(--border-color-light, #f1f5f9); padding-bottom: 16px; margin-bottom: 24px;">
+    <div>
+      <h2 style="margin: 0; color: var(--text-primary, #0f172a); font-size: 1.4rem; font-weight: 700;">Brokerage &amp; STT Calculator</h2>
+      <small style="color: var(--text-muted, #64748b);">Real-time statutory taxes, broker fees, and net P&amp;L estimation</small>
+    </div>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <select id="calc-segment" onchange="calculateBrokerage()" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border-color, #cbd5e1); background: var(--bg-surface, #ffffff); color: var(--text-primary, #0f172a); font-weight: 600; cursor: pointer;">
+        <option value="delivery" selected="">Equity Delivery (Cash)</option>
+        <option value="intraday">Equity Intraday (Cash)</option>
+        <option value="futures">Futures (F&amp;O)</option>
+        <option value="options">Options (F&amp;O Premium)</option>
+      </select>
+
+      <select id="calc-broker" onchange="calculateBrokerage()" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border-color, #cbd5e1); background: var(--bg-surface, #ffffff); color: var(--text-primary, #0f172a); font-weight: 600; cursor: pointer;">
+        <option value="shoonya" selected="">Finvasia Shoonya (₹0 Free)</option>
+        <option value="zerodha">Zerodha (₹0 Free Delivery)</option>
+        <option value="groww">Groww (0.05% or ₹20 max)</option>
+        <option value="angelone">Angel One (₹0 Free Delivery)</option>
+        <option value="upstox">Upstox (2.5% or ₹20 max)</option>
+        <option value="dhan">Dhan (₹0 Free Delivery)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Inputs Grid -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; margin-bottom: 24px;">
+    <div>
+      <label for="calc-buy-price" style="display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: var(--text-secondary, #334155);">Buy Price (₹)</label>
+      <input type="number" id="calc-buy-price" value="1000.00" step="0.05" min="0.05" oninput="calculateBrokerage()" style="width: 100%; padding: 10px 12px; border: 1px solid var(--border-color, #cbd5e1); border-radius: 6px; background: var(--bg-surface, #ffffff); color: var(--text-primary, #0f172a); font-size: 1rem; box-sizing: border-box;" />
+    </div>
+    <div>
+      <label for="calc-sell-price" style="display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: var(--text-secondary, #334155);">Sell Price (₹)</label>
+      <input type="number" id="calc-sell-price" value="1010.00" step="0.05" min="0.05" oninput="calculateBrokerage()" style="width: 100%; padding: 10px 12px; border: 1px solid var(--border-color, #cbd5e1); border-radius: 6px; background: var(--bg-surface, #ffffff); color: var(--text-primary, #0f172a); font-size: 1rem; box-sizing: border-box;" />
+    </div>
+    <div>
+      <label for="calc-qty" style="display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: var(--text-secondary, #334155);">Quantity</label>
+      <input type="number" id="calc-qty" value="100" min="1" step="1" oninput="calculateBrokerage()" style="width: 100%; padding: 10px 12px; border: 1px solid var(--border-color, #cbd5e1); border-radius: 6px; background: var(--bg-surface, #ffffff); color: var(--text-primary, #0f172a); font-size: 1rem; box-sizing: border-box;" />
+    </div>
+  </div>
+
+  <!-- Primary Results Highlight Cards -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+    <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 10px; padding: 16px; text-align: center;">
+      <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #10b981;">Net P&amp;L (Take-Home)</span>
+      <h3 id="res-net-pnl" style="margin: 6px 0 0 0; color: #10b981; font-size: 1.7rem; font-weight: 800;">₹0.00</h3>
+    </div>
+
+    <div style="background: var(--bg-surface-secondary, #f8fafc); border: 1px solid var(--border-color, #e2e8f0); border-radius: 10px; padding: 16px; text-align: center;">
+      <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: var(--text-muted, #64748b);">Gross P&amp;L</span>
+      <h3 id="res-gross-pnl" style="margin: 6px 0 0 0; color: var(--text-primary, #0f172a); font-size: 1.7rem; font-weight: 700;">₹0.00</h3>
+    </div>
+
+    <div style="background: rgba(210, 77, 87, 0.08); border: 1px solid rgba(210, 77, 87, 0.25); border-radius: 10px; padding: 16px; text-align: center;">
+      <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #D24D57;">Total Tax &amp; Charges</span>
+      <h3 id="res-total-tax" style="margin: 6px 0 0 0; color: #D24D57; font-size: 1.7rem; font-weight: 800;">₹0.00</h3>
+    </div>
+
+    <div style="background: var(--bg-surface-secondary, #f8fafc); border: 1px solid var(--border-color, #e2e8f0); border-radius: 10px; padding: 16px; text-align: center;">
+      <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: var(--text-muted, #64748b);">Breakeven Points</span>
+      <h3 id="res-breakeven" style="margin: 6px 0 0 0; color: var(--text-secondary, #334155); font-size: 1.3rem; font-weight: 700;">₹0.00</h3>
+    </div>
+  </div>
+
+  <!-- Shoonya Savings Callout -->
+  <div id="res-shoonya-savings" style="background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; color: #1e40af; font-size: 0.95rem;"></div>
+
+  <!-- Detailed Tax Breakdown Table -->
+  <div style="overflow-x: auto;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left;">
+      <thead>
+        <tr style="background: var(--bg-surface-secondary, #f8fafc); border-bottom: 2px solid var(--border-color, #e2e8f0);">
+          <th style="padding: 10px 14px;">Fee / Statutory Tax Component</th>
+          <th style="padding: 10px 14px; text-align: right;">Amount (₹)</th>
+          <th style="padding: 10px 14px;">Governing Authority / Explanation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid var(--border-color-light, #f1f5f9);">
+          <td style="padding: 10px 14px; font-weight: 600;">Total Trade Turnover</td>
+          <td id="res-turnover" style="padding: 10px 14px; text-align: right; font-weight: 700;">₹0.00</td>
+          <td style="padding: 10px 14px; color: var(--text-muted, #64748b);">Combined Buy &amp; Sell Value</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border-color-light, #f1f5f9);">
+          <td style="padding: 10px 14px; font-weight: 600;">Brokerage Fee</td>
+          <td id="res-brokerage" style="padding: 10px 14px; text-align: right; font-weight: 700;">₹0.00</td>
+          <td id="res-brokerage-desc" style="padding: 10px 14px; color: var(--text-muted, #64748b);">Retained by your stockbroker (₹0 on Shoonya)</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border-color-light, #f1f5f9);">
+          <td style="padding: 10px 14px; font-weight: 600;">Securities Transaction Tax (STT)</td>
+          <td id="res-stt" style="padding: 10px 14px; text-align: right; font-weight: 700;">₹0.00</td>
+          <td style="padding: 10px 14px; color: var(--text-muted, #64748b);">Direct Central Government tax</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border-color-light, #f1f5f9);">
+          <td style="padding: 10px 14px; font-weight: 600;">Exchange Transaction Charges</td>
+          <td id="res-exchange" style="padding: 10px 14px; text-align: right; font-weight: 700;">₹0.00</td>
+          <td style="padding: 10px 14px; color: var(--text-muted, #64748b);">NSE / BSE Infrastructure fee</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border-color-light, #f1f5f9);">
+          <td style="padding: 10px 14px; font-weight: 600;">Goods and Services Tax (18% GST)</td>
+          <td id="res-gst" style="padding: 10px 14px; text-align: right; font-weight: 700;">₹0.00</td>
+          <td style="padding: 10px 14px; color: var(--text-muted, #64748b);">18% on (Brokerage + Exchange + SEBI)</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border-color-light, #f1f5f9);">
+          <td style="padding: 10px 14px; font-weight: 600;">SEBI Turnover Charges</td>
+          <td id="res-sebi" style="padding: 10px 14px; text-align: right; font-weight: 700;">₹0.00</td>
+          <td style="padding: 10px 14px; color: var(--text-muted, #64748b);">₹10 per crore regulatory fee</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border-color-light, #f1f5f9);">
+          <td style="padding: 10px 14px; font-weight: 600;">Stamp Duty</td>
+          <td id="res-stamp" style="padding: 10px 14px; text-align: right; font-weight: 700;">₹0.00</td>
+          <td style="padding: 10px 14px; color: var(--text-muted, #64748b);">Indian Stamp Act (Buy turnover only)</td>
+        </tr>
+        <tr style="background: var(--bg-surface-secondary, #f8fafc); border-top: 2px solid var(--border-color, #e2e8f0); font-weight: 700;">
+          <td style="padding: 12px 14px; color: var(--text-primary, #0f172a);">Total Tax &amp; Charges</td>
+          <td id="res-table-total-tax" style="padding: 12px 14px; text-align: right; color: #D24D57; font-size: 1.05rem;">₹0.00</td>
+          <td style="padding: 12px 14px; color: var(--text-muted, #64748b);">Sum of Brokerage + STT + Exchange + Stamp + SEBI + GST</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Live Side-by-Side Comparison for All Brokers on This Trade -->
+  <div style="margin-top: 28px; border-top: 2px dashed var(--border-color, #e2e8f0); padding-top: 20px;">
+    <h3 style="margin: 0 0 12px 0; font-size: 1.1rem; color: var(--text-primary, #0f172a); font-weight: 700;">
+      ⚡ Compare This Exact Trade Across Top Brokers
+    </h3>
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left;">
+        <thead>
+          <tr style="background: var(--bg-surface-secondary, #f8fafc); border-bottom: 2px solid var(--border-color, #e2e8f0);">
+            <th style="padding: 8px 12px;">Stockbroker</th>
+            <th style="padding: 8px 12px; text-align: right;">Brokerage</th>
+            <th style="padding: 8px 12px; text-align: right;">Total Taxes &amp; Fees</th>
+            <th style="padding: 8px 12px; text-align: right;">Net Take-Home P&amp;L</th>
+          </tr>
+        </thead>
+        <tbody id="broker-comparison-tbody">
+          <!-- Populated live via JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- External Controller Script -->
+<script src="/assets/js/brokerage-calculator.js"></script>
+
+<hr />
+
+<h3 id="features--key-calculations">Features &amp; Key Calculations</h3>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 20px 0 30px 0;">
+  <div style="padding: 18px; background: var(--bg-surface, #ffffff); border: 1px solid var(--border-color, #e2e8f0); border-radius: 8px;">
+    <h4 style="margin: 0 0 6px 0; font-size: 1.05rem; color: var(--text-primary, #0f172a);">🎯 Precise Breakeven Calculation</h4>
+    <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted, #64748b); line-height: 1.5;">Know exactly how many paise or rupees the stock must move in your direction to cover all statutory taxes before taking profit.</p>
+  </div>
+  <div style="padding: 18px; background: var(--bg-surface, #ffffff); border: 1px solid var(--border-color, #e2e8f0); border-radius: 8px;">
+    <h4 style="margin: 0 0 6px 0; font-size: 1.05rem; color: var(--text-primary, #0f172a);">⚖️ Side-by-Side Broker Comparison</h4>
+    <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted, #64748b); line-height: 1.5;">Compare Finvasia Shoonya's ₹0 zero-brokerage model against ₹20-per-order discount brokers across Intraday and F&amp;O segments.</p>
+  </div>
+  <div style="padding: 18px; background: var(--bg-surface, #ffffff); border: 1px solid var(--border-color, #e2e8f0); border-radius: 8px;">
+    <h4 style="margin: 0 0 6px 0; font-size: 1.05rem; color: var(--text-primary, #0f172a);">📜 100% Statutory Alignment</h4>
+    <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted, #64748b); line-height: 1.5;">Updated for the latest Union Budget STT revisions, NSE transaction slabs, SEBI turnover fees, and state stamp duty schedules.</p>
+  </div>
+  <div style="padding: 18px; background: var(--bg-surface, #ffffff); border: 1px solid var(--border-color, #e2e8f0); border-radius: 8px;">
+    <h4 style="margin: 0 0 6px 0; font-size: 1.05rem; color: var(--text-primary, #0f172a);">⚡ Client-Side &amp; Private</h4>
+    <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted, #64748b); line-height: 1.5;">Computations run in your browser. Your trading capital, positions, and order volumes are never recorded or sent to a server.</p>
+  </div>
+</div>
+
+<div style="background: var(--bg-surface, #f8fafc); border: 1px solid var(--border-color, #e2e8f0); border-radius: 8px; padding: 20px; margin-bottom: 30px; text-align: center;">
+  <h3 style="margin: 0 0 8px 0; font-size: 1.15rem; color: var(--text-primary, #0f172a);">Want to Learn How Each Tax is Calculated?</h3>
+  <p style="margin: 0 0 16px 0; font-size: 0.95rem; color: var(--text-muted, #64748b); max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+    Explore our complete technical breakdown explaining STT options premium math, exchange fee tiers, and our open-source Java tax calculation engine.
+  </p>
+  <a href="/understanding-indian-stock-market-charges-and-stt/" style="display: inline-block; padding: 10px 20px; background: #D24D57; color: white; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 0.95rem;">Read the Complete Charges Guide →</a>
+</div>]]></content><author><name></name></author><category term="tools" /><category term="algorithmic-trading" /><category term="personal-finances" /><category term="investing" /><category term="finvasia-shoonya" /><category term="stock-market-india" /><summary type="html"><![CDATA[Free online Indian stock brokerage & STT calculator. Calculate exact STT, GST, SEBI turnover fees, stamp duty, breakeven points, and net P&L across brokers.]]></summary></entry><entry><title type="html">Understanding Indian Stock Market Charges: STT, Stamp Duty, GST, and Brokerage Math</title><link href="https://thoughtstopen.com/understanding-indian-stock-market-charges-and-stt/" rel="alternate" type="text/html" title="Understanding Indian Stock Market Charges: STT, Stamp Duty, GST, and Brokerage Math" /><published>2026-09-07T10:00:00-06:00</published><updated>2026-09-07T10:00:00-06:00</updated><id>https://thoughtstopen.com/understanding-indian-stock-market-charges-and-stt</id><content type="html" xml:base="https://thoughtstopen.com/understanding-indian-stock-market-charges-and-stt/"><![CDATA[<div style="background: var(--bg-surface, #f8fafc); border-left: 5px solid #10b981; border-radius: 8px; padding: 16px 20px; margin: 15px 0 30px 0; border: 1px solid var(--border-color, #e2e8f0); border-left-width: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+  <p style="margin: 0; font-size: 0.98rem; line-height: 1.6; color: var(--text-color, #334155);">
+    <strong>🚀 Try the Interactive Brokerage Calculator:</strong> Want to calculate exact breakeven prices and compare transaction costs across Finvasia Shoonya, Zerodha, Groww, and Angel One? Use our instant tool: <a href="/indian-brokerage-stt-calculator/" style="font-weight: 600; text-decoration: underline; color: #10b981;">Launch the Indian Brokerage &amp; STT Calculator</a>.
+  </p>
+</div>
+
+<p>When you buy and sell shares or derivatives on Indian exchanges (NSE and BSE), your final profit or loss rarely matches the raw price difference between your buy and sell orders.</p>
+
+<p>Every evening, your stockbroker sends an official <strong>Contract Note</strong> itemizing a bewildering array of statutory fees: Securities Transaction Tax (STT), Exchange Transaction Charges, SEBI Turnover Fees, Stamp Duty, and 18% Goods and Services Tax (GST).</p>
+
+<p>For algorithmic traders and high-frequency retail scalpers executing dozens of orders per session, these frictional costs can quietly consume 20% to 50% of gross trading profits.</p>
+
+<p>In this deep-dive guide, we unpack the exact mathematical formulas behind Indian stock market charges across every segment, explore the real-world difference between traditional discount brokers and true zero-brokerage models, and implement a complete, production-grade calculation engine in Java.</p>
+
+<hr />
+
+<h2 id="the-complete-indian-stock-market-charges-flowchart">The Complete Indian Stock Market Charges Flowchart</h2>
+
+<p>When you execute a trade, charges are levied by five distinct governing and operational bodies:</p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5zdWJncmFwaCBFeGVjdXRpb25bXCI8Yj5UcmFkZSBFeGVjdXRpb24gb24gRXhjaGFuZ2U8L2I-XCJdXG5UcmFkZVtcIjxiPkV4ZWN1dGVkIEJ1eSAmIFNlbGwgT3JkZXJzPC9iPjxici8-TlNFIC8gQlNFIFRyYWRlIFZhbHVlXCJdXG5lbmRcbiUlLVxuc3ViZ3JhcGggQnJva2VyX0ZlZVtcIjxiPjEuIEJyb2tlciBSZXZlbnVlPC9iPlwiXVxuQnJva2VyYWdlW1wiPGI-QnJva2VyYWdlIEZlZTwvYj48YnIvPuKCuTAgKFNob29ueWEpIHZzIOKCuTIwL29yZGVyIChaZXJvZGhhL0dyb3d3KVwiXVxuZW5kXG4lJS1cbnN1YmdyYXBoIEdvdnRfVGF4ZXNbXCI8Yj4yLiBDZW50cmFsICYgU3RhdGUgR292ZXJubWVudCBUYXhlczwvYj5cIl1cblNUVFtcIjxiPlNUVCAvIENUVDwvYj48YnIvPlNlY3VyaXRpZXMgVHJhbnNhY3Rpb24gVGF4IChNaW5pc3RyeSBvZiBGaW5hbmNlKVwiXVxuU3RhbXBbXCI8Yj5TdGFtcCBEdXR5PC9iPjxici8-U3RhdGUvQ2VudHJhbCBTdGFtcCBBY3QgKEJ1eSBTaWRlIE9ubHkpXCJdXG5HU1RbXCI8Yj4xOCUgR1NUPC9iPjxici8-TGV2aWVkIG9uIEJyb2tlcmFnZSArIEV4Y2hhbmdlICsgU0VCSSBmZWVzXCJdXG5lbmRcbiUlLVxuc3ViZ3JhcGggUmVndWxhdG9yeV9GZWVzW1wiPGI-My4gRXhjaGFuZ2UgJiBSZWd1bGF0b3IgRmVlczwvYj5cIl1cbkV4Y2hhbmdlW1wiPGI-RXhjaGFuZ2UgVHJhbnNhY3Rpb24gQ2hhcmdlczwvYj48YnIvPk5TRSAvIEJTRSBJbmZyYXN0cnVjdHVyZSBGZWVzXCJdXG5TRUJJW1wiPGI-U0VCSSBUdXJub3ZlciBGZWU8L2I-PGJyLz7igrkxMCBwZXIgY3JvcmUgKFJlZ3VsYXRvcnkgT3ZlcnNpZ2h0KVwiXVxuZW5kXG4lJS1cblRyYWRlIC0tPiBCcm9rZXJhZ2VcblRyYWRlIC0tPiBTVFRcblRyYWRlIC0tPiBTdGFtcFxuVHJhZGUgLS0-IEV4Y2hhbmdlXG5UcmFkZSAtLT4gU0VCSVxuQnJva2VyYWdlIC0tPiBHU1RcbkV4Y2hhbmdlIC0tPiBHU1RcblNFQkkgLS0-IEdTVCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19" /></p>
+
+<p>Let us examine each component in detail.</p>
+
+<hr />
+
+<h2 id="1-securities-transaction-tax-stt--ctt">1. Securities Transaction Tax (STT / CTT)</h2>
+
+<p>The <strong>Securities Transaction Tax (STT)</strong> was introduced in the 2004 Union Budget to curb tax evasion on capital gains. It is direct tax collected automatically by the broker and remitted directly to the Central Government of India.</p>
+
+<p>STT rates vary dramatically depending on whether you hold shares for delivery, square off intraday, or trade derivatives:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Segment</th>
+      <th style="text-align: left">Rate</th>
+      <th style="text-align: left">Applied On</th>
+      <th style="text-align: left">Buy or Sell Side</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">**Equity Delivery (Cash)**</td>
+      <td style="text-align: left">**0.10% (100 bps)**</td>
+      <td style="text-align: left">Total Turnover (Price × Qty)</td>
+      <td style="text-align: left">**Both Buy &amp; Sell**</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">**Equity Intraday (Cash)**</td>
+      <td style="text-align: left">**0.025% (25 bps)**</td>
+      <td style="text-align: left">Total Turnover</td>
+      <td style="text-align: left">**Sell Side Only**</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">**Futures (Equity &amp; Index)**</td>
+      <td style="text-align: left">**0.02% (20 bps)**</td>
+      <td style="text-align: left">Total Contract Turnover</td>
+      <td style="text-align: left">**Sell Side Only**</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">**Options (Equity &amp; Index)**</td>
+      <td style="text-align: left">**0.10% (100 bps)**</td>
+      <td style="text-align: left">**Premium Turnover** (Premium × Qty)</td>
+      <td style="text-align: left">**Sell Side Only**</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>[!IMPORTANT]
+<strong>Options STT Clarification</strong>: In options trading, STT is calculated <strong>strictly on the traded option premium</strong>, NOT on the underlying strike price. For example, selling 1 lot (75 qty) of Nifty Call options at ₹100 premium generates a premium turnover of 75 × ₹100 = ₹7,500. The STT at 0.1% is ₹7.50.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="2-exchange-transaction-charges">2. Exchange Transaction Charges</h2>
+
+<p>Both the National Stock Exchange (NSE) and Bombay Stock Exchange (BSE) charge an infrastructure access fee for routing orders through their matching engines:</p>
+
+<ul>
+  <li><strong>NSE Cash (Equity)</strong>: ~0.00297% (₹2.97 per lakh of turnover on both Buy and Sell).</li>
+  <li><strong>NSE Equity Futures</strong>: ~0.00173% (₹1.73 per lakh of turnover).</li>
+  <li><strong>NSE Equity Options</strong>: ~0.03503% (calculated on the option premium turnover).</li>
+</ul>
+
+<hr />
+
+<h2 id="3-sebi-turnover-charges">3. SEBI Turnover Charges</h2>
+
+<p>The Securities and Exchange Board of India (SEBI) imposes a uniform regulatory fee across all exchanges:</p>
+<ul>
+  <li><strong>Rate</strong>: ₹10 per crore (₹10 / 10,000,000 = 0.0001%).</li>
+  <li><strong>Applicable To</strong>: All segments, on both Buy and Sell turnover.</li>
+</ul>
+
+<hr />
+
+<h2 id="4-stamp-duty">4. Stamp Duty</h2>
+
+<p>Under the Indian Stamp Act, stamp duty is collected by the clearing corporation and disbursed to the trader’s home state government. Stamp duty is levied <strong>exclusively on the BUY turnover</strong>:</p>
+
+<ul>
+  <li><strong>Equity Delivery</strong>: 0.015% (₹1,500 per crore).</li>
+  <li><strong>Equity Intraday</strong>: 0.003% (₹300 per crore).</li>
+  <li><strong>Futures</strong>: 0.002% (₹200 per crore).</li>
+  <li><strong>Options</strong>: 0.003% (₹300 per crore on premium).</li>
+</ul>
+
+<hr />
+
+<h2 id="5-goods-and-services-tax-gst">5. Goods and Services Tax (GST)</h2>
+
+<p>GST in India is levied at <strong>18%</strong>. A common beginner misconception is that GST is charged on your stock turnover or capital gains. It is not.</p>
+
+<p>GST is levied strictly on <strong>services provided</strong>:</p>
+
+<div style="background: var(--bg-surface, #f8fafc); border: 1px solid var(--border-color, #e2e8f0); border-radius: 8px; padding: 14px 20px; font-size: 1.05rem; font-weight: 600; text-align: center; margin: 16px 0; color: var(--text-primary, #0f172a);">
+  GST = 18% &times; (Brokerage + Exchange Transaction Charges + SEBI Turnover Charges)
+</div>
+
+<p>Notice that STT and Stamp Duty are government taxes, so <strong>GST is not levied on STT or Stamp Duty</strong>.</p>
+
+<hr />
+
+<h2 id="discount-brokers-vs-true-zero-brokerage-the-annual-impact">Discount Brokers vs. True Zero-Brokerage: The Annual Impact</h2>
+
+<p>Most modern discount brokers (Zerodha, Groww, Angel One) charge:</p>
+<ul>
+  <li>₹20 or 0.03% (whichever is lower) for Intraday.</li>
+  <li>Flat ₹20 per executed order for Futures &amp; Options.</li>
+</ul>
+
+<p>In contrast, zero-brokerage brokers like <strong>Finvasia Shoonya</strong> charge <strong>₹0 brokerage</strong> across Cash Delivery, Intraday, Futures, and Options.</p>
+
+<h3 id="concrete-example-5-options-trades-per-day">Concrete Example: 5 Options Trades Per Day</h3>
+
+<p>Assume an active derivative trader executes 5 round-trip option trades (10 executed orders: 5 buys, 5 sells) daily over 250 trading sessions per year:</p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IExSXG5zdWJncmFwaCBBbm51YWxfQ29zdF9Db21wYXJpc29uW1wiPGI-QW5udWFsIEJyb2tlcmFnZSBQYWlkICg1IFJvdW5kIFRyaXBzIC8gRGF5KTwvYj5cIl1cbmRpcmVjdGlvbiBUQlxuQjFbXCI8Yj5aZXJvZGhhIC8gR3Jvd3cgLyBBbmdlbCBPbmU8L2I-PGJyLz4xMCBvcmRlcnMvZGF5IMOXIOKCuTIwID0g4oK5MjAwL2RheTxici8-MjUwIGRheXMgw5cg4oK5MjAwID0gPGI-4oK5NTAsMDAwIEJyb2tlcmFnZTwvYj48YnIvPisgMTglIEdTVCA9IDxiPuKCuTU5LDAwMCBUb3RhbCBPdXQtb2YtUG9ja2V0PC9iPlwiXVxuQjJbXCI8Yj5GaW52YXNpYSBTaG9vbnlhPC9iPjxici8-MTAgb3JkZXJzL2RheSDDlyDigrkwID0g4oK5MC9kYXk8YnIvPjI1MCBkYXlzIMOXIOKCuTAgPSA8Yj7igrkwIEJyb2tlcmFnZTwvYj48YnIvPisgMTglIEdTVCBvbiDigrkwID0gPGI-4oK5MCBUb3RhbCBPdXQtb2YtUG9ja2V0PC9iPlwiXVxuZW5kXG5CMSAtLiBcIkRpcmVjdCBBbm51YWwgU2F2aW5nc1wiIC4tPiBCMiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19" /></p>
+
+<p>By eliminating brokerage fees, an algorithmic options trader saves <strong>₹59,000 each year</strong> in non-statutory overhead, regardless of whether their trading strategies finish positive or negative.</p>
+
+<hr />
+
+<h2 id="production-java-implementation-brokerageenginejava">Production Java Implementation: <code class="language-plaintext highlighter-rouge">BrokerageEngine.java</code></h2>
+
+<p>Here is a clean, runnable Java class that calculates the exact statutory tax breakdown, gross profit, net profit, and breakeven point per share:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.thoughtstopen.algo.tax</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.math.BigDecimal</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.math.RoundingMode</span><span class="o">;</span>
+
+<span class="cm">/**
+ * Production-ready Indian Stock Market Transaction Tax &amp; Brokerage Engine.
+ */</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">BrokerageEngine</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">enum</span> <span class="nc">Segment</span> <span class="o">{</span>
+        <span class="no">DELIVERY</span><span class="o">,</span> <span class="no">INTRADAY</span><span class="o">,</span> <span class="no">FUTURES</span><span class="o">,</span> <span class="no">OPTIONS</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">enum</span> <span class="nc">Broker</span> <span class="o">{</span>
+        <span class="no">SHOONYA_ZERO</span><span class="o">,</span> <span class="no">ZERODHA_DISCOUNT</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">record</span> <span class="nf">TaxBreakdown</span><span class="o">(</span>
+            <span class="kt">double</span> <span class="n">buyTurnover</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">sellTurnover</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">totalTurnover</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">brokerage</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">stt</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">exchangeCharges</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">sebiCharges</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">stampDuty</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">gst</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">totalTaxes</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">grossPnl</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">netPnl</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">breakevenPerShare</span>
+    <span class="o">)</span> <span class="o">{}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">TaxBreakdown</span> <span class="nf">calculate</span><span class="o">(</span>
+            <span class="nc">Segment</span> <span class="n">segment</span><span class="o">,</span>
+            <span class="nc">Broker</span> <span class="n">broker</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">buyPrice</span><span class="o">,</span>
+            <span class="kt">double</span> <span class="n">sellPrice</span><span class="o">,</span>
+            <span class="kt">int</span> <span class="n">quantity</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="kt">double</span> <span class="n">buyTurnover</span> <span class="o">=</span> <span class="n">buyPrice</span> <span class="o">*</span> <span class="n">quantity</span><span class="o">;</span>
+        <span class="kt">double</span> <span class="n">sellTurnover</span> <span class="o">=</span> <span class="n">sellPrice</span> <span class="o">*</span> <span class="n">quantity</span><span class="o">;</span>
+        <span class="kt">double</span> <span class="n">totalTurnover</span> <span class="o">=</span> <span class="n">buyTurnover</span> <span class="o">+</span> <span class="n">sellTurnover</span><span class="o">;</span>
+        <span class="kt">double</span> <span class="n">grossPnl</span> <span class="o">=</span> <span class="n">sellTurnover</span> <span class="o">-</span> <span class="n">buyTurnover</span><span class="o">;</span>
+
+        <span class="c1">// 1. Brokerage</span>
+        <span class="kt">double</span> <span class="n">brokerage</span> <span class="o">=</span> <span class="mf">0.0</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">broker</span> <span class="o">==</span> <span class="nc">Broker</span><span class="o">.</span><span class="na">ZERODHA_DISCOUNT</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">segment</span> <span class="o">==</span> <span class="nc">Segment</span><span class="o">.</span><span class="na">INTRADAY</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">brokerage</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="mf">20.0</span><span class="o">,</span> <span class="n">buyTurnover</span> <span class="o">*</span> <span class="mf">0.0003</span><span class="o">)</span> <span class="o">+</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="mf">20.0</span><span class="o">,</span> <span class="n">sellTurnover</span> <span class="o">*</span> <span class="mf">0.0003</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">segment</span> <span class="o">==</span> <span class="nc">Segment</span><span class="o">.</span><span class="na">FUTURES</span> <span class="o">||</span> <span class="n">segment</span> <span class="o">==</span> <span class="nc">Segment</span><span class="o">.</span><span class="na">OPTIONS</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">brokerage</span> <span class="o">=</span> <span class="mf">40.0</span><span class="o">;</span> <span class="c1">// ₹20 buy + ₹20 sell</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="c1">// Shoonya is 0.0 across all segments</span>
+
+        <span class="c1">// 2. STT</span>
+        <span class="kt">double</span> <span class="n">stt</span> <span class="o">=</span> <span class="k">switch</span> <span class="o">(</span><span class="n">segment</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">case</span> <span class="no">DELIVERY</span> <span class="o">-&gt;</span> <span class="n">totalTurnover</span> <span class="o">*</span> <span class="mf">0.001</span><span class="o">;</span> <span class="c1">// 0.1% buy &amp; sell</span>
+            <span class="k">case</span> <span class="no">INTRADAY</span> <span class="o">-&gt;</span> <span class="n">sellTurnover</span> <span class="o">*</span> <span class="mf">0.00025</span><span class="o">;</span> <span class="c1">// 0.025% sell</span>
+            <span class="k">case</span> <span class="no">FUTURES</span> <span class="o">-&gt;</span> <span class="n">sellTurnover</span> <span class="o">*</span> <span class="mf">0.0002</span><span class="o">;</span>  <span class="c1">// 0.02% sell</span>
+            <span class="k">case</span> <span class="no">OPTIONS</span> <span class="o">-&gt;</span> <span class="n">sellTurnover</span> <span class="o">*</span> <span class="mf">0.001</span><span class="o">;</span>   <span class="c1">// 0.1% on premium sell</span>
+        <span class="o">};</span>
+
+        <span class="c1">// 3. Exchange Charges (NSE)</span>
+        <span class="kt">double</span> <span class="n">excRate</span> <span class="o">=</span> <span class="k">switch</span> <span class="o">(</span><span class="n">segment</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">case</span> <span class="no">DELIVERY</span><span class="o">,</span> <span class="no">INTRADAY</span> <span class="o">-&gt;</span> <span class="mf">0.0000297</span><span class="o">;</span>
+            <span class="k">case</span> <span class="no">FUTURES</span> <span class="o">-&gt;</span> <span class="mf">0.0000173</span><span class="o">;</span>
+            <span class="k">case</span> <span class="no">OPTIONS</span> <span class="o">-&gt;</span> <span class="mf">0.0003503</span><span class="o">;</span>
+        <span class="o">};</span>
+        <span class="kt">double</span> <span class="n">exchangeCharges</span> <span class="o">=</span> <span class="n">totalTurnover</span> <span class="o">*</span> <span class="n">excRate</span><span class="o">;</span>
+
+        <span class="c1">// 4. SEBI Turnover Charges (₹10 per crore)</span>
+        <span class="kt">double</span> <span class="n">sebiCharges</span> <span class="o">=</span> <span class="n">totalTurnover</span> <span class="o">*</span> <span class="mf">0.000001</span><span class="o">;</span>
+
+        <span class="c1">// 5. Stamp Duty (Buy side only)</span>
+        <span class="kt">double</span> <span class="n">stampRate</span> <span class="o">=</span> <span class="k">switch</span> <span class="o">(</span><span class="n">segment</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">case</span> <span class="no">DELIVERY</span> <span class="o">-&gt;</span> <span class="mf">0.00015</span><span class="o">;</span>
+            <span class="k">case</span> <span class="no">INTRADAY</span><span class="o">,</span> <span class="no">OPTIONS</span> <span class="o">-&gt;</span> <span class="mf">0.00003</span><span class="o">;</span>
+            <span class="k">case</span> <span class="no">FUTURES</span> <span class="o">-&gt;</span> <span class="mf">0.00002</span><span class="o">;</span>
+        <span class="o">};</span>
+        <span class="kt">double</span> <span class="n">stampDuty</span> <span class="o">=</span> <span class="n">buyTurnover</span> <span class="o">*</span> <span class="n">stampRate</span><span class="o">;</span>
+
+        <span class="c1">// 6. GST (18% on Brokerage + Exchange + SEBI)</span>
+        <span class="kt">double</span> <span class="n">gst</span> <span class="o">=</span> <span class="o">(</span><span class="n">brokerage</span> <span class="o">+</span> <span class="n">exchangeCharges</span> <span class="o">+</span> <span class="n">sebiCharges</span><span class="o">)</span> <span class="o">*</span> <span class="mf">0.18</span><span class="o">;</span>
+
+        <span class="kt">double</span> <span class="n">totalTaxes</span> <span class="o">=</span> <span class="n">brokerage</span> <span class="o">+</span> <span class="n">stt</span> <span class="o">+</span> <span class="n">exchangeCharges</span> <span class="o">+</span> <span class="n">sebiCharges</span> <span class="o">+</span> <span class="n">stampDuty</span> <span class="o">+</span> <span class="n">gst</span><span class="o">;</span>
+        <span class="kt">double</span> <span class="n">netPnl</span> <span class="o">=</span> <span class="n">grossPnl</span> <span class="o">-</span> <span class="n">totalTaxes</span><span class="o">;</span>
+        <span class="kt">double</span> <span class="n">breakevenPerShare</span> <span class="o">=</span> <span class="n">totalTaxes</span> <span class="o">/</span> <span class="n">quantity</span><span class="o">;</span>
+
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">TaxBreakdown</span><span class="o">(</span>
+                <span class="n">round</span><span class="o">(</span><span class="n">buyTurnover</span><span class="o">),</span> <span class="n">round</span><span class="o">(</span><span class="n">sellTurnover</span><span class="o">),</span> <span class="n">round</span><span class="o">(</span><span class="n">totalTurnover</span><span class="o">),</span>
+                <span class="n">round</span><span class="o">(</span><span class="n">brokerage</span><span class="o">),</span> <span class="n">round</span><span class="o">(</span><span class="n">stt</span><span class="o">),</span> <span class="n">round</span><span class="o">(</span><span class="n">exchangeCharges</span><span class="o">),</span>
+                <span class="n">round</span><span class="o">(</span><span class="n">sebiCharges</span><span class="o">),</span> <span class="n">round</span><span class="o">(</span><span class="n">stampDuty</span><span class="o">),</span> <span class="n">round</span><span class="o">(</span><span class="n">gst</span><span class="o">),</span>
+                <span class="n">round</span><span class="o">(</span><span class="n">totalTaxes</span><span class="o">),</span> <span class="n">round</span><span class="o">(</span><span class="n">grossPnl</span><span class="o">),</span> <span class="n">round</span><span class="o">(</span><span class="n">netPnl</span><span class="o">),</span>
+                <span class="n">round</span><span class="o">(</span><span class="n">breakevenPerShare</span><span class="o">)</span>
+        <span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">round</span><span class="o">(</span><span class="kt">double</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nc">BigDecimal</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">val</span><span class="o">).</span><span class="na">setScale</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="nc">RoundingMode</span><span class="o">.</span><span class="na">HALF_UP</span><span class="o">).</span><span class="na">doubleValue</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Example: Intraday trade of 100 shares of Reliance (Buy 2900, Sell 2920)</span>
+        <span class="nc">TaxBreakdown</span> <span class="n">shoonya</span> <span class="o">=</span> <span class="n">calculate</span><span class="o">(</span><span class="nc">Segment</span><span class="o">.</span><span class="na">INTRADAY</span><span class="o">,</span> <span class="nc">Broker</span><span class="o">.</span><span class="na">SHOONYA_ZERO</span><span class="o">,</span> <span class="mi">2900</span><span class="o">,</span> <span class="mi">2920</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
+        <span class="nc">TaxBreakdown</span> <span class="n">zerodha</span> <span class="o">=</span> <span class="n">calculate</span><span class="o">(</span><span class="nc">Segment</span><span class="o">.</span><span class="na">INTRADAY</span><span class="o">,</span> <span class="nc">Broker</span><span class="o">.</span><span class="na">ZERODHA_DISCOUNT</span><span class="o">,</span> <span class="mi">2900</span><span class="o">,</span> <span class="mi">2920</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"=== Reliance Intraday Trade (100 Shares) ==="</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Gross PnL       : ₹"</span> <span class="o">+</span> <span class="n">shoonya</span><span class="o">.</span><span class="na">grossPnl</span><span class="o">());</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Shoonya Net PnL : ₹"</span> <span class="o">+</span> <span class="n">shoonya</span><span class="o">.</span><span class="na">netPnl</span><span class="o">()</span> <span class="o">+</span> <span class="s">" (Taxes: ₹"</span> <span class="o">+</span> <span class="n">shoonya</span><span class="o">.</span><span class="na">totalTaxes</span><span class="o">()</span> <span class="o">+</span> <span class="s">")"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Zerodha Net PnL : ₹"</span> <span class="o">+</span> <span class="n">zerodha</span><span class="o">.</span><span class="na">netPnl</span><span class="o">()</span> <span class="o">+</span> <span class="s">" (Taxes: ₹"</span> <span class="o">+</span> <span class="n">zerodha</span><span class="o">.</span><span class="na">totalTaxes</span><span class="o">()</span> <span class="o">+</span> <span class="s">")"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Shoonya Advantage: ₹"</span> <span class="o">+</span> <span class="o">(</span><span class="n">shoonya</span><span class="o">.</span><span class="na">netPnl</span><span class="o">()</span> <span class="o">-</span> <span class="n">zerodha</span><span class="o">.</span><span class="na">netPnl</span><span class="o">())</span> <span class="o">+</span> <span class="s">" saved!"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="conclusion--actionable-takeaways">Conclusion &amp; Actionable Takeaways</h2>
+
+<p>Understanding your cost breakdown is essential for consistent trading profitability:</p>
+<ol>
+  <li><strong>Always calculate your breakeven spread</strong>: High-frequency trades with narrow target margins (e.g. 0.20% gain) can easily be wiped out by delivery STT or flat order charges.</li>
+  <li><strong>Account for GST on services</strong>: Every rupee in broker and exchange fees incurs an additional 18% tax.</li>
+  <li><strong>Audit your contract notes monthly</strong>: Ensure your broker accurately credits STT and exchange fee adjustments.</li>
+</ol>
+
+<p>To run real-time simulations for your own portfolio and trade setups, visit our free <a href="/indian-brokerage-stt-calculator/">Indian Stock Brokerage &amp; STT Calculator</a>.</p>]]></content><author><name></name></author><category term="algorithmic-trading" /><category term="personal-finances" /><category term="investing" /><category term="java" /><category term="finvasia-shoonya" /><category term="stock-market-india" /><summary type="html"><![CDATA[Complete guide to Indian stock market transaction charges: STT rates, exchange transaction fees, SEBI turnover fees, stamp duty, GST, and zero-brokerage math.]]></summary></entry><entry><title type="html">Interactive FIRE Calculator: Find Your Financial Independence Number &amp;amp; Date</title><link href="https://thoughtstopen.com/interactive-fire-calculator/" rel="alternate" type="text/html" title="Interactive FIRE Calculator: Find Your Financial Independence Number &amp;amp; Date" /><published>2026-09-06T10:00:00-06:00</published><updated>2026-09-06T10:00:00-06:00</updated><id>https://thoughtstopen.com/interactive-fire-calculator</id><content type="html" xml:base="https://thoughtstopen.com/interactive-fire-calculator/"><![CDATA[<div style="background: var(--bg-surface, #f8fafc); border-left: 5px solid #D24D57; border-radius: 8px; padding: 16px 20px; margin: 15px 0 30px 0; border: 1px solid var(--border-color, #e2e8f0); border-left-width: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
   <p style="margin: 0; font-size: 0.98rem; line-height: 1.6; color: var(--text-color, #334155);">
     <strong>📘 Prerequisite Guide:</strong> Looking for the mathematical theory behind the 4% rule, the Trinity Study, savings rate dynamics, and Lean vs. Fat FIRE? Read the prerequisite guide: <a href="/what-is-fire-financial-independence-retire-early/" style="font-weight: 600; text-decoration: underline; color: #D24D57;">The Complete Guide to FIRE: Financial Independence, Retire Early Explained</a>.
   </p>
@@ -68,7 +531,7 @@
     
     <div style="background: rgba(210, 77, 87, 0.07); border: 1px solid rgba(210, 77, 87, 0.25); border-radius: 10px; padding: 16px; text-align: center;">
       <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #D24D57;">Target FIRE Number</span>
-      <div id="res-fire-number" style="font-size: 1.8rem; font-weight: 800; color: #D24D57; margin-top: 4px;">$1,200,000</div>
+      <div id="res-fire-number" style="font-size: 1.8rem; font-weight: 800; color: #D24D57; margin-top: 4px;"><span>&#36;</span>1,200,000</div>
       <small id="res-multiplier" style="color: var(--text-color-muted, #64748b); font-size: 0.8rem;">(25x Annual Expenses)</small>
     </div>
 
@@ -101,17 +564,17 @@
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 24px;">
     <div style="border: 1px solid var(--border-color, #e2e8f0); border-radius: 8px; padding: 12px 14px; background: var(--bg-surface, #ffffff);">
       <strong style="color: var(--text-color, #0f172a); font-size: 0.9rem;">Lean FIRE (75% budget)</strong>
-      <div id="res-lean-fire" style="font-weight: 700; color: #10b981; font-size: 1.15rem; margin-top: 2px;">$900,000</div>
+      <div id="res-lean-fire" style="font-weight: 700; color: #10b981; font-size: 1.15rem; margin-top: 2px;"><span>&#36;</span>900,000</div>
       <small id="res-lean-years" style="color: var(--text-color-muted, #64748b); font-size: 0.78rem;">~14.5 yrs to reach</small>
     </div>
     <div style="border: 1px solid #D24D57; border-radius: 8px; padding: 12px 14px; background: rgba(210, 77, 87, 0.03);">
       <strong style="color: #D24D57; font-size: 0.9rem;">Standard FIRE (100% budget)</strong>
-      <div id="res-std-fire" style="font-weight: 700; color: #D24D57; font-size: 1.15rem; margin-top: 2px;">$1,200,000</div>
+      <div id="res-std-fire" style="font-weight: 700; color: #D24D57; font-size: 1.15rem; margin-top: 2px;"><span>&#36;</span>1,200,000</div>
       <small id="res-std-years" style="color: var(--text-color-muted, #64748b); font-size: 0.78rem;">~17.1 yrs to reach</small>
     </div>
     <div style="border: 1px solid var(--border-color, #e2e8f0); border-radius: 8px; padding: 12px 14px; background: var(--bg-surface, #ffffff);">
       <strong style="color: var(--text-color, #0f172a); font-size: 0.9rem;">Fat FIRE (150% budget)</strong>
-      <div id="res-fat-fire" style="font-weight: 700; color: #6366f1; font-size: 1.15rem; margin-top: 2px;">$1,800,000</div>
+      <div id="res-fat-fire" style="font-weight: 700; color: #6366f1; font-size: 1.15rem; margin-top: 2px;"><span>&#36;</span>1,800,000</div>
       <small id="res-fat-years" style="color: var(--text-color-muted, #64748b); font-size: 0.78rem;">~21.2 yrs to reach</small>
     </div>
   </div>
@@ -3172,1283 +3635,4 @@ END IF
   <li><strong>Need an unexpiring QR code right now?</strong> Head over to our <a href="/free-qr-code-generator-online-tool/">Free Online QR Code Generator</a> to create client-side codes with custom colors and instant PNG export.</li>
   <li><strong>Have questions or need assistance?</strong> Connect with our team through the <a href="/contact/">Contact Us page</a>.</li>
   <li><strong>Find this breakdown helpful?</strong> Consider supporting independent technical writing via the <a href="/about/">Buy Me a Coffee link on our About page</a>! ☕</li>
-</ul>]]></content><author><name></name></author><category term="qr-code" /><category term="java" /><category term="programming" /><category term="data-structures" /><category term="system-architecture" /><category term="web-development" /><category term="cryptography" /><summary type="html"><![CDATA[Deep technical guide to QR code internals: matrix anatomy, 2D scanning physics, Reed-Solomon error correction algebra, and complete Java ZXing implementation.]]></summary></entry><entry><title type="html">Complete Guide to Shoonya (Finvasia) API Authentication in Java: OAuth 2.0, WebSocket Streaming &amp;amp; Network Fixes</title><link href="https://thoughtstopen.com/shoonya-java-api-authentication-guide/" rel="alternate" type="text/html" title="Complete Guide to Shoonya (Finvasia) API Authentication in Java: OAuth 2.0, WebSocket Streaming &amp;amp; Network Fixes" /><published>2026-08-24T00:00:00-06:00</published><updated>2026-08-24T00:00:00-06:00</updated><id>https://thoughtstopen.com/shoonya-java-api-authentication-guide</id><content type="html" xml:base="https://thoughtstopen.com/shoonya-java-api-authentication-guide/"><![CDATA[<p><img src="/assets/img/posts/shoonya-api-java-authentication.png" alt="Shoonya Java API Authentication" />
-<small><em>(Comprehensive Shoonya Finvasia Java API Architecture and Authentication Flow)</em></small></p>
-
-<h2 id="introduction-algorithmic-trading-with-shoonya-finvasia-in-india">Introduction: Algorithmic Trading with Shoonya (Finvasia) in India</h2>
-
-<p>Algorithmic trading across Indian stock exchanges has evolved rapidly over recent years. Quantitative analysts, retail developers, and finance enthusiasts are increasingly transitioning from manual clicking to building programmatic execution engines that interface directly with the <strong>National Stock Exchange (NSE)</strong>, <strong>Bombay Stock Exchange (BSE)</strong>, and <strong>Multi Commodity Exchange (MCX)</strong>.</p>
-
-<p>Among Indian discount brokers, <strong>Shoonya by Finvasia</strong> holds a unique appeal: it offers a <strong>true zero-brokerage model across all trading segments</strong>—including Equity Delivery, Equity Intraday, Futures &amp; Options (F&amp;O), and Commodities—paired with <strong>100% free API access</strong>.</p>
-
-<p>However, integrating Java with Shoonya’s order management system (OMS) frequently catches both new and experienced developers off guard. Shifts mandated by the <strong>Securities and Exchange Board of India (SEBI)</strong> regarding strict Two-Factor Authentication (2FA), combined with Finvasia’s architectural upgrades, have permanently retired legacy authentication methods.</p>
-
-<p>If you have encountered confusing <code class="language-plaintext highlighter-rouge">404 Not Found</code>, <code class="language-plaintext highlighter-rouge">502 Bad Gateway</code>, <code class="language-plaintext highlighter-rouge">"Access Restricted for API Only Users"</code>, or immediate WebSocket drops with <code class="language-plaintext highlighter-rouge">code=1008 (Policy Violation)</code>, you are not alone. These issues stem from outdated documentation and subtle protocol nuances.</p>
-
-<p>In this comprehensive guide, we will break down the <strong>currently supported, official Shoonya authentication workflow</strong> in Java (JDK 11, 17, and 21+). We will cover:</p>
-
-<ol>
-  <li><strong>The Modern API Architecture</strong>: Which endpoints are active and why legacy routes fail.</li>
-  <li><strong>Minimal Static Credentials</strong>: The exact 3 properties required and why application code no longer needs to store passwords or TOTP secret seeds.</li>
-  <li><strong>Resolving IPv6 Conflicts</strong>: Diagnosing and permanently fixing <code class="language-plaintext highlighter-rouge">INVALID_IP</code> and <code class="language-plaintext highlighter-rouge">"Access Restricted"</code> rejections caused by Windows dual-stack networking.</li>
-  <li><strong>The Official 3-Step OAuth 2.0 <code class="language-plaintext highlighter-rouge">GenAcsTok</code> Flow</strong>: Generating authorization codes, computing SHA-256 checksums, and performing HTTP token exchanges.</li>
-  <li><strong>Live WebSocket Market Data Streaming</strong>: Connecting to <code class="language-plaintext highlighter-rouge">NorenWSAPI</code>, sending the critical <code class="language-plaintext highlighter-rouge">"accesstoken"</code> handshake packet, and avoiding the <code class="language-plaintext highlighter-rouge">NorenWSTP</code> silent trap.</li>
-  <li><strong>End-to-End Java Bootstrap Code</strong>: A complete, self-contained Java application built from scratch using standard Java libraries.</li>
-  <li><strong>Troubleshooting Matrix &amp; Trader Checklist</strong>: Rapid solutions for common production errors.</li>
-</ol>
-
-<hr />
-
-<h2 id="1-the-modern-api-architecture-active-vs-retired-endpoints">1. The Modern API Architecture: Active vs. Retired Endpoints</h2>
-
-<p>Shoonya’s backend engine operates on the <strong>Noren OMS gateway</strong>. Historically, brokers permitted clients to send automated HTTP POST requests with a raw password and an OTP directly to single-stage endpoints such as <code class="language-plaintext highlighter-rouge">/QuickAuth</code>. Under current security standards, <strong>direct password-based authentication endpoints have been completely decommissioned for retail API users</strong>.</p>
-
-<p>Instead, Shoonya has transitioned to an <strong>OAuth 2.0 Authorization Code model (<code class="language-plaintext highlighter-rouge">GenAcsTok</code>)</strong>. The trader authenticates once per day inside Shoonya’s official web browser portal, and the resulting authorization code is exchanged programmatically by your Java engine for a 24-hour master session token.</p>
-
-<p>Here is the current operational status of Shoonya’s primary endpoints:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Endpoint / Method</th>
-      <th style="text-align: left">URL Path</th>
-      <th style="text-align: left">Status</th>
-      <th style="text-align: left">Purpose &amp; Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">**Legacy QuickAuth**</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/NorenWST/QuickAuth</code></td>
-      <td style="text-align: left">❌ **404 Not Found**</td>
-      <td style="text-align: left">Permanently retired by Finvasia.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Legacy Web QuickAuth**</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/NorenWClientAPI/QuickAuth</code></td>
-      <td style="text-align: left">❌ **502 Bad Gateway**</td>
-      <td style="text-align: left">Decommissioned for automated API logins.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Modern Access Token Exchange**</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/NorenWClientAPI/GenAcsTok</code></td>
-      <td style="text-align: left">✅ **Active &amp; Supported**</td>
-      <td style="text-align: left">**Official Production Gateway**. Exchanges single-use auth codes for session tokens.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Live WebSocket Gateway**</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">wss://api.shoonya.com/NorenWSAPI/</code></td>
-      <td style="text-align: left">✅ **Active &amp; Supported**</td>
-      <td style="text-align: left">**Official Streaming Gateway**. Real-time tick updates and order events (<code class="language-plaintext highlighter-rouge">t="a"</code> packet).</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Legacy WebSocket Gateway**</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">wss://api.shoonya.com/NorenWSTP/</code></td>
-      <td style="text-align: left">❌ **Silent Black Hole**</td>
-      <td style="text-align: left">**Do Not Use**. Swallows connection handshakes and fails to route live market ticks.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5zdWJncmFwaCBQaGFzZTEgW1wiMS4gQnJvd3NlciBJbnRlcmFjdGl2ZSBBdXRoZW50aWNhdGlvblwiXVxuVHJhZGVyW1wi8J-RpCBUcmFkZXIgKEJyb3dzZXIpXCJdIC0tPnxPcGVuIENvbnNlbnQgVVJMIHdpdGggQXBwIEtleXwgT0F1dGhXZWJbXCLwn5SQIFNob29ueWEgT0F1dGggR2F0ZXdheTxici8-L09BdXRobG9naW4vYXV0aG9yaXplL29hdXRoXCJdXG5PQXV0aFdlYiAtLT58RW50ZXIgVXNlciBJRCwgUGFzc3dvcmQgJiAyRkEgVE9UUHwgUmVkaXJlY3RbXCLwn4yQIEJyb3dzZXIgUmVkaXJlY3RzIHRvIExvb3BiYWNrPGJyLz5odHRwczovLzEyNy4wLjAuMS8_Y29kZT1BVVRIX0NPREVcIl1cblJlZGlyZWN0IC0tPnxFeHRyYWN0IFNpbmdsZS1Vc2UgQ29kZXwgQ29kZVtcIkF1dGggQ29kZSAoVmFsaWQgMuKAkzMgbWlucylcIl1cbmVuZFxuJSUtXG5zdWJncmFwaCBQaGFzZTIgW1wiMi4gSmF2YSBFbmdpbmUgVG9rZW4gRXhjaGFuZ2VcIl1cbkNvZGUgLS0-IEphdmFBcHBbXCLimJUgSmF2YSBBcHBsaWNhdGlvbiBFbmdpbmVcIl1cbkphdmFBcHAgLS0-fENhbGN1bGF0ZSBTSEEtMjU2IENoZWNrc3VtfCBIYXNoW1wiU0hBMjU2KEFwcEtleSArIFNlY3JldEtleSArIENvZGUpXCJdXG5IYXNoIC0tPnxQT1NUIC9Ob3JlbldDbGllbnRBUEkvR2VuQWNzVG9rfCBSRVNUU2VydmVyW1wi8J-PoiBTaG9vbnlhIFJFU1QgR2F0ZXdheVwiXVxuUkVTVFNlcnZlciAtLT58UmV0dXJucyBNYXN0ZXIgU2Vzc2lvbiBUb2tlbnwgU2Vzc2lvblRva2VuW1wic3VzZXJ0b2tlbiAoVmFsaWQgMjRoKVwiXVxuU2Vzc2lvblRva2VuIC0tPiBKYXZhQXBwXG5lbmRcbiUlLVxuc3ViZ3JhcGggUGhhc2UzIFtcIjMuIFJlYWwtVGltZSBTdHJlYW1pbmcgKE5vcmVuV1NBUEkpXCJdXG5KYXZhQXBwIC0tPnxDb25uZWN0IHRvIHdzczovL2FwaS5zaG9vbnlhLmNvbS9Ob3JlbldTQVBJL3wgV1NTb2NrZXRbXCLimqEgV2ViU29ja2V0IEdhdGV3YXlcIl1cbkphdmFBcHAgLS0-fFNlbmQgQXV0aCBQYWNrZXQ6IHQ9J2EnLCBhY2Nlc3N0b2tlbnwgV1NTb2NrZXRcbldTU29ja2V0IC0tPnxTZXJ2ZXIgQWNrbm93bGVkZ21lbnQ6IHQ9J2FrJywgcz0nT0snfCBDb25maXJtZWRbXCLinIUgSGFuZHNoYWtlIENvbmZpcm1lZFwiXVxuQ29uZmlybWVkIC0tPnxTdWJzY3JpYmU6IHQ9J3QnLCBrPSdOU0V8Mjg4NSd8IFN0cmVhbVtcIvCfk4ggTGl2ZSBNYXJrZXQgVGlja3MgUmVjZWl2ZWRcIl1cbmVuZCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19" /></p>
-
-<hr />
-
-<h2 id="2-prerequisites--minimal-static-credentials">2. Prerequisites &amp; Minimal Static Credentials</h2>
-
-<p>Many older tutorials instruct developers to hardcode four or five different items into configuration files: account passwords, answers to security questions, mobile IMEIs, and raw Base32 2FA secret seeds.</p>
-
-<p>Under the modern OAuth 2.0 protocol, your Java application requires <strong>only three static configuration properties</strong>:</p>
-
-<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Minimal Static Configuration in application.properties
-</span><span class="py">shoonya.user-id</span><span class="p">=</span><span class="s">FN84920</span>
-<span class="py">shoonya.app-key</span><span class="p">=</span><span class="s">FN84920_U</span>
-<span class="py">shoonya.secret-key</span><span class="p">=</span><span class="s">a1b2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef0</span>
-</code></pre></div></div>
-
-<h3 id="understanding-the-three-properties">Understanding the Three Properties</h3>
-
-<ol>
-  <li><strong>User ID (<code class="language-plaintext highlighter-rouge">shoonya.user-id</code>)</strong>: Your unique trading account identifier assigned by Finvasia (e.g., <code class="language-plaintext highlighter-rouge">FN84920</code>).</li>
-  <li><strong>App Key / Vendor Code (<code class="language-plaintext highlighter-rouge">shoonya.app-key</code>)</strong>: Your API client identifier created in the developer dashboard. By convention, this is typically your User ID with an appended suffix (e.g., <code class="language-plaintext highlighter-rouge">FN84920_U</code>).</li>
-  <li><strong>Secret Key (<code class="language-plaintext highlighter-rouge">shoonya.secret-key</code>)</strong>: A 64-character hexadecimal string generated inside Shoonya’s PRISM portal.</li>
-</ol>
-
-<blockquote>
-  <p>[!NOTE]
-<strong>Why No Password or Java TOTP Generator in Application Code?</strong><br />
-In the modern OAuth 2.0 architecture, the trader performs interactive authentication (entering password and phone authenticator TOTP) directly within Shoonya’s secure web portal (<code class="language-plaintext highlighter-rouge">/OAuthlogin</code>). The Java trading engine <strong>never sees, stores, or transmits your account password or TOTP secret seed</strong>. This separation of concerns significantly enhances security and ensures compliance with financial safety regulations.</p>
-</blockquote>
-
-<p><img src="/assets/img/posts/shoonya-prism-api-dashboard.png" alt="Shoonya Trading Developer Portal" />
-<small><em>(Shoonya Trading Developer Portal showing App Key, Secret Key creation, and IP Whitelist input field)</em></small></p>
-
-<h3 id="retrieving-your-credentials-from-shoonya-prism">Retrieving Your Credentials from Shoonya PRISM</h3>
-<ol>
-  <li>Log in to the official <a href="https://trade.shoonya.com/">Shoonya PRISM Portal</a>.</li>
-  <li>Navigate to your <strong>Profile / Developer Settings / API Keys</strong>.</li>
-  <li>Create your <strong>App Key</strong> and generate your <strong>Secret Key</strong>. Store the secret key in a secure password manager immediately—it will only be displayed once.</li>
-  <li>Locate the <strong>IP Whitelist</strong> field. This brings us to the most common configuration hurdle developers face.</li>
-</ol>
-
-<hr />
-
-<h2 id="3-the-critical-gotcha-ipv6-leaks--invalid_ip-errors">3. The Critical Gotcha: IPv6 Leaks &amp; <code class="language-plaintext highlighter-rouge">INVALID_IP</code> Errors</h2>
-
-<p>One of the most frequent support questions from developers setting up Shoonya in Java is why their requests fail with either:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shoonya GenAcsTok error: Invalid Input : INVALID_IP
-</code></pre></div></div>
-
-<p>or an error modal in the browser stating:</p>
-
-<blockquote>
-  <p><strong>“Access Restricted for API Only Users”</strong></p>
-</blockquote>
-
-<p><img src="/assets/img/posts/shoonya-access-restricted-error.png" alt="Shoonya Access Restricted Error" />
-<small><em>(Shoonya browser error modal displaying ‘Access Restricted for API Only Users’)</em></small></p>
-
-<p>Even after verifying that their public IP address is saved in the PRISM dashboard, developers are often blocked. Why does this happen?</p>
-
-<h3 id="the-root-cause-dual-stack-networking--dynamic-temporary-ipv6">The Root Cause: Dual-Stack Networking &amp; Dynamic Temporary IPv6</h3>
-
-<p>To understand this issue, consider how modern networking operates on your operating system and internet service provider (ISP):</p>
-
-<ol>
-  <li><strong>IPv4 Whitelisting in PRISM</strong>: Shoonya requires your public IP address to be whitelisted for API access. The PRISM portal interface accepts a standard 32-bit <strong>IPv4 address</strong> (e.g., <code class="language-plaintext highlighter-rouge">122.161.45.10</code>).</li>
-  <li><strong>Happy Eyeballs (RFC 8305)</strong>: Major Indian ISPs (such as Jio Fiber, Airtel Xstream, and ACT Fibernet) and modern operating systems (Windows 10/11, macOS, Linux) provide dual-stack connectivity with IPv6 enabled by default. Under the Happy Eyeballs standard, web browsers and network sockets automatically attempt IPv6 connections before falling back to IPv4.</li>
-  <li><strong>Rotating Privacy Addresses (RFC 4941)</strong>: For privacy protection, Windows periodically generates rotating <strong>Temporary IPv6 Addresses</strong>.</li>
-  <li><strong>The Firewall Rejection</strong>: When your browser or Java runtime contacts <code class="language-plaintext highlighter-rouge">api.shoonya.com</code>, traffic leaves your machine over an unlisted dynamic IPv6 address (<code class="language-plaintext highlighter-rouge">2405:201:...</code>). Shoonya’s edge proxy compares this IPv6 address against the whitelisted IPv4 address (<code class="language-plaintext highlighter-rouge">122.161.45.10</code>). Because they do not match, the firewall instantly drops the request.</li>
-</ol>
-
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5zdWJncmFwaCBDbGllbnRIb3N0IFtcIllvdXIgTWFjaGluZSAvIElTUCAoRHVhbC1TdGFjayBFbnZpcm9ubWVudClcIl1cbmRpcmVjdGlvbiBUQlxuSVB2NFNhdmVkW1wiV2hpdGVsaXN0ZWQgaW4gUFJJU008YnIvPjxiPjEyMi4xNjEuNDUuMTA8L2I-IChTdGF0aWMgSVB2NClcIl1cbklQdjZPdXRbXCJPdXRib3VuZCBDb25uZWN0aW9uIExlYWtlZDxici8-PGI-MjQwNToyMDE6Li4uPC9iPiAoRHluYW1pYyBJUHY2KVwiXVxuZW5kXG4lJS1cbnN1YmdyYXBoIEJyb2tlckVkZ2UgW1wiU2hvb255YSBDbG91ZCBFZGdlIFByb3h5XCJdXG5GaXJld2FsbHtcIkZpcmV3YWxsIFJ1bGUgQ2hlY2s8YnIvPkluY29taW5nIFNvdXJjZSBJUCA9PSBXaGl0ZWxpc3RlZCBJUD9cIn1cblJlamVjdFtcIuKdjCA8Yj5JTlZBTElEX0lQIC8gQWNjZXNzIFJlc3RyaWN0ZWQ8L2I-PGJyLz5Db25uZWN0aW9uIERyb3BwZWQgSW5zdGFudGx5XCJdXG5TdWNjZXNzW1wi4pyFIDxiPkhhbmRzaGFrZSBQZXJtaXR0ZWQ8L2I-PGJyLz5Sb3V0ZSB0byBBdXRoIEdhdGV3YXlcIl1cbmVuZFxuJSUtXG5JUHY2T3V0IC0tPnxPdXRib3VuZCByZXF1ZXN0IHJvdXRlZCB2aWEgSVB2NnwgRmlyZXdhbGxcbklQdjRTYXZlZCAtLi0-fENvbmZpZ3VyZWQgaW4gUFJJU00gV2hpdGVsaXN0fCBGaXJld2FsbFxuRmlyZXdhbGwgLS0-fE1pc21hdGNoOiBJUHY2ICE9IElQdjR8IFJlamVjdFxuRmlyZXdhbGwgLS4tPnxXaGVuIElQdjYgRGlzYWJsZWQ6IElQdjQgPT0gSVB2NHwgU3VjY2VzcyIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19" /></p>
-
-<h3 id="the-three-step-permanent-fix">The Three-Step Permanent Fix</h3>
-
-<p>To ensure consistent connectivity across both browser-based logins and your Java engine:</p>
-
-<h4 id="step-1-identify-your-true-public-ipv4">Step 1: Identify Your True Public IPv4</h4>
-<p>Run an IPv4-specific query in your terminal to see the exact IPv4 address your router exposes:</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Windows PowerShell / Command Prompt</span><span class="w">
-</span><span class="n">curl.exe</span><span class="w"> </span><span class="nt">-4</span><span class="w"> </span><span class="nx">https://ifconfig.me</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Enter this exact IPv4 string into the <strong>IP Whitelist</strong> field in your Shoonya PRISM developer portal and save changes.</p>
-
-<h4 id="step-2-disable-ipv6-on-your-active-network-adapter-windows">Step 2: Disable IPv6 on Your Active Network Adapter (Windows)</h4>
-<p>To prevent your browser from leaking temporary IPv6 addresses when requesting the initial authorization code:</p>
-<ol>
-  <li>Press <code class="language-plaintext highlighter-rouge">Win + R</code>, type <code class="language-plaintext highlighter-rouge">ncpa.cpl</code>, and press <strong>Enter</strong> to open Network Connections.</li>
-  <li>Right-click your active connection (Wi-Fi or Ethernet) and select <strong>Properties</strong>.</li>
-  <li>In the list of networking components, locate <strong>Internet Protocol Version 6 (TCP/IPv6)</strong> and uncheck the checkbox.</li>
-  <li>Click <strong>OK</strong> to save. Your browser will now resolve and route all connections strictly via your whitelisted IPv4.</li>
-</ol>
-
-<h4 id="step-3-tell-java-to-prefer-ipv4-sockets">Step 3: Tell Java to Prefer IPv4 Sockets</h4>
-<p>When launching your Java application, instruct the Java Virtual Machine (JVM) to bypass dual-stack IPv6 probing and bind strictly to IPv4 by providing the system property <code class="language-plaintext highlighter-rouge">-Djava.net.preferIPv4Stack=true</code>:</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">java</span><span class="w"> </span><span class="nt">-Djava</span><span class="o">.</span><span class="nf">net</span><span class="o">.</span><span class="nf">preferIPv4Stack</span><span class="o">=</span><span class="n">true</span><span class="w"> </span><span class="nt">-jar</span><span class="w"> </span><span class="nx">target/algo-trader.jar</span><span class="w">
-</span></code></pre></div></div>
-
-<p>In an IDE (IntelliJ IDEA, Eclipse, or VS Code), add <code class="language-plaintext highlighter-rouge">-Djava.net.preferIPv4Stack=true</code> to your Run/Debug Configuration under <strong>VM options</strong>.</p>
-
-<hr />
-
-<h2 id="4-step-by-step-official-oauth-20-genacstok-flow">4. Step-by-Step Official OAuth 2.0 <code class="language-plaintext highlighter-rouge">GenAcsTok</code> Flow</h2>
-
-<p>Once network routing is aligned, you are ready to complete the official three-step OAuth authentication flow.</p>
-
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5hdXRvbnVtYmVyXG5hY3RvciBUcmFkZXIgYXMgVHJhZGVyIC8gV2ViIEJyb3dzZXJcbnBhcnRpY2lwYW50IFdlYiBhcyBTaG9vbnlhIE9BdXRoICgvT0F1dGhsb2dpbilcbnBhcnRpY2lwYW50IEphdmFBcHAgYXMgSmF2YSBFbmdpbmUgKFNob29ueWFBdXRoQ2xpZW50KVxucGFydGljaXBhbnQgUkVTVCBhcyBTaG9vbnlhIFJFU1QgR2F0ZXdheSAoL0dlbkFjc1RvaylcbiUlLVxuVHJhZGVyLT4-V2ViOiAxLiBPcGVucyAvT0F1dGhsb2dpbi9hdXRob3JpemUvb2F1dGg_Y2xpZW50X2lkPUFQUF9LRVlcbldlYi0tPj5UcmFkZXI6IFByb21wdHMgZm9yIFVzZXIgSUQsIFBhc3N3b3JkICYgNi1EaWdpdCBUT1RQXG5UcmFkZXItPj5XZWI6IFN1Ym1pdHMgQ3JlZGVudGlhbHMgJiBBdXRoZW50aWNhdGVzXG5XZWItLT4-VHJhZGVyOiBSZWRpcmVjdHMgdG8gaHR0cHM6Ly8xMjcuMC4wLjEvP2NvZGU9QVVUSF9DT0RFXG5UcmFkZXItPj5KYXZhQXBwOiBTdXBwbGllcyBBVVRIX0NPREUgdG8gSmF2YSBFbmdpbmVcbkphdmFBcHAtPj5KYXZhQXBwOiAyLiBDb21wdXRlcyBTSEEtMjU2IENoZWNrc3VtID0gU0hBMjU2KGFwcEtleSArIHNlY3JldEtleSArIGF1dGhDb2RlKVxuSmF2YUFwcC0-PlJFU1Q6IDMuIFBPU1QgL05vcmVuV0NsaWVudEFQSS9HZW5BY3NUb2sgKGZvcm0tdXJsZW5jb2RlZCBqRGF0YSlcblJFU1QtLT4-SmF2YUFwcDogUmV0dXJucyBKU09OIHsgc3RhdDogXCJPa1wiLCBzdXNlcnRva2VuOiBcIlNFU1NJT05fVE9LRU5cIiwgYWN0aWQ6IFwiRk44NDkyMFwiIH1cbkphdmFBcHAtPj5KYXZhQXBwOiBSZWFkeSBmb3IgVHJhZGluZyAmIFdlYlNvY2tldCBTdHJlYW1pbmciLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ" /></p>
-
-<hr />
-
-<h3 id="step-1-obtain-the-single-use-authorization-code">Step 1: Obtain the Single-Use Authorization <code class="language-plaintext highlighter-rouge">code</code></h3>
-
-<p>Open your web browser (preferably in an Incognito / Private window to prevent stale session cookies) and navigate to the official consent URL:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.shoonya.com/OAuthlogin/authorize/oauth?client_id=YOUR_APP_KEY
-</code></pre></div></div>
-
-<p><em>(For example: <code class="language-plaintext highlighter-rouge">https://api.shoonya.com/OAuthlogin/authorize/oauth?client_id=FN84920_U</code>)</em></p>
-
-<ol>
-  <li>Log in with your Shoonya <strong>User ID</strong>, <strong>Password</strong>, and current <strong>6-digit TOTP</strong> from your authenticator app.</li>
-  <li>Upon successful authentication, Shoonya redirects your browser to a local loopback address:
-    <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://127.0.0.1/?code=1d8a46ce-736f-43ab-8026-a54d28465c8f
-</code></pre></div>    </div>
-  </li>
-  <li>Your browser may display a <code class="language-plaintext highlighter-rouge">"This site can't be reached"</code> or <code class="language-plaintext highlighter-rouge">"Connection refused"</code> message—<strong>this is completely normal</strong>, because no web server needs to run on port 80/443.</li>
-  <li>Look at your browser’s address bar and copy the query string value immediately following <code class="language-plaintext highlighter-rouge">code=</code> (e.g., <code class="language-plaintext highlighter-rouge">1d8a46ce-736f-43ab-8026-a54d28465c8f</code>).</li>
-</ol>
-
-<blockquote>
-  <p>[!WARNING]
-<strong>Single-Use &amp; Short TTL</strong>: The authorization code has a Time-To-Live (TTL) of <strong>approximately 2 to 3 minutes</strong> and can only be consumed <strong>once</strong>. If an exchange attempt fails due to an incorrect checksum or network timeout, you must refresh the consent URL and generate a fresh code.</p>
-</blockquote>
-
-<hr />
-
-<h3 id="step-2-construct-the-sha-256-checksum-in-java">Step 2: Construct the SHA-256 Checksum in Java</h3>
-
-<p>Shoonya validates the integrity of the token exchange request by requiring an accompanying cryptographic hash. The rule defined by Finvasia is to concatenate three strings in order without delimiters, spaces, or separators:</p>
-
-<p>$$\text{Checksum} = \text{SHA256}(\text{appKey} + \text{secretKey} + \text{authCode})$$</p>
-
-<h4 id="technical-breakdown-for-beginners-how-sha-256-works-in-java">Technical Breakdown for Beginners: How SHA-256 Works in Java</h4>
-<ul>
-  <li><strong>Standard Library</strong>: Java provides built-in support for standard cryptographic hash functions through the <code class="language-plaintext highlighter-rouge">java.security.MessageDigest</code> class. No third-party Apache Commons or BouncyCastle libraries are needed.</li>
-  <li><strong>Byte Encoding</strong>: Strings must be converted to raw bytes using a consistent character set—always use <code class="language-plaintext highlighter-rouge">StandardCharsets.UTF_8</code> to prevent platform-specific encoding bugs on different operating systems.</li>
-  <li><strong>Hexadecimal Conversion</strong>: <code class="language-plaintext highlighter-rouge">MessageDigest.digest()</code> produces a 32-byte binary array. Shoonya expects a lowercase 64-character hexadecimal representation. Each byte (ranging from <code class="language-plaintext highlighter-rouge">-128</code> to <code class="language-plaintext highlighter-rouge">127</code>) must be bitwise-masked with <code class="language-plaintext highlighter-rouge">0xFF</code> and formatted as two hexadecimal characters.</li>
-</ul>
-
-<p>Here is a clean, production-grade utility method built from scratch:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.thoughtstopen.shoonya.auth</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">java.nio.charset.StandardCharsets</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.security.MessageDigest</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.security.NoSuchAlgorithmException</span><span class="o">;</span>
-
-<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">ShoonyaChecksumUtil</span> <span class="o">{</span>
-
-    <span class="kd">private</span> <span class="nf">ShoonyaChecksumUtil</span><span class="o">()</span> <span class="o">{</span>
-        <span class="c1">// Prevent instantiation of utility class</span>
-    <span class="o">}</span>
-
-    <span class="cm">/**
-     * Calculates the SHA-256 checksum required by Shoonya /GenAcsTok.
-     *
-     * @param appKey    Your registered App Key (e.g., FN84920_U)
-     * @param secretKey Your 64-character PRISM secret key
-     * @param authCode  The single-use authorization code from the OAuth redirect
-     * @return Lowercase 64-character hexadecimal SHA-256 string
-     */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">calculateChecksum</span><span class="o">(</span><span class="nc">String</span> <span class="n">appKey</span><span class="o">,</span> <span class="nc">String</span> <span class="n">secretKey</span><span class="o">,</span> <span class="nc">String</span> <span class="n">authCode</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">appKey</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">secretKey</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">authCode</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="s">"App key, secret key, and auth code must not be null"</span><span class="o">);</span>
-        <span class="o">}</span>
-
-        <span class="c1">// Concatenate parameters with no separators</span>
-        <span class="nc">String</span> <span class="n">concatenatedInput</span> <span class="o">=</span> <span class="n">appKey</span><span class="o">.</span><span class="na">trim</span><span class="o">()</span> <span class="o">+</span> <span class="n">secretKey</span><span class="o">.</span><span class="na">trim</span><span class="o">()</span> <span class="o">+</span> <span class="n">authCode</span><span class="o">.</span><span class="na">trim</span><span class="o">();</span>
-
-        <span class="k">try</span> <span class="o">{</span>
-            <span class="nc">MessageDigest</span> <span class="n">digest</span> <span class="o">=</span> <span class="nc">MessageDigest</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="s">"SHA-256"</span><span class="o">);</span>
-            <span class="kt">byte</span><span class="o">[]</span> <span class="n">hashBytes</span> <span class="o">=</span> <span class="n">digest</span><span class="o">.</span><span class="na">digest</span><span class="o">(</span><span class="n">concatenatedInput</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(</span><span class="nc">StandardCharsets</span><span class="o">.</span><span class="na">UTF_8</span><span class="o">));</span>
-
-            <span class="c1">// Convert 32 bytes to 64 hex characters</span>
-            <span class="nc">StringBuilder</span> <span class="n">hexString</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">(</span><span class="n">hashBytes</span><span class="o">.</span><span class="na">length</span> <span class="o">*</span> <span class="mi">2</span><span class="o">);</span>
-            <span class="k">for</span> <span class="o">(</span><span class="kt">byte</span> <span class="n">b</span> <span class="o">:</span> <span class="n">hashBytes</span><span class="o">)</span> <span class="o">{</span>
-                <span class="nc">String</span> <span class="n">hex</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">toHexString</span><span class="o">(</span><span class="mh">0xFF</span> <span class="o">&amp;</span> <span class="n">b</span><span class="o">);</span>
-                <span class="k">if</span> <span class="o">(</span><span class="n">hex</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
-                    <span class="n">hexString</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="sc">'0'</span><span class="o">);</span> <span class="c1">// Ensure leading zero for single-digit hex values</span>
-                <span class="o">}</span>
-                <span class="n">hexString</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">hex</span><span class="o">);</span>
-            <span class="o">}</span>
-            <span class="k">return</span> <span class="n">hexString</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
-        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">NoSuchAlgorithmException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="s">"Standard SHA-256 digest algorithm not available in JVM"</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<hr />
-
-<h3 id="step-3-send-the-token-exchange-request-genacstok">Step 3: Send the Token Exchange Request (<code class="language-plaintext highlighter-rouge">GenAcsTok</code>)</h3>
-
-<p>Now we transmit an HTTP POST request to Shoonya’s token exchange gateway:</p>
-
-<ul>
-  <li><strong>Target URL</strong>: <code class="language-plaintext highlighter-rouge">https://api.shoonya.com/NorenWClientAPI/GenAcsTok</code></li>
-  <li><strong>HTTP Method</strong>: <code class="language-plaintext highlighter-rouge">POST</code></li>
-  <li><strong>Content-Type</strong>: <code class="language-plaintext highlighter-rouge">application/x-www-form-urlencoded</code></li>
-  <li><strong>Form Parameter</strong>: <code class="language-plaintext highlighter-rouge">jData=&lt;URL_ENCODED_JSON_STRING&gt;</code></li>
-</ul>
-
-<h4 id="understanding-the-request-format">Understanding the Request Format</h4>
-<p>Shoonya’s Noren API uses a specific transport format: instead of accepting raw JSON in the HTTP request body (<code class="language-plaintext highlighter-rouge">application/json</code>), the server expects an HTML form-urlencoded body containing a single parameter named <code class="language-plaintext highlighter-rouge">jData</code>. The value of <code class="language-plaintext highlighter-rouge">jData</code> must be a URL-encoded JSON object containing your <code class="language-plaintext highlighter-rouge">code</code> and computed <code class="language-plaintext highlighter-rouge">checksum</code>.</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jData=%7B%22code%22%3A%221d8a46ce-736f...%22%2C%22checksum%22%3A%2238fe283b...%22%7D
-</code></pre></div></div>
-
-<p>Here is how to perform this exchange using Java 11’s standard <code class="language-plaintext highlighter-rouge">java.net.http.HttpClient</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.thoughtstopen.shoonya.auth</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">java.net.URI</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.net.URLEncoder</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.net.http.HttpClient</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.net.http.HttpRequest</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.net.http.HttpResponse</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.nio.charset.StandardCharsets</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.time.Duration</span><span class="o">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ShoonyaTokenClient</span> <span class="o">{</span>
-
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">GEN_ACS_TOK_URL</span> <span class="o">=</span> <span class="s">"https://api.shoonya.com/NorenWClientAPI/GenAcsTok"</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">HttpClient</span> <span class="n">httpClient</span><span class="o">;</span>
-
-    <span class="kd">public</span> <span class="nf">ShoonyaTokenClient</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">httpClient</span> <span class="o">=</span> <span class="nc">HttpClient</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">()</span>
-                <span class="o">.</span><span class="na">version</span><span class="o">(</span><span class="nc">HttpClient</span><span class="o">.</span><span class="na">Version</span><span class="o">.</span><span class="na">HTTP_1_1</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">connectTimeout</span><span class="o">(</span><span class="nc">Duration</span><span class="o">.</span><span class="na">ofSeconds</span><span class="o">(</span><span class="mi">10</span><span class="o">))</span>
-                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
-    <span class="o">}</span>
-
-    <span class="cm">/**
-     * Exchanges the single-use auth code for a valid 24-hour master session token.
-     *
-     * @param appKey    Vendor Code (e.g. FN84920_U)
-     * @param secretKey PRISM 64-char secret key
-     * @param authCode  Single-use code from OAuth redirect
-     * @return The raw JSON response string from Shoonya
-     */</span>
-    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">exchangeAuthCode</span><span class="o">(</span><span class="nc">String</span> <span class="n">appKey</span><span class="o">,</span> <span class="nc">String</span> <span class="n">secretKey</span><span class="o">,</span> <span class="nc">String</span> <span class="n">authCode</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-        <span class="nc">String</span> <span class="n">checksum</span> <span class="o">=</span> <span class="nc">ShoonyaChecksumUtil</span><span class="o">.</span><span class="na">calculateChecksum</span><span class="o">(</span><span class="n">appKey</span><span class="o">,</span> <span class="n">secretKey</span><span class="o">,</span> <span class="n">authCode</span><span class="o">);</span>
-
-        <span class="c1">// Construct JSON payload</span>
-        <span class="nc">String</span> <span class="n">innerJson</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"{\"code\":\"%s\",\"checksum\":\"%s\"}"</span><span class="o">,</span> <span class="n">authCode</span><span class="o">.</span><span class="na">trim</span><span class="o">(),</span> <span class="n">checksum</span><span class="o">);</span>
-
-        <span class="c1">// Encode as form parameter: jData=&lt;URL_ENCODED_JSON&gt;</span>
-        <span class="nc">String</span> <span class="n">formBody</span> <span class="o">=</span> <span class="s">"jData="</span> <span class="o">+</span> <span class="nc">URLEncoder</span><span class="o">.</span><span class="na">encode</span><span class="o">(</span><span class="n">innerJson</span><span class="o">,</span> <span class="nc">StandardCharsets</span><span class="o">.</span><span class="na">UTF_8</span><span class="o">);</span>
-
-        <span class="nc">HttpRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="nc">HttpRequest</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">()</span>
-                <span class="o">.</span><span class="na">uri</span><span class="o">(</span><span class="no">URI</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="no">GEN_ACS_TOK_URL</span><span class="o">))</span>
-                <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Content-Type"</span><span class="o">,</span> <span class="s">"application/x-www-form-urlencoded"</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">timeout</span><span class="o">(</span><span class="nc">Duration</span><span class="o">.</span><span class="na">ofSeconds</span><span class="o">(</span><span class="mi">15</span><span class="o">))</span>
-                <span class="o">.</span><span class="na">POST</span><span class="o">(</span><span class="nc">HttpRequest</span><span class="o">.</span><span class="na">BodyPublishers</span><span class="o">.</span><span class="na">ofString</span><span class="o">(</span><span class="n">formBody</span><span class="o">))</span>
-                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
-
-        <span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">httpClient</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">BodyHandlers</span><span class="o">.</span><span class="na">ofString</span><span class="o">());</span>
-
-        <span class="k">if</span> <span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">statusCode</span><span class="o">()</span> <span class="o">!=</span> <span class="mi">200</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"Unexpected HTTP status from Shoonya: "</span> <span class="o">+</span> <span class="n">response</span><span class="o">.</span><span class="na">statusCode</span><span class="o">());</span>
-        <span class="o">}</span>
-
-        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="na">body</span><span class="o">();</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<h4 id="successful-broker-response-payload">Successful Broker Response Payload:</h4>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"stat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ok"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"USERID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FN84920"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"actid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FN84920"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"uname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ALGO TRADER"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"susertoken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"457357ea9e6e01c52474045cb0f182ab0fc3752b242b293e8ae8ae615a8cf1bc"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"lastaccesstime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1724567890"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"exarr"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"NSE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"BSE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"NFO"</span><span class="p">,</span><span class="w"> </span><span class="s2">"MCX"</span><span class="p">],</span><span class="w">
-  </span><span class="nl">"spasswordreset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<h3 id="the-role-of-susertoken">The Role of <code class="language-plaintext highlighter-rouge">susertoken</code></h3>
-<p>The string returned in the <code class="language-plaintext highlighter-rouge">"susertoken"</code> property is your <strong>master session token</strong>. This token serves as your cryptographic bearer credential for all subsequent REST requests (placing orders, modifying orders, reading portfolio holdings) and WebSocket streaming connections.</p>
-
-<p>The token remains active for <strong>up to 24 hours</strong> or until the broker’s daily post-market settlement cycle runs (around 11:30 PM to 6:30 AM IST).</p>
-
-<hr />
-
-<h2 id="5-the-official-websocket-authentication-handshake">5. The Official WebSocket Authentication Handshake</h2>
-
-<p>Once you have acquired your session token, you can open a bidirectional WebSocket to receive real-time tick-by-tick prices (Last Traded Price, Volume, Market Depth) and order execution status updates.</p>
-
-<p><img src="/assets/img/posts/shoonya-websocket-auth-flow.png" alt="Shoonya WebSocket Authentication Protocol" />
-<small><em>(Shoonya WebSocket Connect documentation showing packet parameters: t, uid, actid, and accesstoken)</em></small></p>
-
-<h3 id="1-the-authoritative-endpoint">1. The Authoritative Endpoint</h3>
-<ul>
-  <li><strong>Official Live Streaming URI</strong>: <code class="language-plaintext highlighter-rouge">wss://api.shoonya.com/NorenWSAPI/</code></li>
-</ul>
-
-<blockquote>
-  <p>[!CAUTION]
-<strong>Beware the <code class="language-plaintext highlighter-rouge">NorenWSTP</code> Silent Black Hole</strong>:<br />
-In legacy SDKs and outdated posts, you may see mentions of <code class="language-plaintext highlighter-rouge">wss://api.shoonya.com/NorenWSTP/</code>. <strong>Do not connect to <code class="language-plaintext highlighter-rouge">NorenWSTP</code></strong>. In current broker infrastructure, this legacy socket accepts TCP handshakes but silently swallows authentication frames and never streams market ticks! Always route WebSocket connections exclusively to <code class="language-plaintext highlighter-rouge">wss://api.shoonya.com/NorenWSAPI/</code>.</p>
-</blockquote>
-
-<hr />
-
-<h3 id="2-the-official-authentication-packet-the-critical-accesstoken-key">2. The Official Authentication Packet: The Critical <code class="language-plaintext highlighter-rouge">"accesstoken"</code> Key</h3>
-
-<p>Immediately upon establishing the WebSocket connection (<code class="language-plaintext highlighter-rouge">onOpen</code>), your client must transmit an authentication JSON frame within <strong>2 seconds</strong>.</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"t"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FN84920"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"actid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FN84920"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"accesstoken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"457357ea9e6e01c52474045cb0f182ab0fc3752b242b293e8ae8ae615a8cf1bc"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Field Name</th>
-      <th style="text-align: left">Expected Value</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"t"</code></td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"a"</code></td>
-      <td style="text-align: left">Identifies this frame as an **Authentication** packet.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"uid"</code></td>
-      <td style="text-align: left">Account User ID (e.g. <code class="language-plaintext highlighter-rouge">FN84920</code>)</td>
-      <td style="text-align: left">The trading account login ID.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"actid"</code></td>
-      <td style="text-align: left">Account User ID (e.g. <code class="language-plaintext highlighter-rouge">FN84920</code>)</td>
-      <td style="text-align: left">Must match your trading account ID.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"accesstoken"</code></td>
-      <td style="text-align: left">Session Token String</td>
-      <td style="text-align: left">**The <code class="language-plaintext highlighter-rouge">susertoken</code> received from <code class="language-plaintext highlighter-rouge">/GenAcsTok</code>**.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"source"</code></td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"API"</code></td>
-      <td style="text-align: left">Identifies the client connection source.</td>
-    </tr>
-  </tbody>
-</table>
-
-<blockquote>
-  <p>[!IMPORTANT]
-<strong>CRITICAL PROTOCOL KEY REQUIREMENT</strong>:<br />
-Notice that the JSON property name in the WebSocket payload is <strong><code class="language-plaintext highlighter-rouge">"accesstoken"</code></strong>.<br />
-If you name this key <code class="language-plaintext highlighter-rouge">"usertoken"</code> or <code class="language-plaintext highlighter-rouge">"susertoken"</code> (as older documents suggested), Shoonya’s gateway will reject the frame with:</p>
-  <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"t"</span><span class="p">:</span><span class="s2">"ck"</span><span class="p">,</span><span class="nl">"s"</span><span class="p">:</span><span class="s2">"NOT_OK"</span><span class="p">}</span><span class="w">
-</span></code></pre></div>  </div>
-  <p>and abruptly close the socket with <strong>WebSocket Close Code <code class="language-plaintext highlighter-rouge">1008 (Policy Violation)</code></strong>. Using <code class="language-plaintext highlighter-rouge">"accesstoken"</code> resolves this immediately.</p>
-</blockquote>
-
-<hr />
-
-<h3 id="3-handling-server-confirmation-before-subscribing">3. Handling Server Confirmation Before Subscribing</h3>
-
-<p>A common race condition in algorithmic trading bots is sending symbol subscriptions immediately after dispatching the authentication frame. The broker socket requires verification before processing subscription requests.</p>
-
-<ol>
-  <li><strong>Step A (Handshake Sent)</strong>: Client sends <code class="language-plaintext highlighter-rouge">{"t": "a", ...}</code>.</li>
-  <li><strong>Step B (Server Acknowledgment)</strong>: Shoonya processes the token and replies with:
-    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"t"</span><span class="p">:</span><span class="s2">"ak"</span><span class="p">,</span><span class="w"> </span><span class="nl">"s"</span><span class="p">:</span><span class="s2">"OK"</span><span class="p">}</span><span class="w">
-</span></code></pre></div>    </div>
-    <p><em>(or <code class="language-plaintext highlighter-rouge">{"t":"ck", "s":"OK"}</code>)</em></p>
-  </li>
-  <li><strong>Step C (Dispatch Subscriptions)</strong>: Only after verifying that <code class="language-plaintext highlighter-rouge">s</code> equals <code class="language-plaintext highlighter-rouge">"OK"</code> should your client send touchline subscription packets:
-    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"t"</span><span class="p">:</span><span class="w"> </span><span class="s2">"t"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"k"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NSE|2885#NSE|26000"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>    </div>
-    <p><em>(Here <code class="language-plaintext highlighter-rouge">2885</code> is the token for Reliance Industries and <code class="language-plaintext highlighter-rouge">26000</code> is the Nifty 50 Index. Security tokens can be looked up in Shoonya’s downloadable daily scrip master files).</em></p>
-  </li>
-</ol>
-
-<hr />
-
-<h2 id="6-complete-working-java-application-jdk-11">6. Complete Working Java Application (JDK 11+)</h2>
-
-<p>Here is a self-contained, working Java application demonstrating the entire workflow: prompting the developer for the morning authorization code, executing the SHA-256 checksum, calling <code class="language-plaintext highlighter-rouge">/GenAcsTok</code>, and establishing a live WebSocket connection to <code class="language-plaintext highlighter-rouge">NorenWSAPI</code> using pure standard Java libraries.</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.thoughtstopen.shoonya</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">com.thoughtstopen.shoonya.auth.ShoonyaChecksumUtil</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">com.thoughtstopen.shoonya.auth.ShoonyaTokenClient</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">java.net.URI</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.net.http.HttpClient</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.net.http.WebSocket</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.nio.ByteBuffer</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.util.concurrent.CompletionStage</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.util.concurrent.CountDownLatch</span><span class="o">;</span>
-
-<span class="cm">/**
- * End-to-end bootstrap runner demonstrating Shoonya OAuth 2.0 authentication
- * and real-time WebSocket tick streaming in modern Java.
- */</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ShoonyaAlgoBootstrap</span> <span class="o">{</span>
-
-    <span class="c1">// Replace with your credentials from Shoonya PRISM</span>
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">USER_ID</span> <span class="o">=</span> <span class="s">"FN84920"</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">APP_KEY</span> <span class="o">=</span> <span class="s">"FN84920_U"</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">SECRET_KEY</span> <span class="o">=</span> <span class="s">"YOUR_64_CHAR_PRISM_SECRET_KEY"</span><span class="o">;</span>
-
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">WS_ENDPOINT</span> <span class="o">=</span> <span class="s">"wss://api.shoonya.com/NorenWSAPI/"</span><span class="o">;</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"==============================================================="</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"        Shoonya (Finvasia) Java Authentication Bootstrap       "</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"==============================================================="</span><span class="o">);</span>
-
-        <span class="c1">// 1. Prompt developer for the single-use auth code from the browser redirect</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\n[Action Required] Open the following URL in an Incognito browser:"</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"https://api.shoonya.com/OAuthlogin/authorize/oauth?client_id="</span> <span class="o">+</span> <span class="no">APP_KEY</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\nLog in with your User ID, Password, and 2FA TOTP."</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"After redirect, copy the 'code' parameter from the URL."</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"\nPaste authorization code here: "</span><span class="o">);</span>
-
-        <span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
-        <span class="nc">String</span> <span class="n">authCode</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">().</span><span class="na">trim</span><span class="o">();</span>
-
-        <span class="c1">// 2. Exchange authorization code for master session token via /GenAcsTok</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\n[Step 1] Exchanging auth code for session token via /GenAcsTok..."</span><span class="o">);</span>
-        <span class="nc">ShoonyaTokenClient</span> <span class="n">tokenClient</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ShoonyaTokenClient</span><span class="o">();</span>
-        <span class="nc">String</span> <span class="n">responseJson</span> <span class="o">=</span> <span class="n">tokenClient</span><span class="o">.</span><span class="na">exchangeAuthCode</span><span class="o">(</span><span class="no">APP_KEY</span><span class="o">,</span> <span class="no">SECRET_KEY</span><span class="o">,</span> <span class="n">authCode</span><span class="o">);</span>
-
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Broker Response: "</span> <span class="o">+</span> <span class="n">responseJson</span><span class="o">);</span>
-
-        <span class="c1">// Parse susertoken from response</span>
-        <span class="nc">String</span> <span class="n">sessionToken</span> <span class="o">=</span> <span class="n">extractJsonValue</span><span class="o">(</span><span class="n">responseJson</span><span class="o">,</span> <span class="s">"susertoken"</span><span class="o">);</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">sessionToken</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">sessionToken</span><span class="o">.</span><span class="na">isBlank</span><span class="o">())</span> <span class="o">{</span>
-            <span class="nc">String</span> <span class="n">errorMsg</span> <span class="o">=</span> <span class="n">extractJsonValue</span><span class="o">(</span><span class="n">responseJson</span><span class="o">,</span> <span class="s">"emsg"</span><span class="o">);</span>
-            <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\n[Authentication Failed]: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">errorMsg</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">?</span> <span class="n">errorMsg</span> <span class="o">:</span> <span class="n">responseJson</span><span class="o">));</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="o">}</span>
-
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\n[Success] Master Session Token Acquired:"</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sessionToken</span><span class="o">);</span>
-
-        <span class="c1">// 3. Connect to Shoonya WebSocket Gateway (NorenWSAPI)</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\n[Step 2] Establishing WebSocket connection to "</span> <span class="o">+</span> <span class="no">WS_ENDPOINT</span> <span class="o">+</span> <span class="s">"..."</span><span class="o">);</span>
-        <span class="nc">CountDownLatch</span> <span class="n">keepAliveLatch</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CountDownLatch</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
-
-        <span class="nc">HttpClient</span> <span class="n">wsHttpClient</span> <span class="o">=</span> <span class="nc">HttpClient</span><span class="o">.</span><span class="na">newHttpClient</span><span class="o">();</span>
-        <span class="n">wsHttpClient</span><span class="o">.</span><span class="na">newWebSocketBuilder</span><span class="o">()</span>
-                <span class="o">.</span><span class="na">buildAsync</span><span class="o">(</span><span class="no">URI</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="no">WS_ENDPOINT</span><span class="o">),</span> <span class="k">new</span> <span class="nc">WebSocket</span><span class="o">.</span><span class="na">Listener</span><span class="o">()</span> <span class="o">{</span>
-
-                    <span class="nd">@Override</span>
-                    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onOpen</span><span class="o">(</span><span class="nc">WebSocket</span> <span class="n">webSocket</span><span class="o">)</span> <span class="o">{</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[WebSocket Connected] Sending official authentication frame..."</span><span class="o">);</span>
-
-                        <span class="c1">// Protocol packet using 'accesstoken' key</span>
-                        <span class="nc">String</span> <span class="n">authPacket</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
-                                <span class="s">"{\"t\":\"a\",\"uid\":\"%s\",\"actid\":\"%s\",\"accesstoken\":\"%s\",\"source\":\"API\"}"</span><span class="o">,</span>
-                                <span class="no">USER_ID</span><span class="o">,</span> <span class="no">USER_ID</span><span class="o">,</span> <span class="n">sessionToken</span>
-                        <span class="o">);</span>
-
-                        <span class="n">webSocket</span><span class="o">.</span><span class="na">sendText</span><span class="o">(</span><span class="n">authPacket</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
-                        <span class="nc">WebSocket</span><span class="o">.</span><span class="na">Listener</span><span class="o">.</span><span class="na">super</span><span class="o">.</span><span class="na">onOpen</span><span class="o">(</span><span class="n">webSocket</span><span class="o">);</span>
-                    <span class="o">}</span>
-
-                    <span class="nd">@Override</span>
-                    <span class="kd">public</span> <span class="nc">CompletionStage</span><span class="o">&lt;?&gt;</span> <span class="n">onText</span><span class="o">(</span><span class="nc">WebSocket</span> <span class="n">webSocket</span><span class="o">,</span> <span class="nc">CharSequence</span> <span class="n">data</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">last</span><span class="o">)</span> <span class="o">{</span>
-                        <span class="nc">String</span> <span class="n">message</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[WebSocket Inbound]: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
-
-                        <span class="c1">// Verify server acknowledgment before subscribing to ticks</span>
-                        <span class="k">if</span> <span class="o">((</span><span class="n">message</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"\"ak\""</span><span class="o">)</span> <span class="o">||</span> <span class="n">message</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"\"ck\""</span><span class="o">))</span> <span class="o">&amp;&amp;</span> <span class="n">message</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"\"OK\""</span><span class="o">))</span> <span class="o">{</span>
-                            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\n[Auth Confirmed] Handshake accepted! Subscribing to Reliance &amp; Nifty 50..."</span><span class="o">);</span>
-
-                            <span class="c1">// Subscribe to Touchline: RELIANCE (Token: 2885), NIFTY 50 (Token: 26000)</span>
-                            <span class="nc">String</span> <span class="n">subscriptionPacket</span> <span class="o">=</span> <span class="s">"{\"t\":\"t\",\"k\":\"NSE|2885#NSE|26000\"}"</span><span class="o">;</span>
-                            <span class="n">webSocket</span><span class="o">.</span><span class="na">sendText</span><span class="o">(</span><span class="n">subscriptionPacket</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
-                        <span class="o">}</span>
-
-                        <span class="k">return</span> <span class="nc">WebSocket</span><span class="o">.</span><span class="na">Listener</span><span class="o">.</span><span class="na">super</span><span class="o">.</span><span class="na">onText</span><span class="o">(</span><span class="n">webSocket</span><span class="o">,</span> <span class="n">data</span><span class="o">,</span> <span class="n">last</span><span class="o">);</span>
-                    <span class="o">}</span>
-
-                    <span class="nd">@Override</span>
-                    <span class="kd">public</span> <span class="nc">CompletionStage</span><span class="o">&lt;?&gt;</span> <span class="n">onClose</span><span class="o">(</span><span class="nc">WebSocket</span> <span class="n">webSocket</span><span class="o">,</span> <span class="kt">int</span> <span class="n">statusCode</span><span class="o">,</span> <span class="nc">String</span> <span class="n">reason</span><span class="o">)</span> <span class="o">{</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[WebSocket Closed] Code: "</span> <span class="o">+</span> <span class="n">statusCode</span> <span class="o">+</span> <span class="s">", Reason: "</span> <span class="o">+</span> <span class="n">reason</span><span class="o">);</span>
-                        <span class="n">keepAliveLatch</span><span class="o">.</span><span class="na">countDown</span><span class="o">();</span>
-                        <span class="k">return</span> <span class="nc">WebSocket</span><span class="o">.</span><span class="na">Listener</span><span class="o">.</span><span class="na">super</span><span class="o">.</span><span class="na">onClose</span><span class="o">(</span><span class="n">webSocket</span><span class="o">,</span> <span class="n">statusCode</span><span class="o">,</span> <span class="n">reason</span><span class="o">);</span>
-                    <span class="o">}</span>
-
-                    <span class="nd">@Override</span>
-                    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="o">(</span><span class="nc">WebSocket</span> <span class="n">webSocket</span><span class="o">,</span> <span class="nc">Throwable</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[WebSocket Error]: "</span> <span class="o">+</span> <span class="n">error</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
-                        <span class="nc">WebSocket</span><span class="o">.</span><span class="na">Listener</span><span class="o">.</span><span class="na">super</span><span class="o">.</span><span class="na">onError</span><span class="o">(</span><span class="n">webSocket</span><span class="o">,</span> <span class="n">error</span><span class="o">);</span>
-                    <span class="o">}</span>
-                <span class="o">}).</span><span class="na">join</span><span class="o">();</span>
-
-        <span class="c1">// Keep process running to monitor inbound market ticks</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\nListening for live market data. Press Ctrl + C to exit...\n"</span><span class="o">);</span>
-        <span class="n">keepAliveLatch</span><span class="o">.</span><span class="na">await</span><span class="o">();</span>
-    <span class="o">}</span>
-
-    <span class="cm">/**
-     * Minimal helper method to parse a string value from simple JSON responses
-     * without introducing external dependencies like Jackson or Gson.
-     */</span>
-    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">extractJsonValue</span><span class="o">(</span><span class="nc">String</span> <span class="n">json</span><span class="o">,</span> <span class="nc">String</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
-        <span class="nc">String</span> <span class="n">searchKey</span> <span class="o">=</span> <span class="s">"\""</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s">"\":\""</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">startIndex</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="n">searchKey</span><span class="o">);</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">startIndex</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
-        <span class="o">}</span>
-        <span class="n">startIndex</span> <span class="o">+=</span> <span class="n">searchKey</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
-        <span class="kt">int</span> <span class="n">endIndex</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">"\""</span><span class="o">,</span> <span class="n">startIndex</span><span class="o">);</span>
-        <span class="k">return</span> <span class="o">(</span><span class="n">endIndex</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">?</span> <span class="n">json</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">startIndex</span><span class="o">,</span> <span class="n">endIndex</span><span class="o">)</span> <span class="o">:</span> <span class="kc">null</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="7-production-troubleshooting-matrix--trader-checklist">7. Production Troubleshooting Matrix &amp; Trader Checklist</h2>
-
-<h3 id="troubleshooting-matrix">Troubleshooting Matrix</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Symptom / Error Message</th>
-      <th style="text-align: left">Root Cause</th>
-      <th style="text-align: left">Immediate Solution</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">**<code class="language-plaintext highlighter-rouge">Invalid Input : INVALID_IP</code>** or **<code class="language-plaintext highlighter-rouge">Access Restricted for API Only Users</code>**</td>
-      <td style="text-align: left">Windows/ISP sent an outbound request over dynamic IPv6, which does not match your PRISM whitelist.</td>
-      <td style="text-align: left">Query your IPv4 using <code class="language-plaintext highlighter-rouge">curl.exe -4 ifconfig.me</code>, whitelist it in PRISM, and disable IPv6 on your network adapter (<code class="language-plaintext highlighter-rouge">ncpa.cpl</code>). Always run with <code class="language-plaintext highlighter-rouge">-Djava.net.preferIPv4Stack=true</code>.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**<code class="language-plaintext highlighter-rouge">{"stat":"Not_Ok","emsg":"Invalid code"}</code>**</td>
-      <td style="text-align: left">The authorization <code class="language-plaintext highlighter-rouge">code</code> expired (TTL is ~2–3 minutes) or has already been consumed once.</td>
-      <td style="text-align: left">Refresh the consent URL in an Incognito window and obtain a fresh authorization code.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**<code class="language-plaintext highlighter-rouge">{"stat":"Not_Ok","emsg":"Invalid Checksum"}</code>**</td>
-      <td style="text-align: left">The SHA-256 hash was calculated with incorrect ordering, spaces, or uppercase characters.</td>
-      <td style="text-align: left">Ensure concatenation is strictly <code class="language-plaintext highlighter-rouge">appKey.trim() + secretKey.trim() + authCode.trim()</code> with no delimiters, and convert to lowercase hex.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**WebSocket closes with <code class="language-plaintext highlighter-rouge">code=1008 (Policy Violation)</code>**</td>
-      <td style="text-align: left">The authentication frame used <code class="language-plaintext highlighter-rouge">"usertoken"</code> or <code class="language-plaintext highlighter-rouge">"susertoken"</code> instead of <code class="language-plaintext highlighter-rouge">"accesstoken"</code>.</td>
-      <td style="text-align: left">Format the JSON payload strictly as: <code class="language-plaintext highlighter-rouge">{"t":"a", "uid":"...", "actid":"...", "accesstoken":"...", "source":"API"}</code>.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**WebSocket connects but zero market ticks arrive**</td>
-      <td style="text-align: left">Connected to the inactive <code class="language-plaintext highlighter-rouge">NorenWSTP</code> endpoint, or dispatched subscriptions before server sent <code class="language-plaintext highlighter-rouge">{"t":"ak","s":"OK"}</code>.</td>
-      <td style="text-align: left">Switch endpoint to <code class="language-plaintext highlighter-rouge">wss://api.shoonya.com/NorenWSAPI/</code> and buffer subscriptions until the acknowledgment frame is received.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**<code class="language-plaintext highlighter-rouge">502 Bad Gateway</code> on connect late at night**</td>
-      <td style="text-align: left">Broker nightly batch settlement running between 11:30 PM and 6:30 AM IST.</td>
-      <td style="text-align: left">Normal scheduled maintenance window. Configure connection retry policies with exponential backoff during off-market hours.</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-
-<h3 id="summary-checklist-for-algorithmic-traders">Summary Checklist for Algorithmic Traders</h3>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Configure only the <strong>3 static properties</strong> (<code class="language-plaintext highlighter-rouge">user-id</code>, <code class="language-plaintext highlighter-rouge">app-key</code>, <code class="language-plaintext highlighter-rouge">secret-key</code>) in your application settings.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Query your public IPv4 via <code class="language-plaintext highlighter-rouge">curl.exe -4 ifconfig.me</code> and save it to the PRISM developer portal.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Disable Windows IPv6 on your active adapter and pass <code class="language-plaintext highlighter-rouge">-Djava.net.preferIPv4Stack=true</code> to your JVM.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Calculate the SHA-256 checksum by concatenating <code class="language-plaintext highlighter-rouge">appKey + secretKey + authCode</code> with zero spaces or separators.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Transmit HTTP POST requests to <code class="language-plaintext highlighter-rouge">/NorenWClientAPI/GenAcsTok</code> using <code class="language-plaintext highlighter-rouge">Content-Type: application/x-www-form-urlencoded</code> with form body <code class="language-plaintext highlighter-rouge">jData=&lt;URL_ENCODED_JSON&gt;</code>.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Connect strictly to the authoritative WebSocket endpoint: <code class="language-plaintext highlighter-rouge">wss://api.shoonya.com/NorenWSAPI/</code>.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Transmit the initial WebSocket frame using <code class="language-plaintext highlighter-rouge">"accesstoken"</code>, and wait for server confirmation (<code class="language-plaintext highlighter-rouge">{"t":"ak","s":"OK"}</code>) before sending instrument subscriptions.</li>
-</ul>
-
-<hr />
-
-<h2 id="conclusion--next-steps">Conclusion &amp; Next Steps</h2>
-
-<p>Integrating Java with Shoonya (Finvasia) gives algorithmic traders a zero-brokerage, high-throughput gateway into the Indian markets. By adopting the modern OAuth 2.0 <code class="language-plaintext highlighter-rouge">GenAcsTok</code> protocol, preventing IPv6 leaks, and adhering to the correct <code class="language-plaintext highlighter-rouge">"accesstoken"</code> WebSocket handshake specification, you eliminate unexpected connection drops and build an institutional-grade foundation for your execution models.</p>
-
-<p>Check out our related algorithmic trading guides:</p>
-<ul>
-  <li><a href="/best-algo-trading-apis-india-comparison/">Comprehensive Comparison of the Best Algo Trading APIs in India</a></li>
-  <li><a href="/shoonya-java-websocket-live-streaming-guide/">Shoonya Java WebSocket Market Data Streaming Guide</a></li>
-  <li><a href="/getting-started-algo-trading-india-shoonya/">Beginner’s Roadmap to Algorithmic Trading with Shoonya</a></li>
-</ul>
-
-<p>If you run into any hurdles setting up your Shoonya integration or have questions about quantitative system design in Java, feel free to reach out via our <a href="/contact/">Contact Us page</a>.</p>
-
-<p>If this guide helped you resolve your authentication roadblocks and saved you debugging hours, consider supporting my work via the <strong>Buy Me a Coffee</strong> link on the <a href="/about/">About page</a>! ☕</p>]]></content><author><name></name></author><category term="programming" /><category term="java" /><category term="algorithmic-trading" /><category term="shoonya-api" /><category term="finvasia" /><category term="stock-market-india" /><category term="nse" /><category term="bse" /><category term="fintech" /><summary type="html"><![CDATA[Learn how to authenticate with Shoonya (Finvasia) Trading API in pure Java. Step-by-step guide covering the modern OAuth 2.0 GenAcsTok flow, SHA-256 checksums, IPv6 network fixes, and live WebSocket streaming with accesstoken.]]></summary></entry><entry><title type="html">Best Algo Trading APIs in India (2026): In-Depth Comparison, Pricing &amp;amp; Developer Guide</title><link href="https://thoughtstopen.com/best-algo-trading-apis-india-comparison/" rel="alternate" type="text/html" title="Best Algo Trading APIs in India (2026): In-Depth Comparison, Pricing &amp;amp; Developer Guide" /><published>2026-08-20T00:00:00-06:00</published><updated>2026-08-20T00:00:00-06:00</updated><id>https://thoughtstopen.com/best-algo-trading-apis-india-comparison</id><content type="html" xml:base="https://thoughtstopen.com/best-algo-trading-apis-india-comparison/"><![CDATA[<p><img src="/assets/img/posts/best-algo-trading-apis-india-comparison.png" alt="Best Algo Trading APIs in India" />
-<small><em>(Comprehensive Comparison of Top Algorithmic Trading API Platforms in India)</em></small>
-<br />
-<small><em>(Image generated by AI)</em></small></p>
-
-<!--
-================================================================================
-AI IMAGE GENERATION PROMPT (Use with Midjourney, DALL-E 3, or Google Imagen):
---------------------------------------------------------------------------------
-"A high-tech digital art illustration representing algorithmic trading APIs in the Indian stock market. In the center, a futuristic multi-screen trading command center with glowing holographic dashboards comparing financial data feeds, stock exchange badges for NSE and BSE, Python and Java code streams, glowing fiber optic network pathways, sub-millisecond execution clocks, and modern financial graphs. Isometric view, sleek dark mode fintech aesthetic with neon blue, emerald green, and amber gold accents, photorealistic depth of field, 8k resolution."
-================================================================================
--->
-
-<h2 id="introduction-the-algo-trading-boom-in-india">Introduction: The Algo Trading Boom in India</h2>
-
-<p>Algorithmic trading is no longer exclusive to Wall Street hedge funds or high-frequency trading (HFT) firms in Mumbai’s Bandra Kurla Complex (BKC). Over the past three years, the Indian retail trading landscape has witnessed a seismic shift.</p>
-
-<p>With the <strong>Securities and Exchange Board of India (SEBI)</strong> establishing formal framework guidelines for retail automated trading and discount brokers opening up their internal <strong>Application Programming Interfaces (APIs)</strong>, everyday software engineers, quantitative analysts, and retail traders can now connect custom algorithms directly to the <strong>National Stock Exchange (NSE)</strong>, <strong>Bombay Stock Exchange (BSE)</strong>, and <strong>Multi Commodity Exchange (MCX)</strong>.</p>
-
-<p>Whether you want to build a simple Python script to automatically rebalance your equity portfolio, deploy a mean-reverting options trading strategy on Nifty and Bank Nifty, or build a production Java engine that streams tick-by-tick market depth over WebSockets, <strong>your choice of broker API will make or break your trading system</strong>.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------------------------------------------------------------------------------+
-|                        THE ALGORITHMIC TRADING STACK                           |
-+--------------------------------------------------------------------------------+
-|                                                                                |
-|  [ Your Trading Logic ] (Python / Java / Node.js / C# / Go)                    |
-|            |                                                                   |
-|            v  (REST Orders &amp; WebSocket Ticks)                                  |
-|  [ Broker Trading API ] (Zerodha / Shoonya / Angel One / Dhan / Upstox / Fyers)|
-|            |                                                                   |
-|            v  (FIX / Native Exchange Protocol)                                 |
-|  [ Indian Exchanges ] (NSE / BSE / MCX Engine)                                 |
-|                                                                                |
-+--------------------------------------------------------------------------------+
-</code></pre></div></div>
-
-<p>A poor API choice can lead to:</p>
-<ul>
-  <li><strong>Hefty recurring costs</strong> (e.g., paying ₹4,000/month in API fees before making your first rupee in profit).</li>
-  <li><strong>Silent WebSocket disconnections</strong> and dropped price updates during volatile market open hours (9:15 AM to 9:30 AM IST).</li>
-  <li><strong>Aggressive rate-limiting</strong> that throttles your orders during rapid market crashes.</li>
-  <li><strong>Painful integration hurdles</strong> due to missing SDKs, broken endpoints, or outdated documentation.</li>
-</ul>
-
-<p>In this definitive guide, we review and benchmark the <strong>top 6 algorithmic trading API providers in India</strong>: <strong>Shoonya (Finvasia)</strong>, <strong>Zerodha (Kite Connect)</strong>, <strong>Angel One (SmartAPI)</strong>, <strong>Dhan (DhanHQ)</strong>, <strong>Upstox (API v2)</strong>, and <strong>Fyers (API v3)</strong>.</p>
-
-<p>By the end of this article, you will understand the exact trade-offs in pricing, rate limits, latency, and developer experience so you can choose the right API for your capital and strategy.</p>
-
-<hr />
-
-<h2 id="the-6-evaluation-criteria-how-to-judge-a-trading-api">The 6 Evaluation Criteria: How to Judge a Trading API</h2>
-
-<p>Before comparing individual brokers, you must evaluate APIs across six objective technical and financial pillars:</p>
-
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbkFbQVBJIEV2YWx1YXRpb24gQ3JpdGVyaWFdIC0tPiBCWzEuIENvc3Q6IEFQSSBGZWVzICYgQnJva2VyYWdlXVxuQSAtLT4gQ1syLiBSYXRlIExpbWl0cyAmIExhdGVuY3ldXG5BIC0tPiBEWzMuIFdlYlNvY2tldCBNYXJrZXQgU3RyZWFtaW5nXVxuQSAtLT4gRVs0LiBTREsgJiBMYW5ndWFnZSBTdXBwb3J0XVxuQSAtLT4gRls1LiBQbGF0Zm9ybSBTdGFiaWxpdHkgYXQgOToxNSBBTV1cbkEgLS0-IEdbNi4gSGlzdG9yaWNhbCBEYXRhICYgU2FuZGJveF0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ" /></p>
-
-<h3 id="1-total-cost-of-ownership-api-subscription--brokerage">1. Total Cost of Ownership (API Subscription + Brokerage)</h3>
-<p>Many beginners forget that broker charges come in two parts:</p>
-<ul>
-  <li><strong>API Subscription Fee:</strong> A recurring monthly charge simply to keep your API keys active.</li>
-  <li><strong>Per-Trade Brokerage:</strong> The fee deducted every time your algorithm buys or sells contracts (typically ₹0 to ₹20 per executed order).
-If you deploy an intraday scalping strategy executing 30 orders a day, a ₹20/order broker will cost you <strong>₹600/day (over ₹13,000/month)</strong> in brokerage alone, regardless of whether your strategy makes money.</li>
-</ul>
-
-<h3 id="2-rate-limits-requests-per-second">2. Rate Limits (Requests Per Second)</h3>
-<p>Exchanges and brokers strictly limit how many HTTP requests your bot can send per second. A low rate limit (e.g., 3 to 5 requests/sec) will choke multi-leg options execution or portfolio scanners. High-frequency algorithms need at least 20 to 50 requests/sec.</p>
-
-<h3 id="3-real-time-streaming-websockets">3. Real-Time Streaming (WebSockets)</h3>
-<p>Does the broker offer full-duplex WebSocket feeds? Are the ticks streamed as lightweight JSON or high-performance binary formats (like Google Protocol Buffers)? Does the broker enforce strict socket concurrency limits (such as allowing only 1 socket per account)?</p>
-
-<h3 id="4-developer-experience--multi-language-sdks">4. Developer Experience &amp; Multi-Language SDKs</h3>
-<p>Does the broker provide officially maintained, well-tested client libraries in languages like <strong>Python</strong>, <strong>Java</strong>, <strong>Node.js</strong>, <strong>Go</strong>, and <strong>C#</strong>? Or are you forced to write raw HTTP networking and cryptographic SHA-256 signatures from scratch?</p>
-
-<h3 id="5-morning-peak-stability-the-915-am-stress-test">5. Morning Peak Stability (The 9:15 AM Stress Test)</h3>
-<p>Indian markets open at 9:15 AM IST with an intense burst of order placements, index re-pricing, and options contract recalculations. Several brokers experience latency spikes, gateway timeouts (<code class="language-plaintext highlighter-rouge">502 Bad Gateway</code>), or frozen WebSocket connections between 9:15 AM and 9:30 AM.</p>
-
-<h3 id="6-historical-data-access--paper-trading-sandbox">6. Historical Data Access &amp; Paper Trading Sandbox</h3>
-<p>To develop profitable strategies, you need years of 1-minute historical candlestick data for backtesting. Some brokers include free historical data in their basic API, while others charge an expensive monthly add-on fee.</p>
-
-<hr />
-
-<h2 id="master-comparison-matrix-top-6-algo-trading-apis-in-india">Master Comparison Matrix: Top 6 Algo Trading APIs in India</h2>
-
-<p>Here is the side-by-side technical and financial breakdown of India’s leading API brokers:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Feature / Broker</th>
-      <th style="text-align: left">Shoonya (Finvasia)</th>
-      <th style="text-align: left">Zerodha (Kite Connect)</th>
-      <th style="text-align: left">Angel One (SmartAPI)</th>
-      <th style="text-align: left">Dhan (DhanHQ)</th>
-      <th style="text-align: left">Upstox (API v2)</th>
-      <th style="text-align: left">Fyers (API v3)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">**API Subscription**</td>
-      <td style="text-align: left">**₹0 (Free Lifetime)**</td>
-      <td style="text-align: left">₹2,000 / month</td>
-      <td style="text-align: left">**₹0 (Free Lifetime)**</td>
-      <td style="text-align: left">**₹0 (Free Lifetime)**</td>
-      <td style="text-align: left">**₹0 (Free)**</td>
-      <td style="text-align: left">**₹0 (Free Lifetime)**</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Historical Data Fee**</td>
-      <td style="text-align: left">Included (Free)</td>
-      <td style="text-align: left">+₹2,000 / month</td>
-      <td style="text-align: left">Included (Free)</td>
-      <td style="text-align: left">Included (Free)</td>
-      <td style="text-align: left">Included (Free)</td>
-      <td style="text-align: left">Included (Free)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Equity Delivery**</td>
-      <td style="text-align: left">**₹0 (Zero Brokerage)**</td>
-      <td style="text-align: left">₹0 (Zero)</td>
-      <td style="text-align: left">₹0 (Zero)</td>
-      <td style="text-align: left">₹0 (Zero)</td>
-      <td style="text-align: left">₹20 or 2.5%</td>
-      <td style="text-align: left">₹0 (Zero)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Intraday &amp; F&amp;O**</td>
-      <td style="text-align: left">**₹0 (True Zero)**</td>
-      <td style="text-align: left">₹20 per order</td>
-      <td style="text-align: left">₹20 per order</td>
-      <td style="text-align: left">₹20 per order</td>
-      <td style="text-align: left">₹20 per order</td>
-      <td style="text-align: left">₹20 per order</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Rate Limit**</td>
-      <td style="text-align: left">~10 req / sec</td>
-      <td style="text-align: left">3 to 10 req / sec</td>
-      <td style="text-align: left">10 to 20 req / sec</td>
-      <td style="text-align: left">**Up to 100 req / sec**</td>
-      <td style="text-align: left">~10 req / sec</td>
-      <td style="text-align: left">~10 req / sec</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**WebSocket Streaming**</td>
-      <td style="text-align: left">Live Touchline &amp; Depth</td>
-      <td style="text-align: left">Live Ticks (Binary)</td>
-      <td style="text-align: left">Live Ticks (Binary 2.0)</td>
-      <td style="text-align: left">Live Ticks (Binary)</td>
-      <td style="text-align: left">Protobuf / JSON</td>
-      <td style="text-align: left">Live Ticks (Binary)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Official SDKs**</td>
-      <td style="text-align: left">Java, Python (Community)</td>
-      <td style="text-align: left">Python, Java, Node, Go</td>
-      <td style="text-align: left">Python, Java, Node, C#</td>
-      <td style="text-align: left">Python, Node, Java</td>
-      <td style="text-align: left">Python, Java, Node, PHP</td>
-      <td style="text-align: left">Python, Node</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**TradingView Webhook**</td>
-      <td style="text-align: left">Manual Build</td>
-      <td style="text-align: left">Via Third-Party Tools</td>
-      <td style="text-align: left">Via Third-Party Tools</td>
-      <td style="text-align: left">**Built-in Native**</td>
-      <td style="text-align: left">Via Third-Party Tools</td>
-      <td style="text-align: left">**Built-in Native**</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Target Audience**</td>
-      <td style="text-align: left">Cost-Conscious / High-Vol</td>
-      <td style="text-align: left">Institutional / Retail</td>
-      <td style="text-align: left">Full-Service Traders</td>
-      <td style="text-align: left">Quants &amp; Chart Traders</td>
-      <td style="text-align: left">Tech-First Developers</td>
-      <td style="text-align: left">Chart &amp; Options Traders</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-
-<h2 id="in-depth-provider-reviews">In-Depth Provider Reviews</h2>
-
-<hr />
-
-<h3 id="1-shoonya-by-finvasia-the-zero-brokerage-powerhouse">1. Shoonya by Finvasia: The Zero-Brokerage Powerhouse</h3>
-
-<p><a href="https://shoonya.com/" target="_blank" rel="noopener noreferrer">Shoonya</a> (powered by financial technology firm Finvasia) has become a sensation among quantitative developers and retail traders due to its uncompromising <strong>true zero-brokerage pricing model</strong>.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------------------------------------------------------------------------------+
-|                        SHOONYA (FINVASIA) AT A GLANCE                          |
-+--------------------------------------------------------------------------------+
-|  API Subscription Cost : ₹0 (Lifetime Free)                                    |
-|  Brokerage Charge      : ₹0 on Equity Delivery, Intraday, Futures &amp; Options    |
-|  Historical Data       : Free (1-minute bars via API)                          |
-|  Streaming Gateway     : WebSocket (NorenWSAPI)                                |
-|  Official Documentation: https://shoonya.com/api                               |
-+--------------------------------------------------------------------------------+
-</code></pre></div></div>
-
-<p>Unlike traditional discount brokers that charge ₹20 per executed order, Shoonya charges <strong>₹0 across every market segment</strong>—Equity Delivery, Equity Intraday, Index Futures, Stock Futures, Options, and Commodities (MCX). Furthermore, API access is 100% free with no recurring monthly maintenance charges.</p>
-
-<h4 id="technical-highlights">Technical Highlights:</h4>
-<ul>
-  <li>Built on the battle-tested <strong>Noren OMS</strong> platform.</li>
-  <li>Provides standard REST endpoints alongside persistent WebSocket market streaming via <code class="language-plaintext highlighter-rouge">wss://api.shoonya.com/NorenWSAPI/</code>.</li>
-  <li>Fast single-use OAuth 2.0 authorization code exchange (<code class="language-plaintext highlighter-rouge">/GenAcsTok</code>) paired with standard RFC 6238 TOTP two-factor authentication.</li>
-</ul>
-
-<h4 id="pros">Pros:</h4>
-<ul>
-  <li><strong>Zero Financial Drag:</strong> You pay zero brokerage fees and zero API fees. If you place 100 trades a day, you save ₹2,000 every single trading session compared to Zerodha or Angel One.</li>
-  <li><strong>Free Historical Data:</strong> Access historical bar data without purchasing extra data packs.</li>
-  <li><strong>Direct Multi-Asset Access:</strong> Connect to NSE, BSE, and MCX through a unified API token system.</li>
-</ul>
-
-<h4 id="cons">Cons:</h4>
-<ul>
-  <li><strong>Documentation Requires Patience:</strong> Official documentation can be brief, and several legacy endpoints (like <code class="language-plaintext highlighter-rouge">QuickAuth</code> or <code class="language-plaintext highlighter-rouge">NorenWSTP</code>) are deprecated, requiring developers to follow updated community guides.</li>
-  <li><strong>Single-Socket Constraint:</strong> Strictly permits only one active WebSocket connection per User ID. Having the mobile app or web portal open will interfere with your stream.</li>
-  <li><strong>Minimal Community Tooling:</strong> Unlike Zerodha, there is no sprawling ecosystem of third-party open-source plugins; you often have to write your own wrapper in Java or Python.</li>
-</ul>
-
-<p><strong>Best Suited For:</strong> Developers, options scalpers, high-frequency quantitative systems, and retail traders with modest capital who cannot afford monthly API fees and per-trade brokerage eating into their edge.</p>
-
-<p><em>Official Links:</em></p>
-<ul>
-  <li>Website: <a href="https://shoonya.com/" target="_blank" rel="noopener noreferrer">Shoonya (Finvasia) Official Portal</a></li>
-  <li>Developer Docs: <a href="https://shoonya.com/api" target="_blank" rel="noopener noreferrer">Shoonya API Documentation</a></li>
-  <li>Trading Terminal: <a href="https://trade.shoonya.com/" target="_blank" rel="noopener noreferrer">Shoonya Web Trading Terminal (PRISM)</a></li>
-  <li>Official GitHub: <a href="https://github.com/Shoonya-Dev/ShoonyaApi-java" target="_blank" rel="noopener noreferrer">Shoonya Official Java SDK on GitHub</a></li>
-</ul>
-
-<hr />
-
-<h3 id="2-zerodha-kite-connect-the-industry-benchmark-for-stability">2. Zerodha (Kite Connect): The Industry Benchmark for Stability</h3>
-
-<p><a href="https://zerodha.com/" target="_blank" rel="noopener noreferrer">Zerodha</a> is India’s largest discount broker, and its proprietary <strong>Kite Connect API</strong> is widely regarded as the gold standard for developer experience, documentation clarity, and architectural elegance.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------------------------------------------------------------------------------+
-|                          ZERODHA KITE CONNECT AT A GLANCE                      |
-+--------------------------------------------------------------------------------+
-|  API Subscription Cost : ₹2,000 / month                                        |
-|  Historical Data Add-on: ₹2,000 / month extra                                  |
-|  Brokerage Charge      : ₹0 Delivery | ₹20 or 0.03% on Intraday / F&amp;O           |
-|  Streaming Gateway     : High-speed Binary WebSocket                           |
-|  Official Documentation: https://kite.trade/                                   |
-+--------------------------------------------------------------------------------+
-</code></pre></div></div>
-
-<p>Zerodha’s Kite Connect ecosystem is mature, polished, and supported by a massive developer forum. If you run into an error or edge case, chances are someone has already solved and documented it on the Kite developer forum.</p>
-
-<h4 id="technical-highlights-1">Technical Highlights:</h4>
-<ul>
-  <li>High-performance binary WebSocket feed streaming packed byte buffers that decode directly into tick structs with minimal CPU overhead.</li>
-  <li>Officially maintained, idiomatic SDKs in <strong>Python (<code class="language-plaintext highlighter-rouge">pykiteconnect</code>)</strong>, <strong>Java (<code class="language-plaintext highlighter-rouge">kiteconnect-java</code>)</strong>, <strong>Node.js</strong>, <strong>Go</strong>, and <strong>PHP</strong>.</li>
-  <li>Robust <strong>Publisher API</strong> allowing fintech startups to build “Click to Execute” buttons directly into websites and apps.</li>
-</ul>
-
-<h4 id="pros-1">Pros:</h4>
-<ul>
-  <li><strong>Unrivaled Reliability:</strong> Excellent uptime and server resilience during peak 9:15 AM market volatility.</li>
-  <li><strong>World-Class Documentation:</strong> Comprehensive guides, clear error codes, interactive API consoles, and transparent changelogs.</li>
-  <li><strong>Vibrant Community:</strong> Active official developer forums where Zerodha core engineers frequently answer architectural questions.</li>
-</ul>
-
-<h4 id="cons-1">Cons:</h4>
-<ul>
-  <li><strong>Steep Pricing:</strong> Costs ₹2,000/month for basic Kite Connect API access, plus an additional ₹2,000/month if your strategy requires historical candlestick data. That is <strong>₹48,000 per year</strong> in static API costs alone!</li>
-  <li><strong>Strict Rate Limits:</strong> Limits order placement to 3 requests per second and general HTTP queries to 10 requests per second.</li>
-</ul>
-
-<p><strong>Best Suited For:</strong> Well-capitalized quantitative traders, financial institutions, fintech startups, and developers who prioritize platform stability, battle-tested libraries, and comprehensive documentation above all else.</p>
-
-<p><em>Official Links:</em></p>
-<ul>
-  <li>Developer Portal: <a href="https://kite.trade/" target="_blank" rel="noopener noreferrer">Zerodha Kite Connect Developer Portal</a></li>
-  <li>Broker Website: <a href="https://zerodha.com/" target="_blank" rel="noopener noreferrer">Zerodha Official Website</a></li>
-  <li>Kite Forum: <a href="https://kite.trade/forum/" target="_blank" rel="noopener noreferrer">Kite Developer Community Forum</a></li>
-</ul>
-
-<hr />
-
-<h3 id="3-angel-one-smartapi-the-enterprise-full-service-free-alternative">3. Angel One (SmartAPI): The Enterprise Full-Service Free Alternative</h3>
-
-<p><a href="https://www.angelone.in/" target="_blank" rel="noopener noreferrer">Angel One</a> (formerly Angel Broking) transitioned from a traditional full-service brokerage into a digital powerhouse with its <strong>SmartAPI</strong> initiative.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------------------------------------------------------------------------------+
-|                          ANGEL ONE SMARTAPI AT A GLANCE                        |
-+--------------------------------------------------------------------------------+
-|  API Subscription Cost : ₹0 (Free Lifetime Access)                             |
-|  Brokerage Charge      : ₹0 Delivery | ₹20 per order on Intraday &amp; F&amp;O          |
-|  Historical Data       : Free (Included with SmartAPI)                         |
-|  Streaming Gateway     : SmartAPI WebSocket 2.0 (Binary Stream)                |
-|  Official Documentation: https://smartapi.angelbroking.com/                    |
-+--------------------------------------------------------------------------------+
-</code></pre></div></div>
-
-<p>Angel One was the first mainstream legacy broker to make its professional trading API <strong>completely free for retail traders</strong>, directly challenging Zerodha’s subscription model.</p>
-
-<h4 id="technical-highlights-2">Technical Highlights:</h4>
-<ul>
-  <li>Generous rate limits (typically up to 20 requests per second across various endpoints).</li>
-  <li>Recently overhauled <strong>WebSocket 2.0</strong> streaming gateway that delivers binary-packed ticks across touchline and market depth.</li>
-  <li>Full support for multi-leg GTT (Good-Till-Triggered) orders directly via the API.</li>
-</ul>
-
-<h4 id="pros-2">Pros:</h4>
-<ul>
-  <li><strong>Free API &amp; Historical Data:</strong> Zero monthly recurring API fees, with historical candle data included for free.</li>
-  <li><strong>Broad Multi-Language SDK Support:</strong> Official libraries for Python, Java, Node.js, C#, Go, and R.</li>
-  <li><strong>Full-Service Infrastructure:</strong> Access to institutional research, mutual funds, and IPO APIs under a single umbrella.</li>
-</ul>
-
-<h4 id="cons-2">Cons:</h4>
-<ul>
-  <li><strong>Session Expiration Traps:</strong> JWT authentication tokens expire frequently, requiring your bot to implement automatic token refresh flows.</li>
-  <li><strong>Brokerage Still Applies:</strong> Flat ₹20 per executed order on Intraday and F&amp;O trades.</li>
-  <li><strong>Customer Support:</strong> Developer support via forums can sometimes be slower compared to dedicated tech-first brokers.</li>
-</ul>
-
-<p><strong>Best Suited For:</strong> Traders who want a free API backed by an established, publicly listed broker with a large asset base and official multi-language SDK support.</p>
-
-<p><em>Official Links:</em></p>
-<ul>
-  <li>Developer Portal: <a href="https://smartapi.angelbroking.com/" target="_blank" rel="noopener noreferrer">Angel One SmartAPI Portal</a></li>
-  <li>Official Website: <a href="https://www.angelone.in/" target="_blank" rel="noopener noreferrer">Angel One Official Website</a></li>
-  <li>SmartAPI GitHub: <a href="https://github.com/angel-one" target="_blank" rel="noopener noreferrer">Angel One GitHub Organization</a></li>
-</ul>
-
-<hr />
-
-<h3 id="4-dhan-dhanhq-the-quant-first-modern-innovator">4. Dhan (DhanHQ): The Quant-First Modern Innovator</h3>
-
-<p>Launched by Raise Financial Services, <a href="https://dhan.co/" target="_blank" rel="noopener noreferrer">Dhan</a> has rapidly established itself as the preferred broker for modern technical traders, active options buyers, and quantitative engineers through its <strong>DhanHQ API</strong> platform.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------------------------------------------------------------------------------+
-|                            DHAN (DHANHQ) AT A GLANCE                           |
-+--------------------------------------------------------------------------------+
-|  API Subscription Cost : ₹0 (Lifetime Free for All Users)                      |
-|  Brokerage Charge      : ₹0 Delivery | ₹20 per order on Intraday / F&amp;O         |
-|  Historical Data       : Free Daily &amp; Intraday Candles                         |
-|  Rate Limits           : Up to 100 requests per second!                        |
-|  Official Documentation: https://dhanhq.co/                                    |
-+--------------------------------------------------------------------------------+
-</code></pre></div></div>
-
-<p>Dhan was engineered from the ground up for active retail traders. It features <strong>native webhook integration with TradingView</strong>, allowing users to fire programmatic orders straight from custom Pine Script alerts without hosting a dedicated server.</p>
-
-<h4 id="technical-highlights-3">Technical Highlights:</h4>
-<ul>
-  <li><strong>Industry-Leading Rate Limits:</strong> Allows up to <strong>100 requests per second</strong> for quote requests and 25 requests/sec for order placement—far surpassing traditional broker limits.</li>
-  <li><strong>Native Webhooks:</strong> Place multi-leg basket orders directly from TradingView alerts with simple JSON payloads.</li>
-  <li><strong>Dedicated Developer Dashboard:</strong> Clean, intuitive UI for generating 30-day API access tokens with fine-grained permission toggles.</li>
-</ul>
-
-<h4 id="pros-3">Pros:</h4>
-<ul>
-  <li><strong>Zero API Fees:</strong> 100% free API and market data feeds for all active Dhan account holders.</li>
-  <li><strong>Blazing Fast API Limits:</strong> Designed specifically for multi-symbol market scanners and fast order dispatch.</li>
-  <li><strong>Superb Options Features:</strong> Dedicated options chain endpoints that provide strike prices, implied volatility (IV), Greeks, and open interest (OI) in a single API call.</li>
-  <li><strong>Discount for Women Traders:</strong> Offers a 50% discount on brokerage for women account holders.</li>
-</ul>
-
-<h4 id="cons-3">Cons:</h4>
-<ul>
-  <li><strong>Flat Brokerage:</strong> Charges ₹20 per order on intraday and derivative trades.</li>
-  <li><strong>Relatively New Broker:</strong> Shorter track record compared to legacy institutions like Angel One or Zerodha.</li>
-</ul>
-
-<p><strong>Best Suited For:</strong> Active options traders, quantitative backtesters, TradingView Pine Script developers, and multi-symbol intraday scanners.</p>
-
-<p><em>Official Links:</em></p>
-<ul>
-  <li>Developer Portal: <a href="https://dhanhq.co/" target="_blank" rel="noopener noreferrer">DhanHQ Developer Platform</a></li>
-  <li>Official Website: <a href="https://dhan.co/" target="_blank" rel="noopener noreferrer">Dhan Official Website</a></li>
-  <li>API Documentation: <a href="https://dhanhq.co/docs/" target="_blank" rel="noopener noreferrer">DhanHQ API Documentation</a></li>
-</ul>
-
-<hr />
-
-<h3 id="5-upstox-developer-api-v2-cloud-native--protobuf-feeds">5. Upstox (Developer API v2): Cloud-Native &amp; Protobuf Feeds</h3>
-
-<p>Backed by institutional investors like Tiger Global and Ratan Tata, <a href="https://upstox.com/" target="_blank" rel="noopener noreferrer">Upstox</a> launched its overhauled <strong>API v2</strong>, featuring modern REST architectural patterns and binary streaming.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------------------------------------------------------------------------------+
-|                           UPSTOX (API V2) AT A GLANCE                          |
-+--------------------------------------------------------------------------------+
-|  API Subscription Cost : Free for Basic Trading API                            |
-|  Brokerage Charge      : ₹20 per order on Equity Intraday &amp; F&amp;O                |
-|  Historical Data       : Free historical candle endpoints                      |
-|  Streaming Format      : Google Protocol Buffers (Protobuf)                    |
-|  Official Documentation: https://upstox.com/developer/api-documentation/      |
-+--------------------------------------------------------------------------------+
-</code></pre></div></div>
-
-<p>Upstox API v2 stands out because of its modern engineering: it uses standard <strong>OAuth 2.0 Authorization Code flows</strong> and <strong>Google Protocol Buffers (Protobuf)</strong> for streaming WebSocket data.</p>
-
-<h4 id="technical-highlights-4">Technical Highlights:</h4>
-<ul>
-  <li><strong>Protobuf Serialization:</strong> Instead of raw JSON strings, market data is serialized using Protobuf, drastically reducing packet sizes and parsing overhead for high-frequency processing.</li>
-  <li>Clean OpenAPI (Swagger) specifications allowing developers to generate clients in any programming language automatically.</li>
-  <li>Robust portfolio, holdings, and order management webhooks.</li>
-</ul>
-
-<h4 id="pros-4">Pros:</h4>
-<ul>
-  <li><strong>Modern Architecture:</strong> Strictly conforms to RFC standards (OAuth 2.0, Protobuf, RESTful conventions).</li>
-  <li><strong>Fast WebSocket Feeds:</strong> Binary streams minimize network bandwidth consumption.</li>
-  <li><strong>Officially Maintained Libraries:</strong> Good SDK support for Python, Java, Node.js, and PHP.</li>
-</ul>
-
-<h4 id="cons-4">Cons:</h4>
-<ul>
-  <li><strong>Protobuf Complexity for Beginners:</strong> Beginners unfamiliar with <code class="language-plaintext highlighter-rouge">.proto</code> schema compiling may find parsing WebSocket market data more challenging than standard JSON.</li>
-  <li><strong>Delivery Brokerage:</strong> Unlike Zerodha or Shoonya, Upstox charges up to ₹20 or 2.5% (whichever is lower) on equity delivery trades.</li>
-</ul>
-
-<p><strong>Best Suited For:</strong> Seasoned software engineers and fintech developers who appreciate strict OpenAPI specifications and modern cloud serialization protocols like Protobuf.</p>
-
-<p><em>Official Links:</em></p>
-<ul>
-  <li>Developer Documentation: <a href="https://upstox.com/developer/api-documentation/" target="_blank" rel="noopener noreferrer">Upstox API Documentation</a></li>
-  <li>Official Website: <a href="https://upstox.com/" target="_blank" rel="noopener noreferrer">Upstox Official Portal</a></li>
-  <li>Upstox GitHub: <a href="https://github.com/upstox" target="_blank" rel="noopener noreferrer">Upstox GitHub Organization</a></li>
-</ul>
-
-<hr />
-
-<h3 id="6-fyers-api-v3-built-by-traders-for-visual--options-analysts">6. Fyers (API v3): Built by Traders for Visual &amp; Options Analysts</h3>
-
-<p><a href="https://fyers.in/" target="_blank" rel="noopener noreferrer">Fyers</a> was among the earliest discount brokers in India to champion trading directly from charts. Their <strong>Fyers API v3</strong> provides deep integration with TradingView and advanced options analytics.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------------------------------------------------------------------------------+
-|                            FYERS (API V3) AT A GLANCE                          |
-+--------------------------------------------------------------------------------+
-|  API Subscription Cost : ₹0 (Free Lifetime Access)                             |
-|  Brokerage Charge      : ₹0 Delivery | ₹20 per order on Intraday / F&amp;O         |
-|  Historical Data       : Free (Up to 5+ years of historical intraday data)     |
-|  Official Documentation: https://fyers.in/fyers-api/                           |
-+--------------------------------------------------------------------------------+
-</code></pre></div></div>
-
-<h4 id="technical-highlights-5">Technical Highlights:</h4>
-<ul>
-  <li>High-speed WebSocket service with market depth and index tick feeds.</li>
-  <li>Extensive historical database providing multi-year 1-minute historical data for backtesting.</li>
-  <li>Built-in multi-leg options strategy execution endpoints.</li>
-</ul>
-
-<h4 id="pros-5">Pros:</h4>
-<ul>
-  <li><strong>Free API Access:</strong> No monthly subscription fee.</li>
-  <li><strong>Deep Historical Data:</strong> Offers some of the longest historical intraday data ranges among free Indian broker APIs.</li>
-  <li><strong>TradingView Integration:</strong> Seamless chart sync between your automated bot trades and manual chart monitoring.</li>
-</ul>
-
-<h4 id="cons-5">Cons:</h4>
-<ul>
-  <li><strong>Morning Open Latency:</strong> Users occasionally report WebSocket reconnection loops during the 9:15 AM to 9:20 AM opening bell.</li>
-  <li><strong>Brokerage Costs:</strong> Standard ₹20/order applies to intraday and F&amp;O.</li>
-</ul>
-
-<p><strong>Best Suited For:</strong> Traders migrating from manual TradingView charting to automated rule-based execution who need deep historical data for backtesting.</p>
-
-<p><em>Official Links:</em></p>
-<ul>
-  <li>Developer Portal: <a href="https://fyers.in/fyers-api/" target="_blank" rel="noopener noreferrer">Fyers API Official Portal</a></li>
-  <li>Official Website: <a href="https://fyers.in/" target="_blank" rel="noopener noreferrer">Fyers Official Website</a></li>
-  <li>Community Forum: <a href="https://community.fyers.in/" target="_blank" rel="noopener noreferrer">Fyers Community Forum</a></li>
-</ul>
-
-<hr />
-
-<h2 id="decision-matrix-which-api-should-you-choose">Decision Matrix: Which API Should YOU Choose?</h2>
-
-<p>To make an informed decision based on your trading style and capital, use this practical recommendation guide:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">If Your Primary Need Is…</th>
-      <th style="text-align: left">Recommended Broker API</th>
-      <th style="text-align: left">Key Advantage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">**Maximum Cost Savings &amp; Scalping**</td>
-      <td style="text-align: left">**Shoonya (Finvasia)**</td>
-      <td style="text-align: left">Pay ₹0 API fee and ₹0 brokerage per trade across all segments.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Enterprise Stability &amp; Documentation**</td>
-      <td style="text-align: left">**Zerodha (Kite Connect)**</td>
-      <td style="text-align: left">Gold-standard uptime, mature SDKs, and huge community support.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**High Request Volume &amp; Options Analytics**</td>
-      <td style="text-align: left">**Dhan (DhanHQ)**</td>
-      <td style="text-align: left">Free API, 100 req/sec limits, Greeks, and native TradingView webhooks.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Full-Service Safety with Free APIs**</td>
-      <td style="text-align: left">**Angel One (SmartAPI)**</td>
-      <td style="text-align: left">Backed by a large listed institution with free APIs and multi-language SDKs.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Cloud-Native Protobuf Streaming**</td>
-      <td style="text-align: left">**Upstox (API v2)**</td>
-      <td style="text-align: left">Clean OpenAPI specs and binary Protocol Buffer WebSocket feeds.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">**Chart-Driven &amp; Long Historical Backtests**</td>
-      <td style="text-align: left">**Fyers (API v3)**</td>
-      <td style="text-align: left">Free multi-year 1-minute historical data and deep TradingView chart sync.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="1-choose-shoonya-finvasia-if">1. Choose Shoonya (Finvasia) If:</h3>
-<ul>
-  <li>You are a retail trader with capital under ₹5,00,000 where ₹20/order brokerage would eat up a substantial percentage of your profits.</li>
-  <li>You trade high-frequency, multi-leg options strategies or scalping algorithms generating dozens of orders per session.</li>
-  <li>You want completely free historical candlestick data and real-time tick streaming without recurring subscriptions.</li>
-</ul>
-
-<h3 id="2-choose-zerodha-kite-connect-if">2. Choose Zerodha (Kite Connect) If:</h3>
-<ul>
-  <li>You are running a professional, well-capitalized fund or startup where spending ₹4,000/month for API and historical data is negligible.</li>
-  <li>You want the peace of mind that comes with India’s largest, most battle-tested algorithmic trading infrastructure.</li>
-  <li>You need official SDKs in Go, Java, Python, or Node.js with extensive StackOverflow and forum documentation.</li>
-</ul>
-
-<h3 id="3-choose-dhan-dhanhq-if">3. Choose Dhan (DhanHQ) If:</h3>
-<ul>
-  <li>You need super-fast rate limits (up to 100 requests/sec) for scanning broad indices and symbol watchlists.</li>
-  <li>You build strategies in TradingView Pine Script and want instant webhook order execution without maintaining a middle-tier server.</li>
-  <li>You need direct API access to live options chains and Greeks without calculating them yourself.</li>
-</ul>
-
-<hr />
-
-<h2 id="technical-pitfalls-to-watch-out-for">Technical Pitfalls to Watch Out For</h2>
-
-<p>Regardless of which API provider you select, every algorithmic trader in India must prepare for these common technical challenges:</p>
-
-<ol>
-  <li><strong>Mandatory 2FA (TOTP) Automation:</strong><br />
-Per SEBI regulations, all API logins require Two-Factor Authentication. Avoid manual SMS OTPs. Configure automated <strong>RFC 6238 TOTP generators</strong> using your broker’s Base32 secret key so your bot can log in autonomously every morning at 8:45 AM before market open.</li>
-  <li><strong>The IPv6 Network Firewall Trap:</strong><br />
-Indian ISPs (Jio Fiber, Airtel Xstream) frequently assign dynamic IPv6 addresses. If your broker’s developer dashboard requires IP whitelisting (like Shoonya or Angel One), ensure your application forces outbound IPv4 connections (<code class="language-plaintext highlighter-rouge">-Djava.net.preferIPv4Stack=true</code> in Java) to prevent mysterious <code class="language-plaintext highlighter-rouge">"Access Restricted"</code> rejections.</li>
-  <li><strong>Session Lifespans:</strong><br />
-Broker access tokens are single-day tokens that expire every night between 3:30 AM and 6:00 AM IST. Never hardcode tokens; always build an automated daily authentication pipeline.</li>
-  <li><strong>WebSocket Concurrency Rules:</strong><br />
-Brokers like Shoonya permit only <strong>one active socket per User ID</strong>. If your bot disconnects or crashes unexpectedly, always ensure background processes are terminated before attempting to reconnect.</li>
-</ol>
-
-<hr />
-
-<h2 id="conclusion--next-steps">Conclusion &amp; Next Steps</h2>
-
-<p>There is no single “best” trading API for everyone—the optimal choice depends on your <strong>trading frequency, capital base, and technical expertise</strong>:</p>
-<ul>
-  <li>For <strong>pure cost efficiency and algorithmic scalping</strong>, <a href="https://shoonya.com/" target="_blank" rel="noopener noreferrer">Shoonya by Finvasia</a> provides unmatched value with lifetime zero brokerage and zero API charges.</li>
-  <li>For <strong>enterprise reliability and community documentation</strong>, <a href="https://kite.trade/" target="_blank" rel="noopener noreferrer">Zerodha Kite Connect</a> remains the industry benchmark.</li>
-  <li>For <strong>high-speed scanning and modern options analytics</strong>, <a href="https://dhanhq.co/" target="_blank" rel="noopener noreferrer">DhanHQ</a> leads the new wave of fintech brokers.</li>
-</ul>
-
-<h3 id="ready-to-start-building">Ready to Start Building?</h3>
-<ul>
-  <li>Check out our <a href="/shoonya-java-api-authentication-guide/">Complete Guide to Shoonya API Authentication in Java</a> to master automated TOTP 2FA, OAuth token exchanges, and IPv6 network fixes.</li>
-  <li>Learn how to stream real-time tick-by-tick prices in our <a href="/shoonya-java-websocket-live-streaming-guide/">Shoonya Java WebSocket Market Data Streaming Guide</a>.</li>
-  <li>Review risk management rules and paper trading strategies in our <a href="/getting-started-algo-trading-india-shoonya/">Beginner’s Roadmap to Algorithmic Trading</a>.</li>
-</ul>
-
-<p>Which broker API are you currently using or considering for your automated strategies? Share your thoughts or questions in the comments below!</p>]]></content><author><name></name></author><category term="algorithmic-trading" /><category term="trading" /><category term="shoonya-api" /><category term="zerodha" /><category term="angel-one" /><category term="upstox" /><category term="dhan" /><category term="fyers" /><category term="nse" /><category term="bse" /><category term="personal-finance" /><category term="investing" /><category term="programming" /><summary type="html"><![CDATA[Comprehensive comparison of the best algorithmic trading APIs in India: Shoonya, Zerodha Kite Connect, Angel One SmartAPI, Upstox v2, DhanHQ, and Fyers. Detailed analysis of API pricing, brokerage, rate limits, SDKs, WebSocket streaming, and pros & cons.]]></summary></entry></feed>
+</ul>]]></content><author><name></name></author><category term="qr-code" /><category term="java" /><category term="programming" /><category term="data-structures" /><category term="system-architecture" /><category term="web-development" /><category term="cryptography" /><summary type="html"><![CDATA[Deep technical guide to QR code internals: matrix anatomy, 2D scanning physics, Reed-Solomon error correction algebra, and complete Java ZXing implementation.]]></summary></entry></feed>

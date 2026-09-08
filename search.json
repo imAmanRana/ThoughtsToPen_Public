@@ -1,12 +1,30 @@
 [
   
   {
+    "title": "Indian Stock Brokerage & STT Calculator: Compare Zerodha, Shoonya, Groww & Angel One",
+    "url": "/indian-brokerage-stt-calculator/",
+    "date": "September 07, 2026",
+    "tags": "tools, algorithmic-trading, personal-finances, investing, finvasia-shoonya, stock-market-india",
+    "excerpt": "Free online Indian stock brokerage & STT calculator. Calculate exact STT, GST, SEBI turnover fees, stamp duty, breakeven points, and net P&L across brokers.",
+    "content": "📘 Looking for the Complete Math Breakdown? Understand the statutory tax formulas, Budget STT rules on options, and Java calculation engine in our companion guide: Understanding Indian Stock Market Charges: STT, Stamp Duty, GST, and Brokerage Math. Brokerage &amp; STT Calculator Real-time statutory taxes, broker fees, and net P&amp;L estimation Equity Delivery (Cash) Equity Intraday (Cash) Futures (F&amp;O) Options (F&amp;O Premium) Finvasia Shoonya (₹0 Free) Zerodha (₹0 Free Delivery) Groww (0.05% or ₹20 max) Angel One (₹0 Free Delivery) Upstox (2.5% or ₹20 max) Dhan (₹0 Free Delivery) Buy Price (₹) Sell Price (₹) Quantity Net P&amp;L (Take-Home) ₹0.00 Gross P&amp;L ₹0.00 Total Tax &amp; Charges ₹0.00 Breakeven Points ₹0.00 Fee / Statutory Tax Component Amount (₹) Governing Authority /..."
+  },
+  
+  {
+    "title": "Understanding Indian Stock Market Charges: STT, Stamp Duty, GST, and Brokerage Math",
+    "url": "/understanding-indian-stock-market-charges-and-stt/",
+    "date": "September 07, 2026",
+    "tags": "algorithmic-trading, personal-finances, investing, java, finvasia-shoonya, stock-market-india",
+    "excerpt": "Complete guide to Indian stock market transaction charges: STT rates, exchange transaction fees, SEBI turnover fees, stamp duty, GST, and zero-brokerage math.",
+    "content": "🚀 Try the Interactive Brokerage Calculator: Want to calculate exact breakeven prices and compare transaction costs across Finvasia Shoonya, Zerodha, Groww, and Angel One? Use our instant tool: Launch the Indian Brokerage &amp; STT Calculator. When you buy and sell shares or derivatives on Indian exchanges (NSE and BSE), your final profit or loss rarely matches the raw price difference between your buy and sell orders.Every evening, your stockbroker sends an official Contract Note itemizing a bewildering array of statutory fees: Securities Transaction Tax (STT), Exchange Transaction Charges, SEBI Turnover Fees, Stamp Duty, and 18% Goods and Services Tax (GST).For algorithmic traders and high-frequency retail scalpers executing dozens of orders per session, these frictional costs can quietly consume 20% to..."
+  },
+  
+  {
     "title": "Interactive FIRE Calculator: Find Your Financial Independence Number & Date",
     "url": "/interactive-fire-calculator/",
     "date": "September 06, 2026",
     "tags": "personal-finances, tools, fire-calculator, financial-independence, early-retirement, compound-interest, investing",
     "excerpt": "Instant, simple, client-side interactive FIRE calculator. Calculate your target FIRE number, years to financial freedom, and projected retirement date.",
-    "content": "📘 Prerequisite Guide: Looking for the mathematical theory behind the 4% rule, the Trinity Study, savings rate dynamics, and Lean vs. Fat FIRE? Read the prerequisite guide: The Complete Guide to FIRE: Financial Independence, Retire Early Explained. FIRE Trajectory Calculator Real-time inflation-adjusted compounding projection Currency: $ (USD / CAD / AUD) ₹ (INR) £ (GBP) € (EUR) Current Age Current Invested Portfolio Monthly Savings / Deposit Annual Retirement Expenses Expected Return (% / Year) Safe Withdrawal Rate (SWR %) 3.5% 4.0% Target FIRE Number $1,200,000 (25x Annual Expenses) Time to Freedom 17.1 Years Target Year: 2043 Retirement Age Age 47 Current: 4.2% Funded Progress Toward Goal 4.2% Lean FIRE (75% budget) $900,000 ~14.5 yrs to reach Standard FIRE (100% budget)..."
+    "content": "📘 Prerequisite Guide: Looking for the mathematical theory behind the 4% rule, the Trinity Study, savings rate dynamics, and Lean vs. Fat FIRE? Read the prerequisite guide: The Complete Guide to FIRE: Financial Independence, Retire Early Explained. FIRE Trajectory Calculator Real-time inflation-adjusted compounding projection Currency: $ (USD / CAD / AUD) ₹ (INR) £ (GBP) € (EUR) Current Age Current Invested Portfolio Monthly Savings / Deposit Annual Retirement Expenses Expected Return (% / Year) Safe Withdrawal Rate (SWR %) 3.5% 4.0% Target FIRE Number &#36;1,200,000 (25x Annual Expenses) Time to Freedom 17.1 Years Target Year: 2043 Retirement Age Age 47 Current: 4.2% Funded Progress Toward Goal 4.2% Lean FIRE (75% budget) &#36;900,000 ~14.5 yrs to reach Standard FIRE (100% budget)..."
   },
   
   {
@@ -88,6 +106,51 @@
     "tags": "algorithmic-trading, trading, shoonya-api, zerodha, angel-one, upstox, dhan, fyers, nse, bse, personal-finance, investing, programming",
     "excerpt": "Comprehensive comparison of the best algorithmic trading APIs in India: Shoonya, Zerodha Kite Connect, Angel One SmartAPI, Upstox v2, DhanHQ, and Fyers. Detailed analysis of API pricing, brokerage, rate limits, SDKs, WebSocket streaming, and pros & cons.",
     "content": "(Comprehensive Comparison of Top Algorithmic Trading API Platforms in India)(Image generated by AI)Introduction: The Algo Trading Boom in IndiaAlgorithmic trading is no longer exclusive to Wall Street hedge funds or high-frequency trading (HFT) firms in Mumbai’s Bandra Kurla Complex (BKC). Over the past three years, the Indian retail trading landscape has witnessed a seismic shift.With the Securities and Exchange Board of India (SEBI) establishing formal framework guidelines for retail automated trading and discount brokers opening up their internal Application Programming Interfaces (APIs), everyday software engineers, quantitative analysts, and retail traders can now connect custom algorithms directly to the National Stock Exchange (NSE), Bombay Stock Exchange (BSE), and Multi Commodity Exchange (MCX).Whether you want to build a simple Python script to..."
+  },
+  
+  {
+    "title": "Online JSON to Java Record & Lombok DTO Converter",
+    "url": "/json-to-java-record-converter/",
+    "date": "August 14, 2026",
+    "tags": "tools, java, spring-boot, productivity, software-engineering",
+    "excerpt": "Convert JSON payloads into modern Java 17/21/25 Records or Lombok DTOs online. Automatic type inference, nested records, and Jackson &#64;JsonProperty annotations.",
+    "content": "              JSON to Java Record Converter      Fast client-side POJO / Record / Lombok DTO generator                          Root Class:                            Target:                  Java 17+ Record          Lombok @Data DTO                                    Jackson @JsonProperty                                          JSON Payload                  Format / Prettify          Load Sample                                                    Generated Java Code        Copy Java Code            // Parsing JSON payload...      Features &amp; Capabilities      ☕ Modern Java 17+ Records    Creates compact, immutable records with concise canonical constructors, eliminating boilerplate getters and hash codes.        🧩 Deep Nested Object Inference    Automatically creates hierarchical companion records/classes for nested JSON objects and generic typed collections (List&lt;T&gt;).        🏷️ Jackson CamelCase Mapping    Converts snake_case or kebab-case into standard Java camelCase while adding @JsonProperty bindings.        📅 ISO 8601 Date Detection    Recognizes timestamp strings automatically and maps them to java.time.OffsetDateTime instead of generic Strings.  "
+  },
+  
+  {
+    "title": "Interactive Cron Expression Generator & Spring Boot Schedule Simulator",
+    "url": "/interactive-cron-expression-generator/",
+    "date": "August 04, 2026",
+    "tags": "tools, spring-boot, java, devops, productivity, software-engineering",
+    "excerpt": "Free online Cron Expression Generator and Spring Boot &#64;Scheduled simulator. Translate cron to plain English, preview next 5 execution times, and copy production code.",
+    "content": "Interactive Cron Generator Schedule generator, human translation, and next execution preview Syntax Dialect: Spring Boot (6 fields: Sec Min Hr Day Mon Dow) Standard Unix (5 fields: Min Hr Day Mon Dow) Common Schedule Presets: Every minute Every 5 min Hourly (:00) Daily at 00:00 Weekdays at 9 AM Weekly on Sunday 1st of Month Cron Expression String Copy Expression Schedule Interpretation: “At 09:00 AM, Monday through Friday” 📅 Next 5 Projected Executions Computing schedule... 🌱 Spring Boot @Scheduled Copy Code // Generating Spring Boot code... Cron Field Reference Guide Field Position Field Name Allowed Values Allowed Special Characters 1 (Spring only) Seconds 0-59 * , - / 1 (Unix) / 2 (Spring) Minutes 0-59 * , - / 2..."
+  },
+  
+  {
+    "title": "Online RegEx Tester & Java Regular Expression Generator",
+    "url": "/regex-tester-and-java-regex-generator/",
+    "date": "July 16, 2026",
+    "tags": "tools, java, regular-expressions, productivity, software-engineering",
+    "excerpt": "Free online regular expression tester and Java 21+ Pattern snippet generator. Live match highlighting, capture group debugging, and instant Java string escaping.",
+    "content": "Live RegEx Tester &amp; Java Generator 0 matches Quick Presets: Email URL IPv4 Address Date (YYYY-MM-DD) Phone Number JWT Token Regular Expression Flags Test String Live Match Highlighting ☕ Java 21+ Escaped Pattern Snippet Copy Java Code // Generating snippet... Key Features &amp; How to Use ⚡ Real-Time Evaluation Matches update as you type. Immediate visual feedback with color-coded badges and clear match counters. ☕ Java String Escaping Never struggle with double-backslash escaping in Java again. Automatically produces thread-safe Pattern.compile() code. 🎯 Production Presets One-click presets for standard enterprise tokens: RFC emails, HTTP URLs, IPv4 addresses, ISO dates, and JWT authorization headers. 🔒 100% Client-Side Privacy Your test strings, auth tokens, and regex patterns are evaluated entirely in your browser..."
+  },
+  
+  {
+    "title": "Online JSON Formatter, Beautifier & Validator: Free Client-Side Tool",
+    "url": "/online-json-beautifier-and-validator/",
+    "date": "June 28, 2026",
+    "tags": "tools, json, productivity, software-engineering, web-development",
+    "excerpt": "Free online JSON formatter, beautifier, minifier, and syntax validator. Format JSON with 2-space, 4-space, or tab indentation with 100% client-side privacy.",
+    "content": "              JSON Formatter &amp; Beautifier      Clean indentation, minification, and instant syntax validation                  Indent:              2 Spaces        4 Spaces        Tabs            Beautify      Minify      Sample      Clear              ✓ Valid JSON    0 bytes                            Raw JSON Input                                Formatted / Minified Output        Copy Output            // Formatted JSON will appear here...      Features &amp; Capabilities      ⚡ Real-Time Formatting    Instantly beautifies complex payloads with customizable 2-space, 4-space, or tab indentation styles.        📦 Zero-Whitespace Minifier    Strip extra whitespaces, line breaks, and indentation to produce ultra-compact JSON for network transmission.        🚨 Precise Error Pinpointing    Catch trailing commas, unquoted keys, and unclosed brackets with exact syntax error feedback.        🔒 100% Client-Side Privacy    All parsing and string manipulation runs purely in your web browser. Sensitive tokens and data never touch a remote server.  "
+  },
+  
+  {
+    "title": "Online URL Encoder / Decoder & Query Parameter Parser",
+    "url": "/online-url-encoder-decoder/",
+    "date": "June 11, 2026",
+    "tags": "tools, web-development, productivity, software-engineering, api",
+    "excerpt": "Free online URL encoder and decoder tool. Encode URI components, decode query strings, parse URL anatomy, and inspect query parameter tables with 100% privacy.",
+    "content": "URL Encoder &amp; Decoder RFC 3986 URI encoding, decoding, and query parameter analyzer Mode: Encode Component (encodeURIComponent) Encode Full URL (encodeURI) Decode (decodeURIComponent) Clear Quick Presets: OAuth Redirect Search Query UTM Campaign Special Characters Source Text / URL Processed Result Copy Result 🌐 URL Structure Breakdown Protocol: — Host: — Path: — Hash: — 🔍 Parsed Query Parameters Parameter Key Decoded Value Features &amp; RFC 3986 Compliance 🔄 Dual Encoding Modes Choose between component escaping (encodes slashes and question marks) or full URI encoding (preserves protocol and query delimiters). 🔍 Query Parameter Inspector Automatically slices complex query strings into clean key-value tables, handling plus characters and percent-encoded values. 🌐 URL Anatomy Breakdown Inspect each component of standard web URLs: protocol..."
   },
   
   {

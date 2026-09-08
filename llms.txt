@@ -14,7 +14,15 @@ Thoughts To Pen is a technical publication and digital garden covering deep-dive
 - [Algorithmic Trading](https://thoughtstopen.com/projects/computer-programming/algorithmic-trading/): Guides and scratch-built implementations for algorithmic trading APIs, authentication, order placement, and WebSocket tick streaming.
 - [Data Structures & Algorithms](https://thoughtstopen.com/projects/computer-programming/algorithms/): In-depth explanations of sorting, graph traversals, dynamic programming, trees, and complexity analysis.
 - [Personal Finance](https://thoughtstopen.com/projects/personal-finances/): Practical financial engineering, Canadian tax-advantaged accounts (TFSA, RRSP, FHSA), and compound interest tools.
-- [Interactive Web Tools](https://thoughtstopen.com/projects/computer-programming/web-tools/): Client-side utilities including QR code generator and compound interest calculators.
+- [Interactive Web Tools](https://thoughtstopen.com/resources/): Fast, client-side, zero-server-tracking developer and finance utilities:
+  - [Free Online QR Code Generator](https://thoughtstopen.com/free-qr-code-generator-online-tool/): 100% private, client-side SVG/Canvas QR Code creator for URLs, Wi-Fi networks, UPI payments, emails, and vCards.
+  - [Interactive FIRE Calculator](https://thoughtstopen.com/fire-calculator-online-tool/): Financial Independence, Retire Early modeling tool with Trinity Study SWR, inflation adjustments, and visual projections.
+  - [Indian Stock Brokerage & STT Calculator](https://thoughtstopen.com/indian-brokerage-stt-calculator/): Real-time statutory taxes (STT, GST, SEBI turnover, stamp duty) and breakeven calculator comparing Shoonya, Zerodha, and Groww.
+  - [Online RegEx Tester & Java Pattern Generator](https://thoughtstopen.com/regex-tester-and-java-regex-generator/): Live regular expression evaluator with capture group debugging and automated Java 21+ Pattern escaping.
+  - [Interactive Cron Expression Generator](https://thoughtstopen.com/interactive-cron-expression-generator/): Visual cron schedule generator supporting Unix 5-field and Spring Boot 6-field formats with plain-English descriptions and next execution projections.
+  - [JSON to Java Record & Lombok Converter](https://thoughtstopen.com/json-to-java-record-converter/): Instant client-side JSON to Java 17+ Record and Lombok DTO generator with Jackson @JsonProperty mappings and type inference.
+  - [Online JSON Formatter & Beautifier](https://thoughtstopen.com/online-json-beautifier-and-validator/): Fast client-side JSON beautifier, minifier, and syntax validator with customizable indentation and instant error pinpointing.
+  - [Online URL Encoder & Decoder](https://thoughtstopen.com/online-url-encoder-decoder/): RFC 3986 URI component encoding, decoding, and automated query parameter key-value table inspector.
 
 ## Legal & Compliance Policies
 - [Privacy Policy](https://thoughtstopen.com/privacy-policy/): Comprehensive data collection disclosure, Google AdSense cookie usage, and GDPR/CCPA privacy rights.
